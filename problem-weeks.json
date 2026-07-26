@@ -1,0 +1,407 @@
+{
+  "week-01": [
+    {
+      "slug": "contains-duplicate",
+      "leetcode": "https://leetcode.com/problems/contains-duplicate/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/217"
+    },
+    {
+      "slug": "two-sum",
+      "leetcode": "https://leetcode.com/problems/two-sum/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/219"
+    },
+    {
+      "slug": "top-k-frequent-elements",
+      "leetcode": "https://leetcode.com/problems/top-k-frequent-elements/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/237"
+    },
+    {
+      "slug": "longest-consecutive-sequence",
+      "leetcode": "https://leetcode.com/problems/longest-consecutive-sequence/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/240"
+    },
+    {
+      "slug": "house-robber",
+      "leetcode": "https://leetcode.com/problems/house-robber/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/264"
+    }
+  ],
+  "week-02": [
+    {
+      "slug": "valid-anagram",
+      "leetcode": "https://leetcode.com/problems/valid-anagram/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/218"
+    },
+    {
+      "slug": "climbing-stairs",
+      "leetcode": "https://leetcode.com/problems/climbing-stairs/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/230"
+    },
+    {
+      "slug": "product-of-array-except-self",
+      "leetcode": "https://leetcode.com/problems/product-of-array-except-self/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/239"
+    },
+    {
+      "slug": "3sum",
+      "leetcode": "https://leetcode.com/problems/3sum/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/241"
+    },
+    {
+      "slug": "validate-binary-search-tree",
+      "leetcode": "https://leetcode.com/problems/validate-binary-search-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/251"
+    }
+  ],
+  "week-03": [
+    {
+      "slug": "valid-palindrome",
+      "leetcode": "https://leetcode.com/problems/valid-palindrome/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/220"
+    },
+    {
+      "slug": "number-of-1-bits",
+      "leetcode": "https://leetcode.com/problems/number-of-1-bits/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/232"
+    },
+    {
+      "slug": "combination-sum",
+      "leetcode": "https://leetcode.com/problems/combination-sum/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/254"
+    },
+    {
+      "slug": "decode-ways",
+      "leetcode": "https://leetcode.com/problems/decode-ways/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/268"
+    },
+    {
+      "slug": "maximum-subarray",
+      "leetcode": "https://leetcode.com/problems/maximum-subarray/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/275"
+    }
+  ],
+  "week-04": [
+    {
+      "slug": "merge-two-sorted-lists",
+      "leetcode": "https://leetcode.com/problems/merge-two-sorted-lists/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/224"
+    },
+    {
+      "slug": "maximum-depth-of-binary-tree",
+      "leetcode": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/227"
+    },
+    {
+      "slug": "find-minimum-in-rotated-sorted-array",
+      "leetcode": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/245"
+    },
+    {
+      "slug": "word-search",
+      "leetcode": "https://leetcode.com/problems/word-search/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/255"
+    },
+    {
+      "slug": "coin-change",
+      "leetcode": "https://leetcode.com/problems/coin-change/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/269"
+    }
+  ],
+  "week-05": [
+    {
+      "slug": "best-time-to-buy-and-sell-stock",
+      "leetcode": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/221"
+    },
+    {
+      "slug": "group-anagrams",
+      "leetcode": "https://leetcode.com/problems/group-anagrams/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/236"
+    },
+    {
+      "slug": "encode-and-decode-strings",
+      "leetcode": "https://leetcode.com/problems/encode-and-decode-strings/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/238"
+    },
+    {
+      "slug": "implement-trie-prefix-tree",
+      "leetcode": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/256"
+    },
+    {
+      "slug": "word-break",
+      "leetcode": "https://leetcode.com/problems/word-break/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/271"
+    }
+  ],
+  "week-06": [
+    {
+      "slug": "valid-parentheses",
+      "leetcode": "https://leetcode.com/problems/valid-parentheses/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/222"
+    },
+    {
+      "slug": "container-with-most-water",
+      "leetcode": "https://leetcode.com/problems/container-with-most-water/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/242"
+    },
+    {
+      "slug": "design-add-and-search-words-data-structure",
+      "leetcode": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/257"
+    },
+    {
+      "slug": "longest-increasing-subsequence",
+      "leetcode": "https://leetcode.com/problems/longest-increasing-subsequence/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/272"
+    },
+    {
+      "slug": "spiral-matrix",
+      "leetcode": "https://leetcode.com/problems/spiral-matrix/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/282"
+    }
+  ],
+  "week-07": [
+    {
+      "slug": "reverse-linked-list",
+      "leetcode": "https://leetcode.com/problems/reverse-linked-list/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/223"
+    },
+    {
+      "slug": "longest-substring-without-repeating-characters",
+      "leetcode": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/243"
+    },
+    {
+      "slug": "number-of-islands",
+      "leetcode": "https://leetcode.com/problems/number-of-islands/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/258"
+    },
+    {
+      "slug": "unique-paths",
+      "leetcode": "https://leetcode.com/problems/unique-paths/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/273"
+    },
+    {
+      "slug": "set-matrix-zeroes",
+      "leetcode": "https://leetcode.com/problems/set-matrix-zeroes/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/283"
+    }
+  ],
+  "week-08": [
+    {
+      "slug": "reverse-bits",
+      "leetcode": "https://leetcode.com/problems/reverse-bits/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/234"
+    },
+    {
+      "slug": "longest-repeating-character-replacement",
+      "leetcode": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/244"
+    },
+    {
+      "slug": "clone-graph",
+      "leetcode": "https://leetcode.com/problems/clone-graph/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/259"
+    },
+    {
+      "slug": "palindromic-substrings",
+      "leetcode": "https://leetcode.com/problems/palindromic-substrings/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/267"
+    },
+    {
+      "slug": "longest-common-subsequence",
+      "leetcode": "https://leetcode.com/problems/longest-common-subsequence/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/274"
+    }
+  ],
+  "week-09": [
+    {
+      "slug": "linked-list-cycle",
+      "leetcode": "https://leetcode.com/problems/linked-list-cycle/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/225"
+    },
+    {
+      "slug": "pacific-atlantic-water-flow",
+      "leetcode": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/260"
+    },
+    {
+      "slug": "maximum-product-subarray",
+      "leetcode": "https://leetcode.com/problems/maximum-product-subarray/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/270"
+    },
+    {
+      "slug": "sum-of-two-integers",
+      "leetcode": "https://leetcode.com/problems/sum-of-two-integers/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/284"
+    },
+    {
+      "slug": "minimum-window-substring",
+      "leetcode": "https://leetcode.com/problems/minimum-window-substring/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/285"
+    }
+  ],
+  "week-10": [
+    {
+      "slug": "invert-binary-tree",
+      "leetcode": "https://leetcode.com/problems/invert-binary-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/226"
+    },
+    {
+      "slug": "search-in-rotated-sorted-array",
+      "leetcode": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/246"
+    },
+    {
+      "slug": "course-schedule",
+      "leetcode": "https://leetcode.com/problems/course-schedule/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/261"
+    },
+    {
+      "slug": "jump-game",
+      "leetcode": "https://leetcode.com/problems/jump-game/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/276"
+    },
+    {
+      "slug": "merge-k-sorted-lists",
+      "leetcode": "https://leetcode.com/problems/merge-k-sorted-lists/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/286"
+    }
+  ],
+  "week-11": [
+    {
+      "slug": "missing-number",
+      "leetcode": "https://leetcode.com/problems/missing-number/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/235"
+    },
+    {
+      "slug": "reorder-list",
+      "leetcode": "https://leetcode.com/problems/reorder-list/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/247"
+    },
+    {
+      "slug": "graph-valid-tree",
+      "leetcode": "https://leetcode.com/problems/graph-valid-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/262"
+    },
+    {
+      "slug": "merge-intervals",
+      "leetcode": "https://leetcode.com/problems/merge-intervals/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/278"
+    },
+    {
+      "slug": "binary-tree-maximum-path-sum",
+      "leetcode": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/287"
+    }
+  ],
+  "week-12": [
+    {
+      "slug": "same-tree",
+      "leetcode": "https://leetcode.com/problems/same-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/228"
+    },
+    {
+      "slug": "remove-nth-node-from-end-of-list",
+      "leetcode": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/248"
+    },
+    {
+      "slug": "number-of-connected-components-in-an-undirected-graph",
+      "leetcode": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/263"
+    },
+    {
+      "slug": "non-overlapping-intervals",
+      "leetcode": "https://leetcode.com/problems/non-overlapping-intervals/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/279"
+    },
+    {
+      "slug": "serialize-and-deserialize-binary-tree",
+      "leetcode": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/288"
+    }
+  ],
+  "week-13": [
+    {
+      "slug": "meeting-rooms",
+      "leetcode": "https://leetcode.com/problems/meeting-rooms/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/231"
+    },
+    {
+      "slug": "lowest-common-ancestor-of-a-binary-search-tree",
+      "leetcode": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/249"
+    },
+    {
+      "slug": "kth-smallest-element-in-a-bst",
+      "leetcode": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/252"
+    },
+    {
+      "slug": "insert-interval",
+      "leetcode": "https://leetcode.com/problems/insert-interval/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/277"
+    },
+    {
+      "slug": "find-median-from-data-stream",
+      "leetcode": "https://leetcode.com/problems/find-median-from-data-stream/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/289"
+    }
+  ],
+  "week-14": [
+    {
+      "slug": "counting-bits",
+      "leetcode": "https://leetcode.com/problems/counting-bits/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/233"
+    },
+    {
+      "slug": "binary-tree-level-order-traversal",
+      "leetcode": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/250"
+    },
+    {
+      "slug": "house-robber-ii",
+      "leetcode": "https://leetcode.com/problems/house-robber-ii/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/265"
+    },
+    {
+      "slug": "meeting-rooms-ii",
+      "leetcode": "https://leetcode.com/problems/meeting-rooms-ii/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/280"
+    },
+    {
+      "slug": "word-search-ii",
+      "leetcode": "https://leetcode.com/problems/word-search-ii/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/290"
+    }
+  ],
+  "week-15": [
+    {
+      "slug": "subtree-of-another-tree",
+      "leetcode": "https://leetcode.com/problems/subtree-of-another-tree/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/229"
+    },
+    {
+      "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+      "leetcode": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/253"
+    },
+    {
+      "slug": "longest-palindromic-substring",
+      "leetcode": "https://leetcode.com/problems/longest-palindromic-substring/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/266"
+    },
+    {
+      "slug": "rotate-image",
+      "leetcode": "https://leetcode.com/problems/rotate-image/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/281"
+    },
+    {
+      "slug": "alien-dictionary",
+      "leetcode": "https://leetcode.com/problems/alien-dictionary/",
+      "github-issue": "https://github.com/DaleStudy/leetcode-study/issues/291"
+    }
+  ]
+}
