@@ -1,0 +1,674 @@
+[
+  {
+    "id": 4735731184,
+    "node_id": "PRR_kwDOLwMdns8AAAABGkWF8A",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?u=7f2dac49ac7a724fec1be3af0b8758646de3c970&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4735731184",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4735731184"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-20T14:14:49Z",
+    "commit_id": "952055aaf6dd17b570c0b8c80afc4ed4cdfbea27"
+  },
+  {
+    "id": 4735775010,
+    "node_id": "PRR_kwDOLwMdns8AAAABGkYxIg",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?u=7f2dac49ac7a724fec1be3af0b8758646de3c970&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4735775010",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4735775010"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-20T14:20:13Z",
+    "commit_id": "952055aaf6dd17b570c0b8c80afc4ed4cdfbea27"
+  },
+  {
+    "id": 4745793327,
+    "node_id": "PRR_kwDOLwMdns8AAAABGt8PLw",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?u=4c3f89bd720b993a4280c8269ffae44b77eff056&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4745793327",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4745793327"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-21T14:38:10Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4756602397,
+    "node_id": "PRR_kwDOLwMdns8AAAABG4P-HQ",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?u=19844ca937dd175d84008ed28d4b21bbed6649d0&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "수고하셨습니다. ",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4756602397",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4756602397"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-22T17:15:15Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4756890945,
+    "node_id": "PRR_kwDOLwMdns8AAAABG4hlQQ",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?u=19844ca937dd175d84008ed28d4b21bbed6649d0&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "복잡도 표기 공란과 이번 주와 관계없는 커밋 로그들은 정리 부탁드립니다.",
+    "state": "CHANGES_REQUESTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4756890945",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4756890945"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-22T17:16:38Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4770310831,
+    "node_id": "PRR_kwDOLwMdns8AAAABHFUqrw",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?u=19844ca937dd175d84008ed28d4b21bbed6649d0&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4770310831",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4770310831"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T05:17:19Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4774214870,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJC81g",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?u=4c3f89bd720b993a4280c8269ffae44b77eff056&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774214870",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774214870"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:44:47Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4774218738,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJDL8g",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?u=4c3f89bd720b993a4280c8269ffae44b77eff056&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774218738",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774218738"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:45:14Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4774228121,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJDwmQ",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?u=4c3f89bd720b993a4280c8269ffae44b77eff056&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774228121",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774228121"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:46:15Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4774242934,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJEqdg",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?u=4c3f89bd720b993a4280c8269ffae44b77eff056&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774242934",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774242934"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:47:50Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4774321096,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJJbyA",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?u=4c3f89bd720b993a4280c8269ffae44b77eff056&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774321096",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774321096"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:56:15Z",
+    "commit_id": "c6825f7cd5367f4296a13c1026815c04b2594d54"
+  },
+  {
+    "id": 4774330099,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJJ-8w",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774330099",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "CONTRIBUTOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774330099"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:57:12Z",
+    "commit_id": "b5f763d3b9528c2982c532055e87a6c015b4a68b"
+  },
+  {
+    "id": 4774330530,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJKAog",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774330530",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "CONTRIBUTOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774330530"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:57:14Z",
+    "commit_id": "b5f763d3b9528c2982c532055e87a6c015b4a68b"
+  },
+  {
+    "id": 4774330872,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJKB-A",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774330872",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "CONTRIBUTOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774330872"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:57:16Z",
+    "commit_id": "b5f763d3b9528c2982c532055e87a6c015b4a68b"
+  },
+  {
+    "id": 4774331191,
+    "node_id": "PRR_kwDOLwMdns8AAAABHJKDNw",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774331191",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "CONTRIBUTOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4774331191"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-24T14:57:18Z",
+    "commit_id": "b5f763d3b9528c2982c532055e87a6c015b4a68b"
+  },
+  {
+    "id": 4778374119,
+    "node_id": "PRR_kwDOLwMdns8AAAABHNAz5w",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?u=19844ca937dd175d84008ed28d4b21bbed6649d0&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "APPROVED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4778374119",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2765#pullrequestreview-4778374119"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2765"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-25T17:54:48Z",
+    "commit_id": "b5f763d3b9528c2982c532055e87a6c015b4a68b"
+  }
+]

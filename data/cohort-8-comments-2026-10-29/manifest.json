@@ -1,0 +1,53 @@
+{
+  "started_at": "2026-10-29T13:07:09.265766+00:00",
+  "finished_at": "2026-10-29T13:07:14.370056+00:00",
+  "query": "repo:DaleStudy/leetcode-study is:pr project:DaleStudy/29",
+  "project_url": "https://github.com/orgs/DaleStudy/projects/29",
+  "project_membership_source": "GitHub project-qualified issue search; direct project API lacks read:project scope",
+  "scope": "All currently searchable PRs in project 29, all currently available comments regardless of comment date",
+  "expected_pr_count": 224,
+  "collected_pr_count": 224,
+  "record_count": 4167,
+  "human_nonempty_body_count": 1385,
+  "counts": {
+    "issue_comment_bot": 229,
+    "review_comment_human": 1066,
+    "review_human": 845,
+    "review_bot": 977,
+    "review_comment_bot": 966,
+    "issue_comment_human": 84
+  },
+  "errors": [],
+  "count_warnings": [
+    {
+      "pr_number": 2854,
+      "kind": "issue_comment",
+      "pr_detail_count": 0,
+      "rest_list_count": 1,
+      "graphql_count": 1,
+      "note": "PR detail count differs; REST list agrees with GraphQL. Cause unknown."
+    },
+    {
+      "pr_number": 2798,
+      "kind": "issue_comment",
+      "pr_detail_count": 2,
+      "rest_list_count": 1,
+      "graphql_count": 1,
+      "note": "PR detail count differs; REST list agrees with GraphQL. Cause unknown."
+    },
+    {
+      "pr_number": 2801,
+      "kind": "issue_comment",
+      "pr_detail_count": 2,
+      "rest_list_count": 1,
+      "graphql_count": 1,
+      "note": "PR detail count differs; REST list agrees with GraphQL. Cause unknown."
+    }
+  ],
+  "limitations": [
+    "Deleted comments and edit history are unavailable.",
+    "Project Week/Status fields and thread resolved state are not collected.",
+    "This is current project membership, not historical membership.",
+    "Snapshot is not atomic; each endpoint was fetched separately."
+  ]
+}

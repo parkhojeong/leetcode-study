@@ -1,0 +1,217 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3451265629",
+    "pull_request_review_id": 4542913650,
+    "id": 3451265629,
+    "node_id": "PRRC_kwDOLwMdns7NtiJd",
+    "diff_hunk": "@@ -0,0 +1,29 @@\n+use std::collections::HashMap;\n+\n+// TC: O(n)\n+// SC: O(n)\n+impl Solution {\n+    pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {\n+        let mut freqs = HashMap::new();\n+        for &num in &nums {\n+            *freqs.entry(num).or_insert(0) += 1;\n+        }\n+\n+        let mut buckets = vec![Vec::new(); nums.len() + 1];",
+    "path": "top-k-frequent-elements/DaleSeo.rs",
+    "commit_id": "66c7ed0a71d38ba1d4477a0f726b56832979efc4",
+    "original_commit_id": "66c7ed0a71d38ba1d4477a0f726b56832979efc4",
+    "user": {
+      "login": "dolphinflow86",
+      "id": 19372057,
+      "node_id": "MDQ6VXNlcjE5MzcyMDU3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372057?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dolphinflow86",
+      "html_url": "https://github.com/dolphinflow86",
+      "followers_url": "https://api.github.com/users/dolphinflow86/followers",
+      "following_url": "https://api.github.com/users/dolphinflow86/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dolphinflow86/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dolphinflow86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dolphinflow86/subscriptions",
+      "organizations_url": "https://api.github.com/users/dolphinflow86/orgs",
+      "repos_url": "https://api.github.com/users/dolphinflow86/repos",
+      "events_url": "https://api.github.com/users/dolphinflow86/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dolphinflow86/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "로직은 버킷소트로 선형시간 만족하게 잘 작성해주신 것 같아요 :)\n\n러스트는 제가 처음 접해봐서 코드를 분석해보다가, 문득 궁금한게 생겨서 질문드려봅니다.\nC++에서는 동적배열인 vector를 힙에 할당하는데, 러스트는 Vec::new()를 하게되면 마찬가지로 힙에 할당하게 될지, 메모리 해제는 어떤식으로 관리될지 궁금합니다. \n\n추가로 동적배열의 시간/공간 복잡도는 아마 구현체 방식이 언어마다 비슷하리라 생각되어서 동일하다고 생각되는데 러스트도 마찬가지이겠죠?",
+    "created_at": "2026-06-22T09:52:33Z",
+    "updated_at": "2026-06-22T09:59:23Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2640#discussion_r3451265629",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2640",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3451265629"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2640#discussion_r3451265629"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2640"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3451265629/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 12,
+    "original_line": 12,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 12,
+    "position": 12,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3456171150",
+    "pull_request_review_id": 4548963816,
+    "id": 3456171150,
+    "node_id": "PRRC_kwDOLwMdns7OAPyO",
+    "diff_hunk": "@@ -0,0 +1,29 @@\n+use std::collections::HashMap;\n+\n+// TC: O(n)\n+// SC: O(n)\n+impl Solution {\n+    pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {\n+        let mut freqs = HashMap::new();\n+        for &num in &nums {\n+            *freqs.entry(num).or_insert(0) += 1;\n+        }\n+\n+        let mut buckets = vec![Vec::new(); nums.len() + 1];",
+    "path": "top-k-frequent-elements/DaleSeo.rs",
+    "commit_id": "66c7ed0a71d38ba1d4477a0f726b56832979efc4",
+    "original_commit_id": "66c7ed0a71d38ba1d4477a0f726b56832979efc4",
+    "user": {
+      "login": "DaleSeo",
+      "id": 5466341,
+      "node_id": "MDQ6VXNlcjU0NjYzNDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5466341?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DaleSeo",
+      "html_url": "https://github.com/DaleSeo",
+      "followers_url": "https://api.github.com/users/DaleSeo/followers",
+      "following_url": "https://api.github.com/users/DaleSeo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DaleSeo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DaleSeo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DaleSeo/subscriptions",
+      "organizations_url": "https://api.github.com/users/DaleSeo/orgs",
+      "repos_url": "https://api.github.com/users/DaleSeo/repos",
+      "events_url": "https://api.github.com/users/DaleSeo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DaleSeo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "@dolphinflow86 님, 좋은 질문 감사합니다.\r\n\r\nRust의 `Vec<T>`도 C++의 `vector`처럼 동적 배열이고, 원소를 저장하는 버퍼는 힙에 할당됩니다. 다만 `Vec::new()` 자체는 보통 아직 버퍼를 할당하지 않고, 길이/용량이 0인 `Vec` 값을 만드는 것으로 이해하시면 됩니다. 실제 힙 할당은 `push` 등으로 원소가 들어가면서 용량이 필요해질 때 발생합니다.\r\n\r\n메모리 해제는 Rust의 ownership/RAII 방식으로 관리됩니다. `buckets`나 `freqs`가 스코프를 벗어나면 `Drop`이 자동으로 호출되고, 내부 원소들을 정리한 뒤 힙 메모리도 해제됩니다.\r\n\r\n시간/공간 복잡도도 일반적인 동적 배열과 거의 동일하게 봐도 될 것 같습니다.",
+    "created_at": "2026-06-22T23:59:59Z",
+    "updated_at": "2026-06-22T23:59:59Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2640#discussion_r3456171150",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2640",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3456171150"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2640#discussion_r3456171150"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2640"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3456171150/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 12,
+    "original_line": 12,
+    "side": "RIGHT",
+    "in_reply_to_id": 3451265629,
+    "author_association": "MEMBER",
+    "original_position": 12,
+    "position": 12,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3459528602",
+    "pull_request_review_id": 4552983307,
+    "id": 3459528602,
+    "node_id": "PRRC_kwDOLwMdns7ONDea",
+    "diff_hunk": "@@ -0,0 +1,29 @@\n+use std::collections::HashMap;\n+\n+// TC: O(n)\n+// SC: O(n)\n+impl Solution {\n+    pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {\n+        let mut freqs = HashMap::new();\n+        for &num in &nums {\n+            *freqs.entry(num).or_insert(0) += 1;\n+        }\n+\n+        let mut buckets = vec![Vec::new(); nums.len() + 1];",
+    "path": "top-k-frequent-elements/DaleSeo.rs",
+    "commit_id": "66c7ed0a71d38ba1d4477a0f726b56832979efc4",
+    "original_commit_id": "66c7ed0a71d38ba1d4477a0f726b56832979efc4",
+    "user": {
+      "login": "dolphinflow86",
+      "id": 19372057,
+      "node_id": "MDQ6VXNlcjE5MzcyMDU3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372057?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dolphinflow86",
+      "html_url": "https://github.com/dolphinflow86",
+      "followers_url": "https://api.github.com/users/dolphinflow86/followers",
+      "following_url": "https://api.github.com/users/dolphinflow86/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dolphinflow86/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dolphinflow86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dolphinflow86/subscriptions",
+      "organizations_url": "https://api.github.com/users/dolphinflow86/orgs",
+      "repos_url": "https://api.github.com/users/dolphinflow86/repos",
+      "events_url": "https://api.github.com/users/dolphinflow86/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dolphinflow86/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "@DaleSeo 자세한 답변 감사합니다 👍 ",
+    "created_at": "2026-06-23T12:00:44Z",
+    "updated_at": "2026-06-23T12:00:45Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2640#discussion_r3459528602",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2640",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3459528602"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2640#discussion_r3459528602"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2640"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3459528602/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 12,
+    "original_line": 12,
+    "side": "RIGHT",
+    "in_reply_to_id": 3451265629,
+    "author_association": "MEMBER",
+    "original_position": 12,
+    "position": 12,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

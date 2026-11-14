@@ -1,0 +1,144 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3564273717",
+    "pull_request_review_id": 4677902327,
+    "id": 3564273717,
+    "node_id": "PRRC_kwDOLwMdns7UcoA1",
+    "diff_hunk": "",
+    "path": "number-of-1-bits/JinuCheon.py",
+    "commit_id": "7847fc594e71c03c245465eaffa67cfcedfa5da1",
+    "original_commit_id": "7847fc594e71c03c245465eaffa67cfcedfa5da1",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Bit Manipulation, Divide and Conquer, Dynamic Programming, Hash Map / Hash Set, Two Pointers, Sliding Window, Fast & Slow Pointers, BFS, DFS, Backtracking, Dynamic Programming, Binary Search, Monotonic Stack, Heap / Priority Queue, Greedy, Union Find, Trie, Bit Manipulation\n- **설명**: 주요 구현은 비트 연산과 이진수 표현 관련으로 Bit Manipulation 패턴에 해당합니다. 또한 간단한 루프를 이용해 각 비트를 확인하는 방식은 자리수 순회 형태의 Divide and Conquer적 특성도 보일 수 있습니다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **3가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.hammingWeight</code> — Time: O(k) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(k) |\n| **Space** | O(1) |\n\n**피드백**: 비트를 왼쪽부터 확인하는 방법으로 모든 비트를 확인하므로 입력 비트 수에 비례하는 시간 복잡도이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Solution.hammingWeight</code> — Time: O(k) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(k) |\n| **Space** | O(1) |\n\n**피드백**: 파이썬의 내장 변환과 문자열 조회를 이용하므로 간결하지만, 최악의 경우 n 비트 처리에 해당한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 3: <code>Solution.hammingWeight</code> — Time: O(k) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(k) |\n| **Space** | O(1) |\n\n**피드백**: 비트 시프트와 AND 연산으로 불필요한 연산 없이 한 비트씩 확인한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-11T13:42:30Z",
+    "updated_at": "2026-07-11T13:42:30Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2731#discussion_r3564273717",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3564273717"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2731#discussion_r3564273717"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3564273717/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3564273879",
+    "pull_request_review_id": 4677902565,
+    "id": 3564273879,
+    "node_id": "PRRC_kwDOLwMdns7UcoDX",
+    "diff_hunk": "",
+    "path": "valid-palindrome/JinuCheon.py",
+    "commit_id": "7847fc594e71c03c245465eaffa67cfcedfa5da1",
+    "original_commit_id": "7847fc594e71c03c245465eaffa67cfcedfa5da1",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Two Pointers, Monotonic Stack\n- **설명**: 제시된 첫 번째 풀이에서 좌우 포인터를 이용해 양쪽에서 알파벳숫자만 비교하는 이중 포인터 방식이며, 두 번째 풀이도 문자열을 정리한 뒤 양쪽에서 비교하는 방식으로 부분적으로 같은 아이디어를 공유합니다. 두 풀이 모두 한 방향으로 인접 비교를 수행하는 점에서 Two Pointers 패턴에 속합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.isPalindrome</code> — Time: ✅ O(n) → O(n) / Space: O(1)</summary>\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | - | O(1) | - |\n\n**피드백**: 추가 배열이나 문자열 생성 없이 제일 효율적인 in-place 방식에 가깝다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Solution.isPalindrome</code> — Time: O(n) / Space: O(n)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(n) |\n\n**피드백**: 공간을 추가로 사용해 간결하지만 전체 문자열을 새로 생성한다는 단점이 있다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-11T13:42:32Z",
+    "updated_at": "2026-07-11T13:42:32Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2731#discussion_r3564273879",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3564273879"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2731#discussion_r3564273879"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3564273879/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

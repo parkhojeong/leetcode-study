@@ -1,0 +1,73 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3888480077",
+    "pull_request_review_id": 5059954782,
+    "id": 3888480077,
+    "node_id": "PRRC_kwDOLwMdns7nxX9N",
+    "diff_hunk": "",
+    "path": "course-schedule/freemjstudio.py",
+    "commit_id": "41b3a540f2b3f33625ed7809080de91a41e57b39",
+    "original_commit_id": "41b3a540f2b3f33625ed7809080de91a41e57b39",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: a5bcff5c055cf345d223838e6b6239b26c8fb097 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>course-schedule/freemjstudio.py</summary>\n\n```py\nclass Solution:\n    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:\n\n        # cycle 을 감지하면 false 를 리턴한다.\n        graph = [[] for _ in range(numCourses)]\n\n        # a <- b\n        for a, b in prerequisites:\n            graph[b].append(a)\n\n        state = [0] * numCourses\n        # 0: unvisited 1: visiting 2: done\n\n        def dfs(node):\n            if state[node] == 1:\n                return False\n\n            if state[node] == 2:\n                return True\n\n            state[node] = 1 # visiting\n\n            for next_node in graph[node]:\n                if dfs(next_node) == False:\n                    return False\n\n            state[node] = 2 # done\n            return True\n\n        for course in range(numCourses):\n            if dfs(course) == False:\n                return False\n\n        return True\n\n```\n\n</details>\n\n- **패턴**: Depth-First Search, Graph\n- **설명**: 그래프를 구성하고 DFS로 사이클 여부를 탐지하는 패턴으로, 방문 상태를 추적해 순환 여부를 판단한다. 사이클이 있으면 false, 없으면 true를 반환한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(N + P) |\n| **Space** | O(N + P) |\n\n**피드백**: 그래프를 인접 리스트로 구성하고 각 노드를 DFS하며 사이클 여부를 검사한다. 상태 배열로 방문 중인 노드를 추적해 사이클을 탐지한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-30T04:41:17Z",
+    "updated_at": "2026-08-30T04:41:17Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2845#discussion_r3888480077",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2845",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3888480077"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2845#discussion_r3888480077"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2845"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3888480077/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

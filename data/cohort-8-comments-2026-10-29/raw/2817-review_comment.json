@@ -1,0 +1,215 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789114881",
+    "pull_request_review_id": 4943555561,
+    "id": 3789114881,
+    "node_id": "PRRC_kwDOLwMdns7h2U4B",
+    "diff_hunk": "",
+    "path": "longest-repeating-character-replacement/tigermint.kt",
+    "commit_id": "8546a24595e64a64e673d12301070ef796871565",
+    "original_commit_id": "8546a24595e64a64e673d12301070ef796871565",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 8a756a13e8fa9161ee9f0edfe3f69cd9c99fbfd3 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-repeating-character-replacement/tigermint.kt</summary>\n\n```kt\n/**\nTC: O(26n) = O(n)\nSC: O(26) = O(1)\n */\nclass Solution {\n    fun characterReplacement(s: String, k: Int): Int {\n        var left = 0\n        val charToCount = mutableMapOf<Char, Int>()\n        var maxFrequency = 0\n\n        for (right in s.indices) {\n            val added = s[right]\n            charToCount[added] = (charToCount[added] ?: 0) + 1\n\n            // 교체 횟수가 k를 넘으면 왼쪽을 당겨 윈도우 축소\n            while ((right - left + 1) - charToCount.values.max() > k) {\n                val removed = s[left]\n                charToCount[removed] = charToCount.getValue(removed) - 1\n                left++\n            }\n\n            maxFrequency = maxOf(maxFrequency, right - left + 1)\n        }\n\n        return maxFrequency\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Sliding Window, Hash Map / Hash Set\n- **설명**: 문자열 윈도우를 좌우로 이동시키며 길이를 최대화하는 방식으로, 창 크기 내 가장 빈도가 높은 문자를 추적하기 위해 해시 맵을 사용합니다. 조건을 만족하는지 확인하며 윈도우를 조정하는 슬라이딩 윈도우 패턴에 속합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.characterReplacement</code> — Time: O(n) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 윈도우 내부 문자 빈도 수를 트래킹하고, 현재 윈도우의 최다빈도 문자를 기준으로 필요한 교체 횟수를 비교한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Solution.reverseBits</code> — Time: O(1) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(1) |\n| **Space** | O(1) |\n\n**피드백**: 상수 시간에 고정된 비트 수를 순회하며 뒤집는다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T09:54:27Z",
+    "updated_at": "2026-08-15T09:54:27Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2817#discussion_r3789114881",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2817",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789114881"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2817#discussion_r3789114881"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2817"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789114881/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789114940",
+    "pull_request_review_id": 4943555611,
+    "id": 3789114940,
+    "node_id": "PRRC_kwDOLwMdns7h2U48",
+    "diff_hunk": "",
+    "path": "reverse-bits/tigermint.kt",
+    "commit_id": "8546a24595e64a64e673d12301070ef796871565",
+    "original_commit_id": "8546a24595e64a64e673d12301070ef796871565",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 19b81e4abb909c0e4be3350458429a16501df162 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>reverse-bits/tigermint.kt</summary>\n\n```kt\n/**\nTC: O(32) = O(1)\nSC: O(1)\n */\nclass Solution {\n    fun reverseBits(n: Int): Int {\n        var result = 0\n        var num = n\n        repeat(32) {\n            result = (result shl 1) or (num and 1)\n            num = num ushr 1\n        }\n        return result\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Bit Manipulation\n- **설명**: 정수의 비트를 반전시키며 앞뒤를 뒤집는 과정으로, 비트 연산과 시프트를 이용한 저수준 비트 조작 패턴이다. 반복문으로 32비트를 순회하며 값을 재배치한다.",
+    "created_at": "2026-08-15T09:54:29Z",
+    "updated_at": "2026-08-15T09:54:29Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2817#discussion_r3789114940",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2817",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789114940"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2817#discussion_r3789114940"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2817"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789114940/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789532911",
+    "pull_request_review_id": 4944005391,
+    "id": 3789532911,
+    "node_id": "PRRC_kwDOLwMdns7h367v",
+    "diff_hunk": "",
+    "path": "reverse-bits/tigermint.kt",
+    "commit_id": "8546a24595e64a64e673d12301070ef796871565",
+    "original_commit_id": "8546a24595e64a64e673d12301070ef796871565",
+    "user": {
+      "login": "ICE0208",
+      "id": 46257328,
+      "node_id": "MDQ6VXNlcjQ2MjU3MzI4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46257328?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/ICE0208",
+      "html_url": "https://github.com/ICE0208",
+      "followers_url": "https://api.github.com/users/ICE0208/followers",
+      "following_url": "https://api.github.com/users/ICE0208/following{/other_user}",
+      "gists_url": "https://api.github.com/users/ICE0208/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ICE0208/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ICE0208/subscriptions",
+      "organizations_url": "https://api.github.com/users/ICE0208/orgs",
+      "repos_url": "https://api.github.com/users/ICE0208/repos",
+      "events_url": "https://api.github.com/users/ICE0208/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ICE0208/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "코틀린의 비트 연산자는 엄청 직관적이네요!!",
+    "created_at": "2026-08-15T14:21:07Z",
+    "updated_at": "2026-08-15T14:25:19Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2817#discussion_r3789532911",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2817",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789532911"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2817#discussion_r3789532911"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2817"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789532911/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

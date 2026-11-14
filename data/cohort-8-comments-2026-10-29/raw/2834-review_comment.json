@@ -1,0 +1,357 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327437",
+    "pull_request_review_id": 5000442591,
+    "id": 3836327437,
+    "node_id": "PRRC_kwDOLwMdns7kqbYN",
+    "diff_hunk": "",
+    "path": "course-schedule/alphaorderly.py",
+    "commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "original_commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 20fbba006f052a00faaa776185ef16bc30c04391 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>course-schedule/alphaorderly.py</summary>\n\n```py\n\n\"\"\"\n시간복잡도: O(n + m)\n공간복잡도: O(n + m)\n\n- 각 과목의 진입 차수(in_degree)를 계산한다.\n- 각 과목의 인접 리스트(graph)를 구성한다.\n- 진입 차수가 0인 과목을 큐에 추가한다.\n- 큐에서 과목을 하나씩 꺼내고, 그 과목을 선수과목으로 가지는 모든 과목의 진입 차수를 1씩 감소시킨다.\n- 진입 차수가 0이 된 과목을 큐에 추가한다.\n- 큐를 모두 처리한 후, 방문한 과목의 수가 전체 과목 수와 같은지 확인한다.\n\"\"\"\nclass Solution:\n    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:\n        in_degree = [0] * numCourses\n        graph = defaultdict(list)\n        entered_courses = 0\n\n        for s, e in prerequisites:\n            in_degree[s] += 1\n            graph[e].append(s)\n\n        queue = deque([])\n\n        for course, count in enumerate(in_degree):\n            if count == 0:\n                queue.append(course)\n                entered_courses += 1\n\n        while queue:\n            course = queue.popleft()\n\n            for next_course in graph[course]:\n                in_degree[next_course] -= 1\n                if in_degree[next_course] == 0:\n                    entered_courses += 1\n                    queue.append(next_course)\n\n        return entered_courses == numCourses\n\n```\n\n</details>\n\n- **패턴**: Breadth-First Search, Topological Sort, Hash Map / Hash Set\n- **설명**: 그래프의 위상 정렬 방식으로 진입 차수를 이용해 순서를 해결한다. 큐를 이용한 BFS 방식으로 사이클 여부를 판단하고, 선수과목 그래프를 구성한다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.canFinish</code> — Time: O(n + m) / Space: O(n + m)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n + m) |\n| **Space** | O(n + m) |\n\n**피드백**: 그래프 인접 리스트와 진입 차수를 이용해 사이클 여부를 판단하는 표준 풀이이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Solution.canFinish</code> — Time: O(n + m) / Space: O(n + m)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n + m) |\n| **Space** | O(n + m) |\n\n**피드백**: 임의의 추가 제약 없이도 동작하는 위상 정렬 풀이이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-22T15:12:21Z",
+    "updated_at": "2026-08-22T15:12:21Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327437",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327437"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327437"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327437/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327478",
+    "pull_request_review_id": 5000442638,
+    "id": 3836327478,
+    "node_id": "PRRC_kwDOLwMdns7kqbY2",
+    "diff_hunk": "",
+    "path": "invert-binary-tree/alphaorderly.py",
+    "commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "original_commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: d8269c4571618359bd4c825403c2b1389acade69 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>invert-binary-tree/alphaorderly.py</summary>\n\n```py\n# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\n\n\"\"\"\n시간복잡도: O(n)\n공간복잡도: O(h) - 트리의 높이(h)만큼 재귀 호출이 쌓인다.\n\n- 루트 노드부터 시작해, 왼쪽과 오른쪽 자식을 각각 재귀적으로 반전한다.\n- 재귀 함수는 현재 노드가 None이면 바로 None을 반환한다.\n- 왼쪽과 오른쪽 자식을 반전한 결과를 각각 root.right, root.left로 할당하여 두 자식을 서로 바꾼다.\n- 최종적으로 반전된 루트 노드를 반환한다.\n\"\"\"\nclass Solution:\n    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:\n        if not root:\n            return None\n\n        root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)\n        return root\n\n```\n\n</details>\n\n- **패턴**: Depth-First Search, Recursive, Binary Tree\n- **설명**: 코드는 재귀적으로 트리의 자식을 방문하며 각 노드의 왼쪽/오른쪽을 서로 반전시키는 DFS 성격의 재귀 패턴으로 구현되었다. 트리 구조를 탐색하며 부분 문제를 해결해 전체 트리를 반전한다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.invertTree</code> — Time: O(n) / Space: O(h)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(h) |\n\n**피드백**: 트리의 모든 노드를 한 번씩 방문하여 자식 노드를 스왑한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Solution.invertTree</code> — Time: O(n) / Space: O(h)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(h) |\n\n**피드백**: 재귀 깊이가 트리의 높이에 비례한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-22T15:12:23Z",
+    "updated_at": "2026-08-22T15:12:23Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327478",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327478"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327478"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327478/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327535",
+    "pull_request_review_id": 5000442695,
+    "id": 3836327535,
+    "node_id": "PRRC_kwDOLwMdns7kqbZv",
+    "diff_hunk": "",
+    "path": "jump-game/alphaorderly.py",
+    "commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "original_commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 1e7abcc7c1630c8f61e9305cc49c1b0a5e464528 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>jump-game/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(n)\n공간복잡도: O(1)\n\n- 현재 위치(index)에서 갈 수 있는 가장 먼 위치(furthest)를 갱신한다.\n- furthest가 현재 위치보다 작으면 도달할 수 없으므로 False를 반환한다.\n- 갱신된 furthest가 마지막 인덱스 이상이 되면 True를 반환한다.\n\"\"\"\nclass Solution:\n    def canJump(self, nums: List[int]) -> bool:\n        N = len(nums)\n        furthest = 0\n\n        for index, jump in enumerate(nums):\n            if furthest < index:\n                return False\n\n            furthest = max(furthest, index + jump)\n            if furthest >= N - 1:\n                return True\n\n        return False\n\n```\n\n</details>\n\n- **패턴**: Greedy, Binary Search\n- **설명**: 코드는 현재 위치에서 도달 가능한 최대 인덱스를 갱신하며, furthest가 현재 인덱스보다 작아지면 도달 불가능을 결정한다. 이는 남은 요소들 중 최적의 경로를 빠르게 판단하는 그리디 접근으로 풀이되며, 최종적으로 마지막 인덱스에 도달하는지 확인한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 그리디 방식으로 최댓값을 갱신하며 도달 가능성을 판단한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-22T15:12:25Z",
+    "updated_at": "2026-08-22T15:12:25Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327535",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327535"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327535"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327535/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327612",
+    "pull_request_review_id": 5000442751,
+    "id": 3836327612,
+    "node_id": "PRRC_kwDOLwMdns7kqba8",
+    "diff_hunk": "",
+    "path": "merge-k-sorted-lists/alphaorderly.py",
+    "commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "original_commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: b75df30f5910a0afe2fd5b3e7f44a0293fe60446 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>merge-k-sorted-lists/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(n log k)\n공간복잡도: O(k)\n- k는 연결 리스트의 개수, n은 모든 노드의 개수\n\n- 각 연결 리스트의 첫 번째 노드 값을 (값, 인덱스) 형태로 힙에 추가한다.\n- 힙에서 가장 작은 값을 꺼내 결과 더미 연결 리스트에 노드로 연결한다.\n- 꺼낸 노드가 속했던 리스트의 다음 노드가 있으면 힙에 추가한다.\n- 힙이 빌 때까지 위 과정을 반복한다.\n- 더미 연결 리스트의 다음 노드를 반환한다.\n\"\"\"\n# Definition for singly-linked list.\n# class ListNode:\n#     def __init__(self, val=0, next=None):\n#         self.val = val\n#         self.next = next\nclass Solution:\n    def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:\n        ans = ListNode()\n        head = ans\n\n        values = [(node.val, index) for index, node in enumerate(lists) if node]\n        heapify(values)\n\n        while values:\n            _, index = heappop(values)\n\n            head.next = lists[index]\n            head = head.next\n\n            lists[index] = lists[index].next\n            if lists[index]:\n                heappush(values, (lists[index].val, index))\n\n        return ans.next\n\n```\n\n</details>\n\n- **패턴**: Heap / Priority Queue, Two Pointers, Greedy\n- **설명**: 리스트들에서 최소 원소를 매번 힙에서 꺼내고 다음 원소를 힙에 넣는 방식으로 k개의 연결 리스트를 합치는 힙 기반 병합 패턴이며, 각 원소를 차례로 처리하면서 전체를 정렬된 형태로 결과에 연결합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n log k) |\n| **Space** | O(k) |\n\n**피드백**: 힙에 각 리스트의 현재 노드를 담고, 하나씩 꺼내며 연결리스트를 구성한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-22T15:12:27Z",
+    "updated_at": "2026-08-22T15:12:27Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327612",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327612"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327612"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327612/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327689",
+    "pull_request_review_id": 5000442784,
+    "id": 3836327689,
+    "node_id": "PRRC_kwDOLwMdns7kqbcJ",
+    "diff_hunk": "",
+    "path": "search-in-rotated-sorted-array/alphaorderly.py",
+    "commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "original_commit_id": "13073877c314e5ea7dee7b87cdd957fcb0714d71",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 4bdeb202765764a4ffb5513297fdc9e90fd23cc8 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>search-in-rotated-sorted-array/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(log n)\n공간복잡도: O(1)\n\n- 회전된 정렬 배열에서 이진 탐색으로 target을 찾는다.\n- mid와 target이 원래 배열의 왼쪽 절반에 있었는지, 오른쪽 절반에 있었는지를 구분한다.\n    - 기준: nums[mid] > nums[N-1] 이면 mid가 왼쪽(회전되기 전 더 작은 쪽), 아니면 오른쪽.\n    - target도 같은 기준으로 왼쪽/오른쪽인지 판별.\n- mid와 target이 서로 다른 쪽에 있으면, target이 있는 쪽으로 포인터를 이동 (left 또는 right 값을 조정).\n- mid == target 이면 mid 반환.\n- 찾지 못하면 -1 반환.\n\"\"\"\nclass Solution:\n    def search(self, nums: List[int], target: int) -> int:\n        N = len(nums)\n        left = 0\n        right = N - 1\n\n        while left <= right:\n            mid = (left + right) // 2\n\n            if target == nums[mid]:\n                return mid\n\n            mid_left = nums[mid] > nums[N - 1]\n            target_left = target > nums[N - 1]\n\n            if nums[mid] > target:\n                if mid_left != target_left:\n                    left = mid + 1\n                else:\n                    right = mid - 1\n            elif mid_left != target_left:\n                right = mid - 1\n            else:\n                left = mid + 1\n\n        return -1\n\n```\n\n</details>\n\n- **패턴**: Binary Search, Two Pointers\n- **설명**: 회전된 정렬 배열에서 이진 탐색으로 범위를 절반씩 축소하며 target의 위치를 찾는 방식이다. left/right를 조정해 탐색 영역을 좁히는 패턴으로, 두 포인터로 구간을 관리하는 특징이 있다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(log n) |\n| **Space** | O(1) |\n\n**피드백**: 중간 값의 위치에 따라 왼쪽/오른쪽 반쪽을 판단해 탐색 범위를 축소한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-22T15:12:28Z",
+    "updated_at": "2026-08-22T15:12:28Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327689",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327689"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2834#discussion_r3836327689"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2834"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836327689/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

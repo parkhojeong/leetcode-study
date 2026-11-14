@@ -1,0 +1,170 @@
+[
+  {
+    "id": 5121113884,
+    "node_id": "PRR_kwDOLwMdns8AAAABMT3_HA",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121113884",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851",
+    "author_association": "CONTRIBUTOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121113884"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-09-05T11:45:15Z",
+    "commit_id": "1a7823dfc9eaacfe7753e3e672eb7102251d0823"
+  },
+  {
+    "id": 5121313902,
+    "node_id": "PRR_kwDOLwMdns8AAAABMUEMbg",
+    "user": {
+      "login": "Yiseull",
+      "id": 98391539,
+      "node_id": "U_kgDOBd1V8w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98391539?u=15ee3d4039553fcf76d3e8811b2259510643ccd3&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Yiseull",
+      "html_url": "https://github.com/Yiseull",
+      "followers_url": "https://api.github.com/users/Yiseull/followers",
+      "following_url": "https://api.github.com/users/Yiseull/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Yiseull/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Yiseull/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Yiseull/subscriptions",
+      "organizations_url": "https://api.github.com/users/Yiseull/orgs",
+      "repos_url": "https://api.github.com/users/Yiseull/repos",
+      "events_url": "https://api.github.com/users/Yiseull/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Yiseull/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121313902",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121313902"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-09-05T12:42:46Z",
+    "commit_id": "1a7823dfc9eaacfe7753e3e672eb7102251d0823"
+  },
+  {
+    "id": 5121320967,
+    "node_id": "PRR_kwDOLwMdns8AAAABMUEoBw",
+    "user": {
+      "login": "Yiseull",
+      "id": 98391539,
+      "node_id": "U_kgDOBd1V8w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98391539?u=15ee3d4039553fcf76d3e8811b2259510643ccd3&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Yiseull",
+      "html_url": "https://github.com/Yiseull",
+      "followers_url": "https://api.github.com/users/Yiseull/followers",
+      "following_url": "https://api.github.com/users/Yiseull/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Yiseull/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Yiseull/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Yiseull/subscriptions",
+      "organizations_url": "https://api.github.com/users/Yiseull/orgs",
+      "repos_url": "https://api.github.com/users/Yiseull/repos",
+      "events_url": "https://api.github.com/users/Yiseull/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Yiseull/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121320967",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121320967"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-09-05T12:46:34Z",
+    "commit_id": "1a7823dfc9eaacfe7753e3e672eb7102251d0823"
+  },
+  {
+    "id": 5121324555,
+    "node_id": "PRR_kwDOLwMdns8AAAABMUE2Cw",
+    "user": {
+      "login": "Yiseull",
+      "id": 98391539,
+      "node_id": "U_kgDOBd1V8w",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98391539?u=15ee3d4039553fcf76d3e8811b2259510643ccd3&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Yiseull",
+      "html_url": "https://github.com/Yiseull",
+      "followers_url": "https://api.github.com/users/Yiseull/followers",
+      "following_url": "https://api.github.com/users/Yiseull/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Yiseull/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Yiseull/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Yiseull/subscriptions",
+      "organizations_url": "https://api.github.com/users/Yiseull/orgs",
+      "repos_url": "https://api.github.com/users/Yiseull/repos",
+      "events_url": "https://api.github.com/users/Yiseull/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Yiseull/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "리뷰를 늦게 남겨서, 제 코멘트는 참고만 하시고 바로 머지하시면 될 것 같아요! 문제 푸느라 고생하셨습니다!!👍 ",
+    "state": "APPROVED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121324555",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2851#pullrequestreview-5121324555"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2851"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-09-05T12:48:30Z",
+    "commit_id": "1a7823dfc9eaacfe7753e3e672eb7102251d0823"
+  }
+]

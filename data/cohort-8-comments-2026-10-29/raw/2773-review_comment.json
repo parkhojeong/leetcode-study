@@ -1,0 +1,287 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3645050036",
+    "pull_request_review_id": 4772829571,
+    "id": 3645050036,
+    "node_id": "PRRC_kwDOLwMdns7ZQwy0",
+    "diff_hunk": "",
+    "path": "best-time-to-buy-and-sell-stock/freemjstudio.py",
+    "commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "original_commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Greedy, Two Pointers\n- **설명**: 최초 풀이엔 시간 복잡도 문제로 비효율적이지만, 두 번째 풀이에서 매일 최소 가격을 갱신하며 현재 가격과의 차이를 비교하는 방식은 그리디 패턴의 전형으로, 한 번의 순회로 최적해를 구한다. 또한 1차원 배열을 좌우로 단순한 포인터처럼 다루는 접근으로 간주 가능하다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 첫 시도는 모든 가능한 구매 시점을 기반으로 최대 이익을 계산해 시간 복잡도가 O(n^2)로 비효율적이다. 두 번째 시도에서 최소 가격과 누적 이익을 추적해 선형 시간으로 해결한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-24T11:38:18Z",
+    "updated_at": "2026-07-24T11:38:18Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3645050036",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3645050036"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3645050036"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3645050036/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3649252930",
+    "pull_request_review_id": 4778190535,
+    "id": 3649252930,
+    "node_id": "PRRC_kwDOLwMdns7Zgy5C",
+    "diff_hunk": "@@ -0,0 +1,21 @@\n+# first attempt - time out\n+\n+class Solution:\n+    def maxProfit(self, prices: List[int]) -> int:\n+        max_profit = 0\n+        for i in range(len(prices)):\n+            profit = max(prices[i:]) - prices[i]\n+            max_profit = max(max_profit, profit)\n+        return max_profit\n+\n+# second attempt - greedy approach\n+class Solution:\n+    def maxProfit(self, prices: List[int]) -> int:\n+        max_profit = 0\n+        min_price = prices[0]\n+\n+        for i in range(len(prices)):\n+            min_price = min(min_price, prices[i])\n+            profit = prices[i] - min_price\n+            max_profit = max(max_profit, profit)\n+        return max_profit",
+    "path": "best-time-to-buy-and-sell-stock/freemjstudio.py",
+    "commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "original_commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "user": {
+      "login": "dolphinflow86",
+      "id": 19372057,
+      "node_id": "MDQ6VXNlcjE5MzcyMDU3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372057?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dolphinflow86",
+      "html_url": "https://github.com/dolphinflow86",
+      "followers_url": "https://api.github.com/users/dolphinflow86/followers",
+      "following_url": "https://api.github.com/users/dolphinflow86/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dolphinflow86/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dolphinflow86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dolphinflow86/subscriptions",
+      "organizations_url": "https://api.github.com/users/dolphinflow86/orgs",
+      "repos_url": "https://api.github.com/users/dolphinflow86/repos",
+      "events_url": "https://api.github.com/users/dolphinflow86/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dolphinflow86/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "타임아웃 과정부터 성공한 솔루션까지 같이 보여주셔서 비교하기 좋았습니다. \n시간/공간 복잡도 분석도 주석으로 같이 해주시면 더 좋을 것 같아요!\n수고하셨습니다.",
+    "created_at": "2026-07-25T03:14:05Z",
+    "updated_at": "2026-07-25T03:14:13Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3649252930",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3649252930"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3649252930"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3649252930/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 1,
+    "original_start_line": 1,
+    "start_side": "RIGHT",
+    "line": 21,
+    "original_line": 21,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 21,
+    "position": 21,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3650580232",
+    "pull_request_review_id": 4779677812,
+    "id": 3650580232,
+    "node_id": "PRRC_kwDOLwMdns7Zl28I",
+    "diff_hunk": "@@ -0,0 +1,21 @@\n+# first attempt - time out\n+\n+class Solution:\n+    def maxProfit(self, prices: List[int]) -> int:\n+        max_profit = 0\n+        for i in range(len(prices)):\n+            profit = max(prices[i:]) - prices[i]\n+            max_profit = max(max_profit, profit)\n+        return max_profit\n+\n+# second attempt - greedy approach\n+class Solution:\n+    def maxProfit(self, prices: List[int]) -> int:\n+        max_profit = 0\n+        min_price = prices[0]\n+\n+        for i in range(len(prices)):\n+            min_price = min(min_price, prices[i])",
+    "path": "best-time-to-buy-and-sell-stock/freemjstudio.py",
+    "commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "original_commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "i가 0인 경우 불필요한 재계산이 되서 1부터 시작하면 명확할 거 같습니다.",
+    "created_at": "2026-07-25T16:53:33Z",
+    "updated_at": "2026-07-25T16:55:46Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3650580232",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3650580232"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3650580232"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3650580232/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 14,
+    "original_start_line": 14,
+    "start_side": "RIGHT",
+    "line": 18,
+    "original_line": 18,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 18,
+    "position": 18,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3651822500",
+    "pull_request_review_id": 4781033091,
+    "id": 3651822500,
+    "node_id": "PRRC_kwDOLwMdns7ZqmOk",
+    "diff_hunk": "@@ -0,0 +1,21 @@\n+# first attempt - time out\n+\n+class Solution:\n+    def maxProfit(self, prices: List[int]) -> int:\n+        max_profit = 0\n+        for i in range(len(prices)):\n+            profit = max(prices[i:]) - prices[i]\n+            max_profit = max(max_profit, profit)\n+        return max_profit\n+\n+# second attempt - greedy approach\n+class Solution:\n+    def maxProfit(self, prices: List[int]) -> int:\n+        max_profit = 0\n+        min_price = prices[0]\n+\n+        for i in range(len(prices)):\n+            min_price = min(min_price, prices[i])\n+            profit = prices[i] - min_price\n+            max_profit = max(max_profit, profit)\n+        return max_profit",
+    "path": "best-time-to-buy-and-sell-stock/freemjstudio.py",
+    "commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "original_commit_id": "24a6c67f9070c3240be77c81805ba527e5aae309",
+    "user": {
+      "login": "freemjstudio",
+      "id": 41604678,
+      "node_id": "MDQ6VXNlcjQxNjA0Njc4",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41604678?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/freemjstudio",
+      "html_url": "https://github.com/freemjstudio",
+      "followers_url": "https://api.github.com/users/freemjstudio/followers",
+      "following_url": "https://api.github.com/users/freemjstudio/following{/other_user}",
+      "gists_url": "https://api.github.com/users/freemjstudio/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/freemjstudio/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/freemjstudio/subscriptions",
+      "organizations_url": "https://api.github.com/users/freemjstudio/orgs",
+      "repos_url": "https://api.github.com/users/freemjstudio/repos",
+      "events_url": "https://api.github.com/users/freemjstudio/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/freemjstudio/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "앞으로는 시간/공간복잡도 분석도 추가해보겠습니다\r\n감사합니다 !! ",
+    "created_at": "2026-07-26T05:10:44Z",
+    "updated_at": "2026-07-26T05:10:44Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3651822500",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3651822500"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2773#discussion_r3651822500"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2773"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3651822500/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 1,
+    "original_start_line": 1,
+    "start_side": "RIGHT",
+    "line": 21,
+    "original_line": 21,
+    "side": "RIGHT",
+    "in_reply_to_id": 3649252930,
+    "author_association": "MEMBER",
+    "original_position": 21,
+    "position": 21,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

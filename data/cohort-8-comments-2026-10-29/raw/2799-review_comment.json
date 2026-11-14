@@ -1,0 +1,1210 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459339",
+    "pull_request_review_id": 4874213558,
+    "id": 3728459339,
+    "node_id": "PRRC_kwDOLwMdns7eO8ZL",
+    "diff_hunk": "",
+    "path": "longest-substring-without-repeating-characters/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 7d0f78f68f31f71c440441d45c8df54594133cef -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-substring-without-repeating-characters/dolphinflow86.py</summary>\n\n```py\n# N is the length of s.\n# TC: O(N) - each character is added and removed at most once\n# SC: O(N) - stores the characters in the current window\nclass Solution:\n\n    def lengthOfLongestSubstring(self, s: str) -> int:\n        chars = set()\n        left = 0\n        longest = 0\n\n        for right, char in enumerate(s):\n            while char in chars:\n                chars.remove(s[left])\n                left += 1\n\n            chars.add(char)\n            longest = max(longest, right - left + 1)\n\n        return longest\n\n\n```\n\n</details>\n\n- **패턴**: Sliding Window, Hash Map / Hash Set\n- **설명**: 문자열에서 중복 제거를 위해 창을 움직이며(left, right) 현재 윈도우의 문자들을 집합에 저장하고, 중복 시 왼쪽 포인터를 이동시키는 슬라이딩 윈도우 패턴을 사용합니다. 해시 세트를 이용해 문자 존재 여부를 확인합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(min(n, m)) |\n\n**피드백**: 해당 구현은 모든 문자를 한 번씩 추가/제거하며 윈도우를 이동시키므로 선형 시간과 창 크기에 비례한 추가 공간을 사용한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-06T11:42:14Z",
+    "updated_at": "2026-08-06T11:42:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3728459339",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459339"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3728459339"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459339/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459541",
+    "pull_request_review_id": 4874213817,
+    "id": 3728459541,
+    "node_id": "PRRC_kwDOLwMdns7eO8cV",
+    "diff_hunk": "",
+    "path": "number-of-islands/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 0a9760a273af71361b2d820342c8b78b54e8a35d -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>number-of-islands/dolphinflow86.py</summary>\n\n```py\n# R is the number of rows, and C is the number of columns.\n# TC: O(R * C) - visits each cell at most once\n# SC: O(R * C) - uses the recursion stack in the worst case\nclass Solution:\n\n    def numIslands(self, grid: List[List[str]]) -> int:\n        rows = len(grid)\n        cols = len(grid[0])\n\n        def dfs(row, col):\n            if (\n                row < 0\n                or row >= rows\n                or col < 0\n                or col >= cols\n                or grid[row][col] != \"1\"\n            ):\n                return\n\n            grid[row][col] = \"0\"\n\n            dfs(row - 1, col)\n            dfs(row + 1, col)\n            dfs(row, col - 1)\n            dfs(row, col + 1)\n\n        islands = 0\n\n        for row in range(rows):\n            for col in range(cols):\n                if grid[row][col] == \"1\":\n                    islands += 1\n                    dfs(row, col)\n\n        return islands\n\n\n```\n\n</details>\n\n- **패턴**: Depth-First Search, Backtracking\n- **설명**: 그리드에서 1로 연결된 영역을 DFS로 탐색하며 방문한 노드를 0으로 바꿔 연결 요소(섬)의 개수를 셈. 재귀를 이용한 깊은 탐색이 핵심 패턴입니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(R * C) | O(rows * cols) | ❌ |\n| **Space** | O(R * C) | O(rows * cols) | ❌ |\n\n**피드백**: 그리드의 각 셀을 한 번씩 방문하고 인접한 '1'들을 재귀적으로 처리한다.\n\n**개선 제안**: 재귀 깊이가 커질 수 있는 환경에서는 스택 기반 DFS나 BFS로 스택 사용을 명시하는 것이 안전하다.",
+    "created_at": "2026-08-06T11:42:16Z",
+    "updated_at": "2026-08-06T11:42:16Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3728459541",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459541"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3728459541"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459541/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459753",
+    "pull_request_review_id": 4874214075,
+    "id": 3728459753,
+    "node_id": "PRRC_kwDOLwMdns7eO8fp",
+    "diff_hunk": "",
+    "path": "reverse-linked-list/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 905079f98ab199d2a8154415f215821f7b30a9da -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>reverse-linked-list/dolphinflow86.py</summary>\n\n```py\n# TC: O(N) - visits each node exactly once\n# SC: O(1) - reverses the links in place\nclass Solution:\n\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev = None\n        current = head\n\n        while current:\n            next_node = current.next\n            current.next = prev\n            prev = current\n            current = next_node\n\n        return prev\n\n\n```\n\n</details>\n\n- **패턴**: Two Pointers, Linked List\n- **설명**: 주어진 코드는 단순히 포인터 두 개를 사용해 링크드 리스트의 방향을 반대로 바꾸는 과정으로, 노드를 순회하며 노드의 링크를 뒤집는 데 두 포인터를 활용하는 패턴이 핵심입니다. 시간 복잡도 O(N), 공간 복잡도 O(1)로 구현됩니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 연결 구조를 역전시키면서 상호 참조를 유지하는 표준 패턴이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-06T11:42:18Z",
+    "updated_at": "2026-08-06T11:42:18Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3728459753",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459753"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3728459753"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3728459753/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3729039586",
+    "pull_request_review_id": 4874941648,
+    "id": 3729039586,
+    "node_id": "PRRC_kwDOLwMdns7eRKDi",
+    "diff_hunk": "",
+    "path": "reverse-linked-list/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "제 개인적인 생각에는요! head를 리턴 혹은 어디에도 쓰지 않으니 current를 쓰시는 부분 그대로 head를 쓰셔도 되지 않을까?\n하는 생각이 들어요!\n\n그리고 파이썬의 `a, b = b, a`처럼 쓸수 있는 문법을 활용하시면 while loop 안을 1줄로 줄이실수도 있답니다!",
+    "created_at": "2026-08-06T13:11:00Z",
+    "updated_at": "2026-08-06T13:11:00Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3729039586",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3729039586"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3729039586"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3729039586/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3736790741",
+    "pull_request_review_id": 4884131388,
+    "id": 3736790741,
+    "node_id": "PRRC_kwDOLwMdns7euubV",
+    "diff_hunk": "",
+    "path": "reverse-linked-list/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "dolphinflow86",
+      "id": 19372057,
+      "node_id": "MDQ6VXNlcjE5MzcyMDU3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372057?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dolphinflow86",
+      "html_url": "https://github.com/dolphinflow86",
+      "followers_url": "https://api.github.com/users/dolphinflow86/followers",
+      "following_url": "https://api.github.com/users/dolphinflow86/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dolphinflow86/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dolphinflow86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dolphinflow86/subscriptions",
+      "organizations_url": "https://api.github.com/users/dolphinflow86/orgs",
+      "repos_url": "https://api.github.com/users/dolphinflow86/repos",
+      "events_url": "https://api.github.com/users/dolphinflow86/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dolphinflow86/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "오 그렇네요!\n\n리뷰 받으면서 파이썬 문법에 조금씩 익숙해지는 것 같습니다.\n\n리뷰 감사합니다.",
+    "created_at": "2026-08-07T15:17:09Z",
+    "updated_at": "2026-08-07T15:17:09Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3736790741",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3736790741"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3736790741"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3736790741/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "in_reply_to_id": 3729039586,
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737515253",
+    "pull_request_review_id": 4885045965,
+    "id": 3737515253,
+    "node_id": "PRRC_kwDOLwMdns7exfT1",
+    "diff_hunk": "@@ -0,0 +1,36 @@\n+# R is the number of rows, and C is the number of columns.\n+# TC: O(R * C) - visits each cell at most once\n+# SC: O(R * C) - uses the recursion stack in the worst case\n+class Solution:\n+\n+    def numIslands(self, grid: List[List[str]]) -> int:\n+        rows = len(grid)\n+        cols = len(grid[0])\n+\n+        def dfs(row, col):\n+            if (\n+                row < 0\n+                or row >= rows\n+                or col < 0\n+                or col >= cols\n+                or grid[row][col] != \"1\"\n+            ):",
+    "path": "number-of-islands/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "python의 `a <= x < b` 쓰면 이런 형태도 가능한데 or 사용해주신게 더 명확한 거 같기는 하네요.\r\n```\r\nif not (\r\n    0 <= row < rows \r\n    and 0 <= col < cols \r\n    and grid[row][col] == \"1\"\r\n):\r\n```\r\n",
+    "created_at": "2026-08-07T17:15:45Z",
+    "updated_at": "2026-08-07T17:24:27Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737515253",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737515253"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737515253"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737515253/reactions",
+      "total_count": 2,
+      "+1": 2,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 11,
+    "original_start_line": 11,
+    "start_side": "RIGHT",
+    "line": 17,
+    "original_line": 17,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 17,
+    "position": 17,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737520017",
+    "pull_request_review_id": 4885045965,
+    "id": 3737520017,
+    "node_id": "PRRC_kwDOLwMdns7exgeR",
+    "diff_hunk": "@@ -0,0 +1,36 @@\n+# R is the number of rows, and C is the number of columns.\n+# TC: O(R * C) - visits each cell at most once\n+# SC: O(R * C) - uses the recursion stack in the worst case\n+class Solution:\n+\n+    def numIslands(self, grid: List[List[str]]) -> int:\n+        rows = len(grid)\n+        cols = len(grid[0])",
+    "path": "number-of-islands/dolphinflow86.py",
+    "commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "rows, cols가 길이로 보이지 않고 배열 같은 변수가 담기는 거처럼 보이는 거 같습니다. 길이를 나타내는 네이밍을 사용하시면 어떨까요?",
+    "created_at": "2026-08-07T17:16:36Z",
+    "updated_at": "2026-08-07T17:21:44Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737520017",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737520017"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737520017"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737520017/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": 7,
+    "start_side": "RIGHT",
+    "line": null,
+    "original_line": 8,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 8,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737529168",
+    "pull_request_review_id": 4885045965,
+    "id": 3737529168,
+    "node_id": "PRRC_kwDOLwMdns7exitQ",
+    "diff_hunk": "@@ -0,0 +1,16 @@\n+# TC: O(N) - visits each node exactly once\n+# SC: O(1) - reverses the links in place\n+class Solution:\n+\n+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n+        prev = None\n+        current = head\n+\n+        while current:\n+            next_node = current.next\n+            current.next = prev\n+            prev = current\n+            current = next_node",
+    "path": "reverse-linked-list/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "next가 예약어여서 _node를 붙여주신 거 같네요. 다른 네이밍들이랑 일관성을 맞추시는 건 어떨까요?",
+    "created_at": "2026-08-07T17:18:11Z",
+    "updated_at": "2026-08-07T17:21:44Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737529168",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737529168"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737529168"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737529168/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 7,
+    "original_start_line": 7,
+    "start_side": "RIGHT",
+    "line": 13,
+    "original_line": 13,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 13,
+    "position": 13,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737545165",
+    "pull_request_review_id": 4885045965,
+    "id": 3737545165,
+    "node_id": "PRRC_kwDOLwMdns7exmnN",
+    "diff_hunk": "@@ -0,0 +1,20 @@\n+# N is the length of s.\n+# TC: O(N) - each character is added and removed at most once\n+# SC: O(N) - stores the characters in the current window\n+class Solution:\n+\n+    def lengthOfLongestSubstring(self, s: str) -> int:\n+        chars = set()\n+        left = 0\n+        longest = 0\n+\n+        for right, char in enumerate(s):\n+            while char in chars:\n+                chars.remove(s[left])\n+                left += 1",
+    "path": "longest-substring-without-repeating-characters/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "fe7b603126cd8208bf5b25dbe8aba6485c4c9324",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "left를 하나씩 증가하지 않고 각 문자의 인덱스를 저장해서 점프하는 방식으로도 조금 더 최적화가 가능하니 풀어보셔도 좋을 거 같습니다.",
+    "created_at": "2026-08-07T17:21:02Z",
+    "updated_at": "2026-08-07T17:21:44Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737545165",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737545165"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3737545165"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3737545165/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 12,
+    "original_start_line": 12,
+    "start_side": "RIGHT",
+    "line": 14,
+    "original_line": 14,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 14,
+    "position": 14,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844812",
+    "pull_request_review_id": 4887962870,
+    "id": 3739844812,
+    "node_id": "PRRC_kwDOLwMdns7e6YDM",
+    "diff_hunk": "",
+    "path": "longest-substring-without-repeating-characters/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: f171063a4add0569d07c4e0ab15c52406617b2a7 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-substring-without-repeating-characters/dolphinflow86.py</summary>\n\n```py\n# N is the length of s.\n# TC: O(N) - each character is added and removed at most once\n# SC: O(N) - stores the characters in the current window\nclass Solution:\n\n    def lengthOfLongestSubstring(self, s: str) -> int:\n        chars = set()\n        left = 0\n        longest = 0\n\n        for right, char in enumerate(s):\n            while char in chars:\n                chars.remove(s[left])\n                left += 1\n\n            chars.add(char)\n            longest = max(longest, right - left + 1)\n\n        return longest\n\n```\n\n</details>\n\n- **패턴**: Sliding Window, Hash Map / Hash Set\n- **설명**: 문자열에서 연속 부분 문자열의 길이를 구하기 위해 두 포인터(left, right)로 창(window)을 유지하고, 집합으로 현재 창의 문자들을 관리하는 슬라이딩 윈도우 패턴을 사용합니다. 해시 세트를 활용해 등장 여부를 빠르게 확인합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(N) | O(n) | ✅ |\n| **Space** | O(N) | O(min(n, k)) | ❌ |\n\n**피드백**: 두 인덱스가 한 방향으로 움직이며 각 문자를 셋에 저장하고 제거한다. 각 문자는 한 번씩 추가/제거되므로 선형 시간 복잡도에 도달한다.\n\n**개선 제안**: 현재 구현이 적합해 보입니다.",
+    "created_at": "2026-08-08T03:19:57Z",
+    "updated_at": "2026-08-08T03:19:57Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739844812",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844812"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739844812"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844812/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844868",
+    "pull_request_review_id": 4887962925,
+    "id": 3739844868,
+    "node_id": "PRRC_kwDOLwMdns7e6YEE",
+    "diff_hunk": "",
+    "path": "number-of-islands/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 80f5079f88544c50152d7fb76d769f05cb298772 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>number-of-islands/dolphinflow86.py</summary>\n\n```py\n# R is the number of rows, and C is the number of columns.\n# TC: O(R * C) - visits each cell at most once\n# SC: O(R * C) - uses the recursion stack in the worst case\nclass Solution:\n\n    def numIslands(self, grid: List[List[str]]) -> int:\n        row_count = len(grid)\n        column_count = len(grid[0])\n\n        def dfs(row, col):\n            if (\n                row < 0\n                or row >= row_count\n                or col < 0\n                or col >= column_count\n                or grid[row][col] != \"1\"\n            ):\n                return\n\n            grid[row][col] = \"0\"\n\n            dfs(row - 1, col)\n            dfs(row + 1, col)\n            dfs(row, col - 1)\n            dfs(row, col + 1)\n\n        island_count = 0\n\n        for row in range(row_count):\n            for col in range(column_count):\n                if grid[row][col] == \"1\":\n                    island_count += 1\n                    dfs(row, col)\n\n        return island_count\n\n```\n\n</details>\n\n- **패턴**: Depth-First Search, Backtracking\n- **설명**: 그리드의 연결된 1들을 탐색하기 위해 DFS를 재귀로 호출하여 방문 표시를 하고, 섬의 개수를 셈. 각 섬의 모든 칸을 탐색하는 과정은 백트래킹 성격도 포함합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(R * C) | O(R*C) | ✅ |\n| **Space** | O(R * C) | O(R*C) | ✅ |\n\n**피드백**: 그리드 전체를 한 번씩 방문하고 각 섬에 대해 DFS로 인접한 부분을 방문한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-08-08T03:19:59Z",
+    "updated_at": "2026-08-08T03:19:59Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739844868",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844868"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739844868"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844868/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844945",
+    "pull_request_review_id": 4887962983,
+    "id": 3739844945,
+    "node_id": "PRRC_kwDOLwMdns7e6YFR",
+    "diff_hunk": "",
+    "path": "reverse-linked-list/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 8a5bf422a1d734d72b1b1d6b37101898ca2df6f5 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>reverse-linked-list/dolphinflow86.py</summary>\n\n```py\n# TC: O(N) - visits each node exactly once\n# SC: O(1) - reverses the links in place\nclass Solution:\n\n    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:\n        prev = None\n        current = head\n\n        while current:\n            next_node = current.next\n            current.next = prev\n            prev = current\n            current = next_node\n\n        return prev\n\n```\n\n</details>\n\n- **패턴**: Two Pointers, Linked List\n- **설명**: 주어진 코드는 포인터 두 개를 사용해 연결리스트의 노드를 역순으로 만듭니다. 각 노드를 한 번씩 방문하며 노드 간 링크를 뒤집는 방식으로 O(N) 시간, O(1) 추가 공간으로 구현됩니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 순회 중 현재 노드의 다음 노드를 저장하고 포인터를 뒤로 바꿔 간다. 불필요한 추가 공간이 없다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-08T03:20:02Z",
+    "updated_at": "2026-08-08T03:20:02Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739844945",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844945"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739844945"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739844945/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739845013",
+    "pull_request_review_id": 4887963030,
+    "id": 3739845013,
+    "node_id": "PRRC_kwDOLwMdns7e6YGV",
+    "diff_hunk": "",
+    "path": "set-matrix-zeroes/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 751b3de18b0e1668fe0ebd3202288a3349f83dd1 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>set-matrix-zeroes/dolphinflow86.py</summary>\n\n```py\n# R is the number of rows, and C is the number of columns.\n# TC: O(R * C) - scans each cell a constant number of times\n# SC: O(1) - uses the first row and column as markers\nclass Solution:\n\n    def setZeroes(self, matrix: List[List[int]]) -> None:\n        row_count = len(matrix)\n        column_count = len(matrix[0])\n        first_row_has_zero = any(matrix[0][col] == 0 for col in range(column_count))\n        first_column_has_zero = any(matrix[row][0] == 0 for row in range(row_count))\n\n        for row in range(1, row_count):\n            for col in range(1, column_count):\n                if matrix[row][col] == 0:\n                    matrix[row][0] = 0\n                    matrix[0][col] = 0\n\n        for row in range(1, row_count):\n            for col in range(1, column_count):\n                if matrix[row][0] == 0 or matrix[0][col] == 0:\n                    matrix[row][col] = 0\n\n        if first_row_has_zero:\n            for col in range(column_count):\n                matrix[0][col] = 0\n\n        if first_column_has_zero:\n            for row in range(row_count):\n                matrix[row][0] = 0\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming, Greedy, Hash Map / Hash Set\n- **설명**: 해당 코드는 행렬의 특정 행/열 정보를 임시 마커로 사용해 추가 공간 없이 제로를 확산시키는 방식이다. 첫 행과 열을 마커로 활용하는 방식은 공간 최적화를 위한 아이디어로, DP의 부분 문제 관리나 배치 방식과 유사한 패턴으로 볼 수 있다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(R * C) | O(R*C) | ✅ |\n| **Space** | O(1) | O(1) | ✅ |\n\n**피드백**: 추가 배열 없이 첫 행/열의 플래그를 재활용하는 공간 최적화 방식이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-08-08T03:20:04Z",
+    "updated_at": "2026-08-08T03:20:04Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739845013",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739845013"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739845013"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739845013/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739845065",
+    "pull_request_review_id": 4887963072,
+    "id": 3739845065,
+    "node_id": "PRRC_kwDOLwMdns7e6YHJ",
+    "diff_hunk": "",
+    "path": "unique-paths/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 76d68d93f4ed00a34c562e0c4fa97b8f4e5247b2 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>unique-paths/dolphinflow86.py</summary>\n\n```py\n# M is the number of rows, and N is the number of columns.\n# TC: O(M * N) - calculates the number of paths from each cell once\n# SC: O(M * N) - uses a memo dictionary and the recursion stack\nclass Solution:\n\n    def dfs(self, row, col, m, n, memo):\n        if row == m - 1 and col == n - 1:\n            return 1\n\n        if row >= m or col >= n:\n            return 0\n\n        if (row, col) in memo:\n            return memo[(row, col)]\n\n        memo[(row, col)] = (\n            self.dfs(row + 1, col, m, n, memo)\n            + self.dfs(row, col + 1, m, n, memo)\n        )\n        return memo[(row, col)]\n\n    def uniquePaths(self, m: int, n: int) -> int:\n        memo = {}\n        return self.dfs(0, 0, m, n, memo)\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming, Depth-First Search, Memoization\n- **설명**: 초기 위치에서 오른쪽/아래로 가는 경로 합을 재귀적으로 구하고, 중복 계산을 메모이제이션으로 줄이는 방식으로 DP를 구현한 예로, DFS 탐색과 함께 결과를 저장하는 패턴이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(M * N) | O(m*n) | ✅ |\n| **Space** | O(M * N) | O(m*n) | ✅ |\n\n**피드백**: 하위 문제 재사용으로 중복을 제거하고, 최종적으로 모든 경로의 수를 합친다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-08-08T03:20:06Z",
+    "updated_at": "2026-08-08T03:20:06Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739845065",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739845065"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3739845065"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3739845065/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740078167",
+    "pull_request_review_id": 4888216230,
+    "id": 3740078167,
+    "node_id": "PRRC_kwDOLwMdns7e7RBX",
+    "diff_hunk": "@@ -0,0 +1,35 @@\n+# R is the number of rows, and C is the number of columns.\n+# TC: O(R * C) - visits each cell at most once\n+# SC: O(R * C) - uses the recursion stack in the worst case\n+class Solution:\n+\n+    def numIslands(self, grid: List[List[str]]) -> int:\n+        row_count = len(grid)\n+        column_count = len(grid[0])\n+\n+        def dfs(row, col):\n+            if (\n+                row < 0\n+                or row >= row_count\n+                or col < 0\n+                or col >= column_count\n+                or grid[row][col] != \"1\"\n+            ):\n+                return\n+\n+            grid[row][col] = \"0\"\n+\n+            dfs(row - 1, col)\n+            dfs(row + 1, col)\n+            dfs(row, col - 1)\n+            dfs(row, col + 1)",
+    "path": "number-of-islands/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "코드 자체는 깔끔해지는데, 사전에 체크해서 쌓지 않아도 될 call stack 이 쌓이는 부분은 있는 것 같습니다.",
+    "created_at": "2026-08-08T05:32:16Z",
+    "updated_at": "2026-08-08T05:38:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3740078167",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740078167"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3740078167"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740078167/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 22,
+    "original_start_line": 22,
+    "start_side": "RIGHT",
+    "line": 25,
+    "original_line": 25,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 25,
+    "position": 25,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740087214",
+    "pull_request_review_id": 4888216230,
+    "id": 3740087214,
+    "node_id": "PRRC_kwDOLwMdns7e7TOu",
+    "diff_hunk": "",
+    "path": "unique-paths/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "재귀 DP + 메모이제이션으로 잘 구현해주신 것 같습니다.",
+    "created_at": "2026-08-08T05:34:35Z",
+    "updated_at": "2026-08-08T05:38:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3740087214",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740087214"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3740087214"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740087214/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740096489",
+    "pull_request_review_id": 4888216230,
+    "id": 3740096489,
+    "node_id": "PRRC_kwDOLwMdns7e7Vfp",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+# M is the number of rows, and N is the number of columns.\n+# TC: O(M * N) - calculates the number of paths from each cell once\n+# SC: O(M * N) - uses a memo dictionary and the recursion stack\n+class Solution:\n+\n+    def dfs(self, row, col, m, n, memo):",
+    "path": "unique-paths/dolphinflow86.py",
+    "commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "original_commit_id": "7980f0ae1f0e410cce7ef81677948e894dc12ac7",
+    "user": {
+      "login": "yuseok89",
+      "id": 3938973,
+      "node_id": "MDQ6VXNlcjM5Mzg5NzM=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3938973?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/yuseok89",
+      "html_url": "https://github.com/yuseok89",
+      "followers_url": "https://api.github.com/users/yuseok89/followers",
+      "following_url": "https://api.github.com/users/yuseok89/following{/other_user}",
+      "gists_url": "https://api.github.com/users/yuseok89/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/yuseok89/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/yuseok89/subscriptions",
+      "organizations_url": "https://api.github.com/users/yuseok89/orgs",
+      "repos_url": "https://api.github.com/users/yuseok89/repos",
+      "events_url": "https://api.github.com/users/yuseok89/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/yuseok89/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "dfs 함수를 uniquePaths 안에 구현하면, 인자 개수를 줄일 수 있을 것 같습니다.",
+    "created_at": "2026-08-08T05:37:03Z",
+    "updated_at": "2026-08-08T05:38:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3740096489",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740096489"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2799#discussion_r3740096489"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2799"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3740096489/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 6,
+    "original_line": 6,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 6,
+    "position": 6,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

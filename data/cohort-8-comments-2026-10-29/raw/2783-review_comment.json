@@ -1,0 +1,357 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680594282",
+    "pull_request_review_id": 4816102807,
+    "id": 3680594282,
+    "node_id": "PRRC_kwDOLwMdns7bYWlq",
+    "diff_hunk": "@@ -0,0 +1,37 @@\n+/**\n+  * TC : O(n)\n+  *   - 문자열 s의 길이 만큼 순회 하므로 O(n)\n+  * SC : O(n)\n+  *   - 문자열 길이 만큼의 char 배열을 생성하고, 최대 n/2 만큼의 스택 사용. 합산 1.5n 이므로 O(n)\n+  */\n+class Solution {\n+    public boolean isValid(String s) {\n+        Deque<Character> stack = new ArrayDeque<>();\n+\n+        for(char c : s.toCharArray()) {\n+            //여는 괄호의 경우 stack 에 쌓기\n+            if(c == '{'\n+            || c == '('\n+            || c == '['\n+            ) {\n+                stack.push(c);\n+            } else {\n+            // 닫는 괄호의 경우 stack이 비어있으면 안됨\n+                if(stack.size() < 1) return false;",
+    "path": "valid-parentheses/dahyeong-yun.java",
+    "commit_id": "15b3c698fe252524e5beb294fbb7b6537f5e5260",
+    "original_commit_id": "8042123b53f5db86f959e64dfde398882f37f70b",
+    "user": {
+      "login": "dolphinflow86",
+      "id": 19372057,
+      "node_id": "MDQ6VXNlcjE5MzcyMDU3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372057?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dolphinflow86",
+      "html_url": "https://github.com/dolphinflow86",
+      "followers_url": "https://api.github.com/users/dolphinflow86/followers",
+      "following_url": "https://api.github.com/users/dolphinflow86/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dolphinflow86/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dolphinflow86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dolphinflow86/subscriptions",
+      "organizations_url": "https://api.github.com/users/dolphinflow86/orgs",
+      "repos_url": "https://api.github.com/users/dolphinflow86/repos",
+      "events_url": "https://api.github.com/users/dolphinflow86/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dolphinflow86/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "사소하지만, stack에 isEmtpy()가 있다면 사용하시면 좀 더 가독성이 좋을 것 같아요.",
+    "created_at": "2026-07-30T06:50:57Z",
+    "updated_at": "2026-07-30T06:56:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3680594282",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680594282"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3680594282"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680594282/reactions",
+      "total_count": 2,
+      "+1": 2,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 20,
+    "original_line": 20,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 20,
+    "position": 20,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680597627",
+    "pull_request_review_id": 4816102807,
+    "id": 3680597627,
+    "node_id": "PRRC_kwDOLwMdns7bYXZ7",
+    "diff_hunk": "@@ -0,0 +1,37 @@\n+/**\n+  * TC : O(n)\n+  *   - 문자열 s의 길이 만큼 순회 하므로 O(n)\n+  * SC : O(n)\n+  *   - 문자열 길이 만큼의 char 배열을 생성하고, 최대 n/2 만큼의 스택 사용. 합산 1.5n 이므로 O(n)\n+  */\n+class Solution {\n+    public boolean isValid(String s) {\n+        Deque<Character> stack = new ArrayDeque<>();\n+\n+        for(char c : s.toCharArray()) {\n+            //여는 괄호의 경우 stack 에 쌓기\n+            if(c == '{'\n+            || c == '('\n+            || c == '['\n+            ) {\n+                stack.push(c);\n+            } else {\n+            // 닫는 괄호의 경우 stack이 비어있으면 안됨\n+                if(stack.size() < 1) return false;\n+                else {\n+                    char peek = stack.peek();\n+                    if((peek == '(' && c == ')') \n+                    || (peek == '{' && c == '}') \n+                    || (peek == '[' && c == ']')",
+    "path": "valid-parentheses/dahyeong-yun.java",
+    "commit_id": "15b3c698fe252524e5beb294fbb7b6537f5e5260",
+    "original_commit_id": "8042123b53f5db86f959e64dfde398882f37f70b",
+    "user": {
+      "login": "dolphinflow86",
+      "id": 19372057,
+      "node_id": "MDQ6VXNlcjE5MzcyMDU3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372057?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dolphinflow86",
+      "html_url": "https://github.com/dolphinflow86",
+      "followers_url": "https://api.github.com/users/dolphinflow86/followers",
+      "following_url": "https://api.github.com/users/dolphinflow86/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dolphinflow86/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dolphinflow86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dolphinflow86/subscriptions",
+      "organizations_url": "https://api.github.com/users/dolphinflow86/orgs",
+      "repos_url": "https://api.github.com/users/dolphinflow86/repos",
+      "events_url": "https://api.github.com/users/dolphinflow86/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dolphinflow86/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "저도 리뷰 받은 사항인데, map에 key, value로 여는괄호 닫는괄호 쌍을 넣어두고 체크하면 코드가 매우 깔끔해질 것 같습니다.",
+    "created_at": "2026-07-30T06:51:36Z",
+    "updated_at": "2026-07-30T06:56:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3680597627",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680597627"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3680597627"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680597627/reactions",
+      "total_count": 2,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 1,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 23,
+    "original_start_line": 23,
+    "start_side": "RIGHT",
+    "line": 25,
+    "original_line": 25,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 25,
+    "position": 25,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680624229",
+    "pull_request_review_id": 4816102807,
+    "id": 3680624229,
+    "node_id": "PRRC_kwDOLwMdns7bYd5l",
+    "diff_hunk": "@@ -0,0 +1,37 @@\n+/**\n+  * TC : O(n)\n+  *   - 문자열 s의 길이 만큼 순회 하므로 O(n)\n+  * SC : O(n)\n+  *   - 문자열 길이 만큼의 char 배열을 생성하고, 최대 n/2 만큼의 스택 사용. 합산 1.5n 이므로 O(n)\n+  */\n+class Solution {\n+    public boolean isValid(String s) {\n+        Deque<Character> stack = new ArrayDeque<>();\n+\n+        for(char c : s.toCharArray()) {",
+    "path": "valid-parentheses/dahyeong-yun.java",
+    "commit_id": "15b3c698fe252524e5beb294fbb7b6537f5e5260",
+    "original_commit_id": "8042123b53f5db86f959e64dfde398882f37f70b",
+    "user": {
+      "login": "dolphinflow86",
+      "id": 19372057,
+      "node_id": "MDQ6VXNlcjE5MzcyMDU3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19372057?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dolphinflow86",
+      "html_url": "https://github.com/dolphinflow86",
+      "followers_url": "https://api.github.com/users/dolphinflow86/followers",
+      "following_url": "https://api.github.com/users/dolphinflow86/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dolphinflow86/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dolphinflow86/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dolphinflow86/subscriptions",
+      "organizations_url": "https://api.github.com/users/dolphinflow86/orgs",
+      "repos_url": "https://api.github.com/users/dolphinflow86/repos",
+      "events_url": "https://api.github.com/users/dolphinflow86/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dolphinflow86/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "찾아보니 toCharArray가 내부적으로 문자열을 복제헤서 새로 만든다고 하네요.\n인덱스 접근으로 s.chatAt(i) 처럼 하시면 불필요한 연산을 줄이실 수 있을 것 같습니다.",
+    "created_at": "2026-07-30T06:56:10Z",
+    "updated_at": "2026-07-30T06:56:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3680624229",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680624229"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3680624229"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3680624229/reactions",
+      "total_count": 3,
+      "+1": 3,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 11,
+    "original_line": 11,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 11,
+    "position": 11,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3696013706",
+    "pull_request_review_id": 4835054269,
+    "id": 3696013706,
+    "node_id": "PRRC_kwDOLwMdns7cTLGK",
+    "diff_hunk": "@@ -0,0 +1,41 @@\n+/**\n+  * TC : O(m * n)\n+  *   - matrix의 원소 수 m * n 만큼 순회 하므로 O(m * n)\n+  * SC : O(m * n)\n+  *   - matrix의 원소 수 m * n 만큼의 리스트를 생성하므로 O(m * n)\n+  */\n+class Solution {\n+    public List<Integer> spiralOrder(int[][] matrix) {\n+        int[] dRow = {0, 1, 0, -1};\n+        int[] dCol = {1, 0, -1, 0};\n+    \n+        int direction = 0;\n+        List<Integer> list = new ArrayList<>();\n+\n+        int rowCount = matrix.length;\n+        int colCount = matrix[0].length;\n+\n+        int row = 0, col = 0;\n+        int totalElements = rowCount * colCount;\n+\n+        for (int i = 0; i < totalElements; i++) {\n+            list.add(matrix[row][col]);\n+            matrix[row][col] = 101; // 방문 처리 (제약조건: -100 <= val <= 100)\n+\n+            int nextRow = row + dRow[direction];\n+            int nextCol = col + dCol[direction];\n+\n+            // 범위를 벗어나거나 이미 방문한 칸인 경우 방향 전환\n+            if (nextRow < 0 || nextRow >= rowCount || \n+                nextCol < 0 || nextCol >= colCount || \n+                matrix[nextRow][nextCol] > 100) {\n+                \n+                direction = (direction + 1) % 4;\n+            }",
+    "path": "spiral-matrix/dahyeong-yun.java",
+    "commit_id": "15b3c698fe252524e5beb294fbb7b6537f5e5260",
+    "original_commit_id": "15b3c698fe252524e5beb294fbb7b6537f5e5260",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "주석 내용도 이해가 쉽고 코드도 직관적인 거 같습니다. \n\n101 을 방문 처리용 값으로 쓰시는데 VISITED 같은 상수로 선언해서 사용하면 더 좋을 거 같습니다.",
+    "created_at": "2026-08-01T16:13:36Z",
+    "updated_at": "2026-08-01T16:19:44Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3696013706",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3696013706"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3696013706"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3696013706/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 28,
+    "original_start_line": 28,
+    "start_side": "RIGHT",
+    "line": 34,
+    "original_line": 34,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 34,
+    "position": 34,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3696025370",
+    "pull_request_review_id": 4835054269,
+    "id": 3696025370,
+    "node_id": "PRRC_kwDOLwMdns7cTN8a",
+    "diff_hunk": "@@ -0,0 +1,26 @@\n+/**\n+  * TC : O(n)\n+  *   - 기둥 높이 배열의 길이 n에 대해 최악의 경우 전체를 순회 하므로 O(n)\n+  * SC : O(1)\n+  *   - 별도로 유의미한 공간 생성이 없음\n+  */\n+class Solution {\n+    /**\n+     * 넗이의 조합을 다 해보고 max 값을 찾으면 됨\n+     * 그 중에 안해도 되는 조합이 있음. 더 낮은 높이로 인해서 넓이가 결정되므로 더 높은 탑은 그냥 유지하고 다른 조합만 확인해보면 됨.\n+     */\n+    public int maxArea(int[] height) {\n+        int left = 0, right = height.length-1, max = 0;\n+        while(left < right) {\n+            int w = right - left;\n+            int h = height[left] < height[right] ? height[left] : height[right];\n+\n+            int current = w * h;\n+            max = Math.max(max, current);",
+    "path": "container-with-most-water/dahyeong-yun.java",
+    "commit_id": "15b3c698fe252524e5beb294fbb7b6537f5e5260",
+    "original_commit_id": "15b3c698fe252524e5beb294fbb7b6537f5e5260",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "자바의 Math.min은 오버헤드가 적고 가독성을 챙길 수 있어서 내장함수 사용도 좋을 거 같습니다. 19라인에 Math.max 사용하고 있어서 Math.min 사용하면 일관성이 있을 거 같습니다.",
+    "created_at": "2026-08-01T16:19:41Z",
+    "updated_at": "2026-08-01T16:19:44Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3696025370",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3696025370"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2783#discussion_r3696025370"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2783"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3696025370/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 16,
+    "original_start_line": 16,
+    "start_side": "RIGHT",
+    "line": 19,
+    "original_line": 19,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 19,
+    "position": 19,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

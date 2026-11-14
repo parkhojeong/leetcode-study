@@ -1,0 +1,501 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3691708916",
+    "pull_request_review_id": 4830155059,
+    "id": 3691708916,
+    "node_id": "PRRC_kwDOLwMdns7cCwH0",
+    "diff_hunk": "",
+    "path": "design-add-and-search-words-data-structure/okyungjin.py",
+    "commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "original_commit_id": "e764d8be80234ad2765821898a3e5ee02bcc7236",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "최적화 필요! Trie 자료구조 사용 가능한지 고민해보기",
+    "created_at": "2026-07-31T16:02:10Z",
+    "updated_at": "2026-07-31T16:02:10Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3691708916",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3691708916"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3691708916"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3691708916/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695261824",
+    "pull_request_review_id": 4834324854,
+    "id": 3695261824,
+    "node_id": "PRRC_kwDOLwMdns7cQTiA",
+    "diff_hunk": "@@ -0,0 +1,30 @@\n+\"\"\"\n+복잡도:\n+    n: `s`의 길이\n+    시간 복잡도: O(n)\n+    공간 복잡도: O(n)\n+\"\"\"\n+class Solution:\n+    def isValid(self, s: str) -> bool:\n+        # 괄호 개수가 짝수인 경우는 항상 실패\n+        if len(s) % 2:\n+            return False\n+    \n+        brackets = {\n+            ')' : '(',\n+            '}' : '{',\n+            ']' : '['\n+        }\n+\n+        stack = []\n+        \n+        for char in s:\n+            if char in brackets: # 닫히는 괄호인지\n+                if stack and stack[-1] == brackets[char]:\n+                    stack.pop()\n+                else:\n+                    stack.append(char)",
+    "path": "valid-parentheses/okyungjin.py",
+    "commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "original_commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "이 케이스가 성공하는 경우가 없을 것 같아요.",
+    "created_at": "2026-08-01T08:45:01Z",
+    "updated_at": "2026-08-01T10:35:58Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695261824",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695261824"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695261824"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695261824/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 26,
+    "original_line": 26,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 26,
+    "position": 26,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695264444",
+    "pull_request_review_id": 4834324854,
+    "id": 3695264444,
+    "node_id": "PRRC_kwDOLwMdns7cQUK8",
+    "diff_hunk": "@@ -0,0 +1,30 @@\n+\"\"\"\n+복잡도:\n+    n: `s`의 길이\n+    시간 복잡도: O(n)\n+    공간 복잡도: O(n)\n+\"\"\"\n+class Solution:\n+    def isValid(self, s: str) -> bool:\n+        # 괄호 개수가 짝수인 경우는 항상 실패\n+        if len(s) % 2:\n+            return False\n+    \n+        brackets = {",
+    "path": "valid-parentheses/okyungjin.py",
+    "commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "original_commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "미리 dictionary 를 만드니, 아래에서 깔끔하게 접근할 수 있네요 👍🏼 ",
+    "created_at": "2026-08-01T08:46:07Z",
+    "updated_at": "2026-08-01T10:35:58Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695264444",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695264444"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695264444"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695264444/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 13,
+    "original_line": 13,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 13,
+    "position": 13,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695287895",
+    "pull_request_review_id": 4834324854,
+    "id": 3695287895,
+    "node_id": "PRRC_kwDOLwMdns7cQZ5X",
+    "diff_hunk": "@@ -0,0 +1,40 @@\n+\"\"\"\n+문제:\n+    - 담을 수 있는 최대 물의 양(최대 면적)을 구한다.\n+    - i번째 수직선은 height[i] 높이를 가진다.\n+    - x축과 선택한 두 수직선이 담는 물의 양이 최대가 되도록한다.\n+\n+접근법:\n+    1. 좌측, 우측 포인터 `left`, `right`를 선언하여 기둥을 움직인다.\n+    2. 좌우 기둥의 높이를 비교해서 높이가 낮은 기둥의 x좌표를 한칸 안쪽으로 움직인다.\n+        포인터를 바깥쪽에서 안쪽으로 이동할 때 가로의 길이가 줄어든다.\n+        따라서 낮은 기둥을 버려야 `max_area`를 갱신할 수 있는 가능성이 생긴다.\n+    3. 두 포인터가 만나거나 좌우가 역전되면 탐색을 종료한다.\n+\n+복잡도:\n+    시간 복잡도: O(n)\n+    공간 복잡도: O(1)\n+\n+실패했던 접근법:\n+    1. 2중 for: TLE\n+    2. 가장 높은 기둥을 고정축으로 하고 나머지 하나의 기둥을 찾도록: [1,2,1] 입력에서 실패\n+\"\"\"\n+class Solution:\n+    def maxArea(self, height: List[int]) -> int:\n+        left = 0\n+        right = len(height) - 1\n+\n+        max_area = 0\n+\n+        while left < right:\n+            if height[left] < height[right]:\n+                area = height[left] * (right - left)",
+    "path": "container-with-most-water/okyungjin.py",
+    "commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "original_commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "사소하지만 `right - left` 가 `width`의 개념이고 아래서 반복되는 거 같아, 따로 빼도 괜찮을 것 같아요.",
+    "created_at": "2026-08-01T08:56:11Z",
+    "updated_at": "2026-08-01T10:35:58Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695287895",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695287895"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695287895"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695287895/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 1,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 31,
+    "original_line": 31,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 31,
+    "position": 31,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695427518",
+    "pull_request_review_id": 4834324854,
+    "id": 3695427518,
+    "node_id": "PRRC_kwDOLwMdns7cQ7--",
+    "diff_hunk": "@@ -0,0 +1,106 @@\n+\"\"\"",
+    "path": "design-add-and-search-words-data-structure/okyungjin.py",
+    "commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "original_commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "저는 트라이 문제는 다 skip 했는데, 직관적으로 접근하신 부분에서 트라이의 필요성을 역체감 할 수 있어서 좋았습니다!",
+    "created_at": "2026-08-01T10:33:01Z",
+    "updated_at": "2026-08-01T10:35:58Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695427518",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695427518"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695427518"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695427518/reactions",
+      "total_count": 1,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 1,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695700005",
+    "pull_request_review_id": 4834737377,
+    "id": 3695700005,
+    "node_id": "PRRC_kwDOLwMdns7cR-gl",
+    "diff_hunk": "@@ -0,0 +1,30 @@\n+\"\"\"\n+복잡도:\n+    n: `s`의 길이\n+    시간 복잡도: O(n)\n+    공간 복잡도: O(n)\n+\"\"\"\n+class Solution:\n+    def isValid(self, s: str) -> bool:\n+        # 괄호 개수가 짝수인 경우는 항상 실패\n+        if len(s) % 2:\n+            return False\n+    \n+        brackets = {\n+            ')' : '(',\n+            '}' : '{',\n+            ']' : '['\n+        }\n+\n+        stack = []\n+        \n+        for char in s:\n+            if char in brackets: # 닫히는 괄호인지\n+                if stack and stack[-1] == brackets[char]:\n+                    stack.pop()\n+                else:\n+                    stack.append(char)",
+    "path": "valid-parentheses/okyungjin.py",
+    "commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "original_commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "> 이 케이스가 성공하는 경우가 없을 것 같아요.\r\n\r\n오 그렇네요 감사합니다. 다음 문제 풀때 수정해두겠습니다🙏",
+    "created_at": "2026-08-01T13:29:41Z",
+    "updated_at": "2026-08-01T13:29:41Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695700005",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695700005"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695700005"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695700005/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 26,
+    "original_line": 26,
+    "side": "RIGHT",
+    "in_reply_to_id": 3695261824,
+    "author_association": "MEMBER",
+    "original_position": 26,
+    "position": 26,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695700448",
+    "pull_request_review_id": 4834737769,
+    "id": 3695700448,
+    "node_id": "PRRC_kwDOLwMdns7cR-ng",
+    "diff_hunk": "@@ -0,0 +1,40 @@\n+\"\"\"\n+문제:\n+    - 담을 수 있는 최대 물의 양(최대 면적)을 구한다.\n+    - i번째 수직선은 height[i] 높이를 가진다.\n+    - x축과 선택한 두 수직선이 담는 물의 양이 최대가 되도록한다.\n+\n+접근법:\n+    1. 좌측, 우측 포인터 `left`, `right`를 선언하여 기둥을 움직인다.\n+    2. 좌우 기둥의 높이를 비교해서 높이가 낮은 기둥의 x좌표를 한칸 안쪽으로 움직인다.\n+        포인터를 바깥쪽에서 안쪽으로 이동할 때 가로의 길이가 줄어든다.\n+        따라서 낮은 기둥을 버려야 `max_area`를 갱신할 수 있는 가능성이 생긴다.\n+    3. 두 포인터가 만나거나 좌우가 역전되면 탐색을 종료한다.\n+\n+복잡도:\n+    시간 복잡도: O(n)\n+    공간 복잡도: O(1)\n+\n+실패했던 접근법:\n+    1. 2중 for: TLE\n+    2. 가장 높은 기둥을 고정축으로 하고 나머지 하나의 기둥을 찾도록: [1,2,1] 입력에서 실패\n+\"\"\"\n+class Solution:\n+    def maxArea(self, height: List[int]) -> int:\n+        left = 0\n+        right = len(height) - 1\n+\n+        max_area = 0\n+\n+        while left < right:\n+            if height[left] < height[right]:\n+                area = height[left] * (right - left)",
+    "path": "container-with-most-water/okyungjin.py",
+    "commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "original_commit_id": "a41de3ad0ba12754f6617bceb7743d4bd1cc49df",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "의견 감사합니다!",
+    "created_at": "2026-08-01T13:29:58Z",
+    "updated_at": "2026-08-01T13:29:58Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695700448",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695700448"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2781#discussion_r3695700448"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2781"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3695700448/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 31,
+    "original_line": 31,
+    "side": "RIGHT",
+    "in_reply_to_id": 3695287895,
+    "author_association": "MEMBER",
+    "original_position": 31,
+    "position": 31,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

@@ -1,0 +1,215 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995788288",
+    "pull_request_review_id": 5186012518,
+    "id": 3995788288,
+    "node_id": "PRRC_kwDOLwMdns7uKuQA",
+    "diff_hunk": "",
+    "path": "non-overlapping-intervals/okyungjin.py",
+    "commit_id": "fc04e6aebbe097c769a3a39c77a946a1a5eec382",
+    "original_commit_id": "61e469208e997687888b2551abf0abd2097886df",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 4925f9af0b76d48a877ed3357d0cf3ff567c4906 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>non-overlapping-intervals/okyungjin.py</summary>\n\n```py\n\"\"\"\nhttps://leetcode.com/problems/non-overlapping-intervals/\n\nTime: O(N)\nSpace: O(1)\n\"\"\"\nclass Solution:\n    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:\n        # 1. end 오름차순 intervals 정렬\n        intervals.sort(key=lambda x: x[1])\n\n        # remove count\n        count = 0        \n        last_end = float('-inf')\n\n        for start, end in intervals:\n            if start >= last_end: # 구간 안 겹침\n                last_end = end\n            else: # 구간 겹침\n                count += 1\n            \n        return count\n\n```\n\n</details>\n\n- **패턴**: Greedy, Two Pointers\n- **설명**: 최소 제거 수를 구하기 위해 종료시간 기준으로 오름차순 정렬하고, 현재 구간의 시작과 이전 종료를 비교하여 겹침 여부를 판단하는 방식으로 최적해를 찾으므로 Greedy 패턴에 속하며 투 포인터처럼 앞쪽 포인터(last_end)와 현재 포인터를 사용해 유효 구간을 검사합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n log n) |\n| **Space** | O(1) |\n\n**피드백**: 끝점을 기준으로 정렬한 뒤, 현재 구간의 시작이 last_end 이상이면 겹치지 않는 구간으로 간주하고, 그렇지 않으면 제거 카운트를 증가시키는 방식이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-09-12T09:31:16Z",
+    "updated_at": "2026-09-12T09:31:16Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2860#discussion_r3995788288",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2860",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995788288"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2860#discussion_r3995788288"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2860"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995788288/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995788373",
+    "pull_request_review_id": 5186012586,
+    "id": 3995788373,
+    "node_id": "PRRC_kwDOLwMdns7uKuRV",
+    "diff_hunk": "",
+    "path": "same-tree/okyungjin.py",
+    "commit_id": "fc04e6aebbe097c769a3a39c77a946a1a5eec382",
+    "original_commit_id": "61e469208e997687888b2551abf0abd2097886df",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: bb59f630a3586aae9235b3ff377b7b05fa07898c -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>same-tree/okyungjin.py</summary>\n\n```py\n\"\"\"\nhttps://leetcode.com/problems/same-tree/description/\n\nN: min(p노드수, q노드수)\nTime: O(N)\nSpace: O(N)\n\"\"\"\n\n# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:\n        queue = deque([(p, q)])\n\n        while queue:\n            node_p, node_q = queue.popleft()\n\n            if not node_p and not node_q:\n                continue\n\n            elif node_p and node_q:\n                if node_p.val == node_q.val: \n                    queue.append((node_p.left, node_q.left))\n                    queue.append((node_p.right, node_q.right))\n                else:\n                    return False\n            \n            else:\n                return False\n\n        return True\n\n```\n\n</details>\n\n- **패턴**: Breadth-First Search, Hash Map / Hash Set\n- **설명**: 두 트리의 같은 위치 노드를 한 쌍으로 큐에 담아 레벨 단위로 비교하는 BFS 방식으로 모든 노드를 순회합니다. 각 노드의 값과 존재 여부를 비교해 동일하면 자식 노드를 큐에 추가합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(n) |\n\n**피드백**: 큐에 노드를 쌍으로 담아 동시 탐색하며 각 위치의 값과 구조를 검사한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-09-12T09:31:18Z",
+    "updated_at": "2026-09-12T09:31:18Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2860#discussion_r3995788373",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2860",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995788373"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2860#discussion_r3995788373"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2860"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995788373/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995790356",
+    "pull_request_review_id": 5186014375,
+    "id": 3995790356,
+    "node_id": "PRRC_kwDOLwMdns7uKuwU",
+    "diff_hunk": "",
+    "path": "non-overlapping-intervals/okyungjin.py",
+    "commit_id": "fc04e6aebbe097c769a3a39c77a946a1a5eec382",
+    "original_commit_id": "fc04e6aebbe097c769a3a39c77a946a1a5eec382",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 5fc005fb254ea0de857eb0bd9d78be3000b93358 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>non-overlapping-intervals/okyungjin.py</summary>\n\n```py\n\"\"\"\nhttps://leetcode.com/problems/non-overlapping-intervals/\n\nTime: O(N log N), intervals 정렬\nSpace: O(1)\n\"\"\"\nclass Solution:\n    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:\n        # end 오름차순 intervals 정렬\n        intervals.sort(key=lambda x: x[1])\n\n        # remove count\n        count = 0        \n        last_end = float('-inf')\n\n        for start, end in intervals:\n            if start >= last_end: # 구간 안 겹침\n                last_end = end\n            else: # 구간 겹침\n                count += 1\n            \n        return count\n\n```\n\n</details>\n\n- **패턴**: Greedy, Two Pointers\n- **설명**: 끝 점 오름차순 정렬 후 현재 구간과 비교하여 겹치면 제거(카운트)하는 방식으로 최적 해를 찾으므로 그리디 패턴이며, 포인터를 이용한 탐색 흐름도 존재합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n log n) |\n| **Space** | O(1) |\n\n**피드백**: 종료점으로 정렬한 뒤 현재 구간과의 겹침 여부를 판단하고 겹치면 제거 카운트를 증가시킨다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-09-12T09:32:21Z",
+    "updated_at": "2026-09-12T09:32:21Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2860#discussion_r3995790356",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2860",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995790356"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2860#discussion_r3995790356"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2860"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3995790356/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

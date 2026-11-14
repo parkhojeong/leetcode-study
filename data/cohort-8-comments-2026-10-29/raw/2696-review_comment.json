@@ -1,0 +1,570 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517545220",
+    "pull_request_review_id": 4622877781,
+    "id": 3517545220,
+    "node_id": "PRRC_kwDOLwMdns7RqXsE",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+/*\n+f(45) = f(44) + f(43)\n+f(44) = f(43) + f(42)\n+.\n+.\n+.\n+f(3) = f(2) + f(1)\n+f(2) = 2\n+f(1) = 1\n+*/\n+class Solution {\n+    public int climbStairs(int n) {\n+        if (n <= 2) return n;",
+    "path": "climbing-stairs/hoonjichoi.java",
+    "commit_id": "1cfbf8262205b34758289eb45a6d575e7946e0aa",
+    "original_commit_id": "cc3e002d89f74d3c2a788791d8f4c9282f7ced4c",
+    "user": {
+      "login": "hellojoyworldz",
+      "id": 116714457,
+      "node_id": "U_kgDOBvTr2Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116714457?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hellojoyworldz",
+      "html_url": "https://github.com/hellojoyworldz",
+      "followers_url": "https://api.github.com/users/hellojoyworldz/followers",
+      "following_url": "https://api.github.com/users/hellojoyworldz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hellojoyworldz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hellojoyworldz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hellojoyworldz/subscriptions",
+      "organizations_url": "https://api.github.com/users/hellojoyworldz/orgs",
+      "repos_url": "https://api.github.com/users/hellojoyworldz/repos",
+      "events_url": "https://api.github.com/users/hellojoyworldz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hellojoyworldz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "n이 1, 2일 때는 이미 답이 정해져 있으니, 반복문 타지 않게 미리 걸러주는 부분이 좋은 것 같아요..!\r\n\r\n",
+    "created_at": "2026-07-03T04:54:52Z",
+    "updated_at": "2026-07-03T05:20:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517545220",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517545220"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517545220"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517545220/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 14,
+    "original_line": 13,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 13,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517552844",
+    "pull_request_review_id": 4622877781,
+    "id": 3517552844,
+    "node_id": "PRRC_kwDOLwMdns7RqZjM",
+    "diff_hunk": "@@ -0,0 +1,25 @@\n+/*\n+f(45) = f(44) + f(43)\n+f(44) = f(43) + f(42)\n+.\n+.\n+.\n+f(3) = f(2) + f(1)\n+f(2) = 2\n+f(1) = 1\n+*/\n+class Solution {\n+    public int climbStairs(int n) {\n+        if (n <= 2) return n;\n+\n+        int prev = 1;\n+        int result = 2;\n+        int temp = 0;\n+        for (int i = 2; i < n ; i++) {\n+            temp = result;\n+            result += prev;\n+            prev = temp;\n+        }     \n+        return result;\n+    }\n+}",
+    "path": "climbing-stairs/hoonjichoi.java",
+    "commit_id": "1cfbf8262205b34758289eb45a6d575e7946e0aa",
+    "original_commit_id": "cc3e002d89f74d3c2a788791d8f4c9282f7ced4c",
+    "user": {
+      "login": "hellojoyworldz",
+      "id": 116714457,
+      "node_id": "U_kgDOBvTr2Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116714457?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hellojoyworldz",
+      "html_url": "https://github.com/hellojoyworldz",
+      "followers_url": "https://api.github.com/users/hellojoyworldz/followers",
+      "following_url": "https://api.github.com/users/hellojoyworldz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hellojoyworldz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hellojoyworldz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hellojoyworldz/subscriptions",
+      "organizations_url": "https://api.github.com/users/hellojoyworldz/orgs",
+      "repos_url": "https://api.github.com/users/hellojoyworldz/repos",
+      "events_url": "https://api.github.com/users/hellojoyworldz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hellojoyworldz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "맨 마지막줄을 비워 컨벤션에 맞춰야할거같아요",
+    "created_at": "2026-07-03T04:57:32Z",
+    "updated_at": "2026-07-03T05:03:27Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517552844",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517552844"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517552844"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517552844/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 24,
+    "original_line": 25,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 25,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517568989",
+    "pull_request_review_id": 4622877781,
+    "id": 3517568989,
+    "node_id": "PRRC_kwDOLwMdns7Rqdfd",
+    "diff_hunk": "@@ -0,0 +1,39 @@\n+import java.util.HashMap;\n+\n+public class hoonjichoi1 {\n+    public boolean isAnagram(String s, String t) {\n+        if (s.equals(t))\n+            return true;\n+        if (s.length() != t.length())\n+            return false;\n+\n+        HashMap<Character, Integer> map = new HashMap<>();\n+\n+        for (int i = 0; i < s.length(); i++) {\n+            Character c = s.charAt(i);\n+            if (map.containsKey(c)) {\n+                int value = map.get(c) + 1;\n+                map.put(c, value);\n+            } else {\n+                map.put(c, 1);\n+            }\n+        }\n+\n+        for (int j = 0; j < t.length(); j++) {\n+            Character c2 = t.charAt(j);\n+            if (map.containsKey(c2)) {\n+                int value = map.get(c2) - 1;\n+                map.put(c2, value);\n+            } else {\n+                return false;\n+            }\n+        }\n+\n+        for (Integer i : map.values()) {\n+            if (i < 0) {\n+                return false;\n+            }\n+        }",
+    "path": "valid-anagram/hoonjichoi1.java",
+    "commit_id": "dd0e8ec068b4e9292aab4f4fe61f9482697c391c",
+    "original_commit_id": "cc3e002d89f74d3c2a788791d8f4c9282f7ced4c",
+    "user": {
+      "login": "hellojoyworldz",
+      "id": 116714457,
+      "node_id": "U_kgDOBvTr2Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116714457?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hellojoyworldz",
+      "html_url": "https://github.com/hellojoyworldz",
+      "followers_url": "https://api.github.com/users/hellojoyworldz/followers",
+      "following_url": "https://api.github.com/users/hellojoyworldz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hellojoyworldz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hellojoyworldz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hellojoyworldz/subscriptions",
+      "organizations_url": "https://api.github.com/users/hellojoyworldz/orgs",
+      "repos_url": "https://api.github.com/users/hellojoyworldz/repos",
+      "events_url": "https://api.github.com/users/hellojoyworldz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hellojoyworldz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "이 반복문은 2번째 반복문에서 처리해줘도 좋을 듯 싶습니다..!",
+    "created_at": "2026-07-03T05:02:37Z",
+    "updated_at": "2026-07-03T05:03:27Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517568989",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517568989"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517568989"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517568989/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 26,
+    "original_start_line": 32,
+    "start_side": "RIGHT",
+    "line": 30,
+    "original_line": 36,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 36,
+    "position": 30,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517678231",
+    "pull_request_review_id": 4623034763,
+    "id": 3517678231,
+    "node_id": "PRRC_kwDOLwMdns7Rq4KX",
+    "diff_hunk": "",
+    "path": "climbing-stairs/hoonjichoi.java",
+    "commit_id": "1cfbf8262205b34758289eb45a6d575e7946e0aa",
+    "original_commit_id": "1cfbf8262205b34758289eb45a6d575e7946e0aa",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Dynamic Programming, Two Pointers\n- **설명**: 피보나치 계열의 점화식 f(n)=f(n-1)+f(n-2)으로 계단 오르기 문제를 DP로 해결하며, 반복문으로 이전 두 값을 유지해 중복 계산을 피하는 방식이다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.climbStairs</code> — Time: O(n) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 상수 개 메모리만 사용하고 반복으로 값을 업데이트하므로 시간 복잡도는 입력 크기 n에 선형 비례합니다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Solution.climbStairs</code> — Time: O(n) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 메모리 사용 없이 두 변수로만 최근 값을 유지합니다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-03T05:33:37Z",
+    "updated_at": "2026-07-03T05:33:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517678231",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517678231"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3517678231"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3517678231/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523290996",
+    "pull_request_review_id": 4629687756,
+    "id": 3523290996,
+    "node_id": "PRRC_kwDOLwMdns7SASd0",
+    "diff_hunk": "@@ -0,0 +1,39 @@\n+import java.util.HashMap;\n+\n+public class hoonjichoi1 {\n+    public boolean isAnagram(String s, String t) {\n+        if (s.equals(t))\n+            return true;\n+        if (s.length() != t.length())\n+            return false;\n+\n+        HashMap<Character, Integer> map = new HashMap<>();\n+\n+        for (int i = 0; i < s.length(); i++) {\n+            Character c = s.charAt(i);\n+            if (map.containsKey(c)) {\n+                int value = map.get(c) + 1;\n+                map.put(c, value);\n+            } else {\n+                map.put(c, 1);\n+            }\n+        }\n+\n+        for (int j = 0; j < t.length(); j++) {\n+            Character c2 = t.charAt(j);\n+            if (map.containsKey(c2)) {\n+                int value = map.get(c2) - 1;\n+                map.put(c2, value);\n+            } else {\n+                return false;\n+            }\n+        }",
+    "path": "valid-anagram/hoonjichoi1.java",
+    "commit_id": "dd0e8ec068b4e9292aab4f4fe61f9482697c391c",
+    "original_commit_id": "6386bf39162ca439f1ad4df18a45813e8358c4fe",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "개선해보면 좋을 거 같은 포인트 적어보았어요.\r\n- getOrDefault 와 early return 을 사용하면 가독성을 높일 수 있을 거 같습니다.  \r\n- 변수명도 c, c2로 다른데 c로 사용해도 괜찮을 거 같습니다! 사소하지만 c로 읽다가 c2가 나오는 것보다 c->c 또는 c1 -> c2의 흐름이 조금 더 자연스러울 거 같습니다. 개인적으로는 이 문제에선 c -> c 로 임시 변수는 같은 네이밍이 좋을 거 같습니닷\r\n- 마지막 루프 조건식은 두번 째 조건식으로 합쳐도 될 거 같습니다\r\n\r\n코드는 이런 식으로 될 거 같습니다 :) \r\n```suggestion\r\n        for (int i = 0; i < s.length(); i++) {\r\n            Character c = s.charAt(i);\r\n            map.put(c, map.getOrDefault(c, 0) + 1);\r\n        }\r\n\r\n        for (int j = 0; j < t.length(); j++) {\r\n            Character c = t.charAt(j);\r\n            if (!map.containsKey(c) || map.get(c) <= 0) {\r\n                return false;\r\n            }\r\n\r\n            map.put(c, map.get(c) - 1);\r\n        }\r\n```",
+    "created_at": "2026-07-04T13:48:03Z",
+    "updated_at": "2026-07-04T14:04:03Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3523290996",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523290996"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3523290996"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523290996/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 12,
+    "original_start_line": 12,
+    "start_side": "RIGHT",
+    "line": 24,
+    "original_line": 30,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 30,
+    "position": 24,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523296739",
+    "pull_request_review_id": 4629687756,
+    "id": 3523296739,
+    "node_id": "PRRC_kwDOLwMdns7SAT3j",
+    "diff_hunk": "@@ -0,0 +1,26 @@\n+\n+/*\n+f(45) = f(44) + f(43)\n+f(44) = f(43) + f(42)\n+.\n+.\n+.\n+f(3) = f(2) + f(1)\n+f(2) = 2\n+f(1) = 1\n+*/\n+class Solution {\n+    public int climbStairs(int n) {\n+        if (n <= 2) return n;\n+\n+        int prev = 1;\n+        int result = 2;\n+        int temp = 0;\n+        for (int i = 2; i < n ; i++) {\n+            temp = result;\n+            result += prev;\n+            prev = temp;\n+        }     \n+        return result;",
+    "path": "climbing-stairs/hoonjichoi1.java",
+    "commit_id": "daee88b0449c9f5062331cfa2d2098ef69737e8a",
+    "original_commit_id": "6386bf39162ca439f1ad4df18a45813e8358c4fe",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "몇 가지 생각나는 것들 적어봅니다 :)\r\n- temp는 포문 안에서만 사용되니 스코프를 안쪽으로 옮겨서 필요한 스코프에 변수 선언해도 좋을 거 같아요.\r\n- result가 의미하는게 현재 포인터 느낌이라 prev와 유사한 성격으로 cur 으로 네이밍해봐도 좋을 거 같습니다.  \r\n- prev, cur 은 한 줄에 쓰는 것도 괜찮아 보이네요\r\n\r\n코드는 요런 스타일을 생각했습니다!\r\n```suggestion\r\n        int prev = 1, cur = 2;\r\n        for (int i = 2; i < n ; i++) {\r\n            int temp = cur;\r\n            cur += prev;\r\n            prev = temp;\r\n        }     \r\n        return cur;\r\n```",
+    "created_at": "2026-07-04T13:52:56Z",
+    "updated_at": "2026-07-04T14:08:19Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3523296739",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523296739"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3523296739"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523296739/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": 16,
+    "start_side": "RIGHT",
+    "line": null,
+    "original_line": 24,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 24,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3525833388",
+    "pull_request_review_id": 4632186780,
+    "id": 3525833388,
+    "node_id": "PRRC_kwDOLwMdns7SJ_Ks",
+    "diff_hunk": "",
+    "path": "climbing-stairs/hoonjichoi1.java",
+    "commit_id": "dd0e8ec068b4e9292aab4f4fe61f9482697c391c",
+    "original_commit_id": "dd0e8ec068b4e9292aab4f4fe61f9482697c391c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Dynamic Programming, Fibonacci Sequence (implicit), Greedy\n- **설명**: 문제는 계단 오르기 값을 피보나치처럼 점화식으로 계산하며, 반복문으로 이전 값 두 개를 저장해 현재 값을 구하는 DP 기반 구현이다. 최적해를 상향식으로 구성하는 전형적인 Dynamic Programming 패턴이다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.climbStairs</code> — Time: O(n) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 상수 공간으로 이전 두 항만 저장하고 순차적으로 업데이트하여 시간 복잡도는 선형으로 구해진다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>hoonjichoi1.isAnagram</code> — Time: O(n + m) / Space: O(k)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n + m) |\n| **Space** | O(k) |\n\n**피드백**: 두 문자열의 길이가 n, m일 때 해시맵에 최대 서로 다른 문자 수만큼 공간이 필요하고, 모든 문자의 빈도 차이를 확인한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-05T23:38:33Z",
+    "updated_at": "2026-07-05T23:38:33Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3525833388",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3525833388"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3525833388"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3525833388/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3525833418",
+    "pull_request_review_id": 4632186814,
+    "id": 3525833418,
+    "node_id": "PRRC_kwDOLwMdns7SJ_LK",
+    "diff_hunk": "",
+    "path": "valid-anagram/hoonjichoi1.java",
+    "commit_id": "dd0e8ec068b4e9292aab4f4fe61f9482697c391c",
+    "original_commit_id": "dd0e8ec068b4e9292aab4f4fe61f9482697c391c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Hash Map / Hash Set, Greedy\n- **설명**: 두 문자열의 문자를 해시맵으로 세고 비교하여 아나그램 여부를 판단하는 방식으로, 해시 맵을 이용한 빈도 카운트 패턴이 핵심입니다. 특정 최적화 없이도 일치 여부를 확인하는 절차로 구성됩니다.",
+    "created_at": "2026-07-05T23:38:35Z",
+    "updated_at": "2026-07-05T23:38:35Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3525833418",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3525833418"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2696#discussion_r3525833418"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2696"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3525833418/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

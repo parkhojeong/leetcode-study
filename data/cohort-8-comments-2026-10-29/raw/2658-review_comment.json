@@ -1,0 +1,358 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3481695111",
+    "pull_request_review_id": 4579821118,
+    "id": 3481695111,
+    "node_id": "PRRC_kwDOLwMdns7PhnOH",
+    "diff_hunk": "@@ -0,0 +1,10 @@\n+class Solution:\n+    def containsDuplicate(self, nums: List[int]) -> bool:\n+        hashmap = dict()\n+        sorted(nums)\n+        for num in nums:\n+            if hashmap.get(num, False) == True: \n+                return True\n+            else :\n+                hashmap[num] = True\n+        return False",
+    "path": "contains-duplicate/Chanz82.py",
+    "commit_id": "40cb681a27a3b615df351f65a89f2f2e0c58840e",
+    "original_commit_id": "b6e35e7b3443d60e415e1f8725dc12e6f45986e6",
+    "user": {
+      "login": "sonshn",
+      "id": 55887179,
+      "node_id": "MDQ6VXNlcjU1ODg3MTc5",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55887179?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/sonshn",
+      "html_url": "https://github.com/sonshn",
+      "followers_url": "https://api.github.com/users/sonshn/followers",
+      "following_url": "https://api.github.com/users/sonshn/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sonshn/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sonshn/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sonshn/subscriptions",
+      "organizations_url": "https://api.github.com/users/sonshn/orgs",
+      "repos_url": "https://api.github.com/users/sonshn/repos",
+      "events_url": "https://api.github.com/users/sonshn/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sonshn/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "저는 Java로 주로 사용하고, Python은 기초적인 문법만 알고 있기 때문에 참고해서 읽어주시기 바랍니다!\n\n우선, 전체적인 풀이 흐름은 저와 비슷한 것 같습니다! 다만, for문 안에 있는 if 조건문도 `if num in hashmap`처럼 작성하는 것이 더 좋아 보입니다! 그 외에 모든 flow를 처리할 수 있게 return 문을 정리하신 것은 좋아 보여요!",
+    "created_at": "2026-06-26T13:30:22Z",
+    "updated_at": "2026-06-26T13:30:33Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3481695111",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3481695111"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3481695111"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3481695111/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 10,
+    "original_line": 10,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 10,
+    "position": 10,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484442566",
+    "pull_request_review_id": 4583099359,
+    "id": 3484442566,
+    "node_id": "PRRC_kwDOLwMdns7PsF_G",
+    "diff_hunk": "@@ -0,0 +1,10 @@\n+class Solution:\n+    def containsDuplicate(self, nums: List[int]) -> bool:\n+        hashmap = dict()\n+        sorted(nums)\n+        for num in nums:\n+            if hashmap.get(num, False) == True: \n+                return True\n+            else :\n+                hashmap[num] = True\n+        return False",
+    "path": "contains-duplicate/Chanz82.py",
+    "commit_id": "40cb681a27a3b615df351f65a89f2f2e0c58840e",
+    "original_commit_id": "b6e35e7b3443d60e415e1f8725dc12e6f45986e6",
+    "user": {
+      "login": "Chanz82",
+      "id": 126567839,
+      "node_id": "U_kgDOB4tFnw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126567839?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Chanz82",
+      "html_url": "https://github.com/Chanz82",
+      "followers_url": "https://api.github.com/users/Chanz82/followers",
+      "following_url": "https://api.github.com/users/Chanz82/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Chanz82/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Chanz82/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Chanz82/subscriptions",
+      "organizations_url": "https://api.github.com/users/Chanz82/orgs",
+      "repos_url": "https://api.github.com/users/Chanz82/repos",
+      "events_url": "https://api.github.com/users/Chanz82/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Chanz82/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "리뷰 감사합니다!!",
+    "created_at": "2026-06-26T22:36:57Z",
+    "updated_at": "2026-06-26T22:36:57Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484442566",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484442566"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484442566"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484442566/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 10,
+    "original_line": 10,
+    "side": "RIGHT",
+    "in_reply_to_id": 3481695111,
+    "author_association": "MEMBER",
+    "original_position": 10,
+    "position": 10,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484457119",
+    "pull_request_review_id": 4583115194,
+    "id": 3484457119,
+    "node_id": "PRRC_kwDOLwMdns7PsJif",
+    "diff_hunk": "",
+    "path": "two-sum/Chanz82.py",
+    "commit_id": "40cb681a27a3b615df351f65a89f2f2e0c58840e",
+    "original_commit_id": "e8339c9b9f962f89ab0459ec6ebdefd96a474e2b",
+    "user": {
+      "login": "Chanz82",
+      "id": 126567839,
+      "node_id": "U_kgDOB4tFnw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126567839?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Chanz82",
+      "html_url": "https://github.com/Chanz82",
+      "followers_url": "https://api.github.com/users/Chanz82/followers",
+      "following_url": "https://api.github.com/users/Chanz82/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Chanz82/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Chanz82/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Chanz82/subscriptions",
+      "organizations_url": "https://api.github.com/users/Chanz82/orgs",
+      "repos_url": "https://api.github.com/users/Chanz82/repos",
+      "events_url": "https://api.github.com/users/Chanz82/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Chanz82/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "Bot님. 질문에 자동응답 하나요?",
+    "created_at": "2026-06-26T22:41:24Z",
+    "updated_at": "2026-06-26T22:41:24Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484457119",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484457119"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484457119"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484457119/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484472614",
+    "pull_request_review_id": 4583131954,
+    "id": 3484472614,
+    "node_id": "PRRC_kwDOLwMdns7PsNUm",
+    "diff_hunk": "",
+    "path": "contains-duplicate/Chanz82.py",
+    "commit_id": "40cb681a27a3b615df351f65a89f2f2e0c58840e",
+    "original_commit_id": "40cb681a27a3b615df351f65a89f2f2e0c58840e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Hash Map / Hash Set, Greedy\n- **설명**: 해당 코드는 숫자 등장 여부를 해시맵으로 추적하여 중복 여부를 판단합니다. 매 원소를 확인하며 이미 등장했는지 확인하는 방식으로 중복 탐지를 구현합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(n) |\n\n**피드백**: 해시맵에 방문 여부를 저장해 중복 여부를 인식합니다. 반복마다 상수시간 조회/삽입이 가능하므로 전체 시간은 선형이고 추가 공간도 선형입니다.\n\n**개선 제안**: 현재 구현은 전통적인 해시맵 기반 풀이로 적절합니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-06-26T22:46:32Z",
+    "updated_at": "2026-06-26T22:46:32Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484472614",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484472614"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484472614"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484472614/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484472746",
+    "pull_request_review_id": 4583132060,
+    "id": 3484472746,
+    "node_id": "PRRC_kwDOLwMdns7PsNWq",
+    "diff_hunk": "",
+    "path": "two-sum/Chanz82.py",
+    "commit_id": "40cb681a27a3b615df351f65a89f2f2e0c58840e",
+    "original_commit_id": "40cb681a27a3b615df351f65a89f2f2e0c58840e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Hash Map / Hash Set, Two Pointers\n- **설명**: 코드에서 각 숫자와 목표값의 차를 해시맵에 저장하며, 현재 숫자와 매칭되는 값을 해시맵에서 빠르게 찾는다. 이를 통해 한 번의 순회로 두 수의 인덱스를 찾는 해시맵 기반 풀이와 연결된다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(n) |\n\n**피드백**: 해시맵에 이전에 본 값의 인덱스를 저장하고, 현재 값과 목표 차이가 존재하는지 확인합니다.\n\n**개선 제안**: 현재 구현이 올바르게 작동하는 한, 더 간단한 주석만 남겨도 충분합니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-06-26T22:46:34Z",
+    "updated_at": "2026-06-26T22:46:34Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484472746",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484472746"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2658#discussion_r3484472746"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2658"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3484472746/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

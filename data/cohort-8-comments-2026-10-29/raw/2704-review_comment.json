@@ -1,0 +1,572 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523346423",
+    "pull_request_review_id": 4629746963,
+    "id": 3523346423,
+    "node_id": "PRRC_kwDOLwMdns7SAf_3",
+    "diff_hunk": "@@ -38,3 +38,38 @@ def go_right(self, cur:TreeNode, mm:int, MM:int):\n         if cur.right:\n             self.go_right(cur.right, cur.val, MM)\n \n+\n+\n+\n+# ---------\n+\n+\n+# Definition for a binary tree node.\n+\n+# TC: O(n)\n+# SC: O(h)\n+\n+# class TreeNode:\n+#     def __init__(self, val=0, left=None, right=None):\n+#         self.val = val\n+#         self.left = left\n+#         self.right = right\n+class Solution:\n+    def isValidBST(self, root: Optional[TreeNode]) -> bool:\n+        \n+        def isValid(mm, MM, cur: TreeNode) -> bool:\n+            \n+\n+            if cur == None:\n+                return True\n+            \n+            if mm != None and cur.val <= mm:\n+                return False\n+             \n+            if MM != None and cur.val >= MM:\n+                return False\n+            \n+            return isValid(mm, cur.val, cur.left) and isValid(cur.val, MM, cur.right)\n+        \n+        return isValid(None, None ,root)",
+    "path": "validate-binary-search-tree/sangbeenmoon.py",
+    "commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "original_commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "None은 is 로 비교하는 것으로 권장되어서 참고하시면 좋을 거 같아요! \r\n`Comparisons to singletons like None should always be done with is or is not, never the equality operators.`\r\nhttps://peps.python.org/pep-0008/#programming-recommendations\r\n\r\n그리고 변수명은 mm, MM이 어떤 값인지 알기가 어려워서 의미를 담아 보아도 좋을 거 같습니다 :)\r\n```suggestion\r\n        def isValid(max_val, min_val, cur: TreeNode) -> bool:\r\n            if cur is None:\r\n                return True\r\n\r\n            if max_val is not None and cur.val <= max_val:\r\n                return False\r\n\r\n            if min_val is not None and cur.val >= min_val:\r\n                return False\r\n\r\n            return isValid(max_val, cur.val, cur.left) and isValid(cur.val, min_val, cur.right)\r\n\r\n        return isValid(None, None, root)\r\n```",
+    "created_at": "2026-07-04T14:32:54Z",
+    "updated_at": "2026-07-04T14:55:32Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523346423",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523346423"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523346423"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523346423/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": 60,
+    "start_side": "RIGHT",
+    "line": null,
+    "original_line": 74,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 37,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523356350",
+    "pull_request_review_id": 4629746963,
+    "id": 3523356350,
+    "node_id": "PRRC_kwDOLwMdns7SAia-",
+    "diff_hunk": "@@ -30,3 +30,35 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:\n                     left = left + 1\n                     right = right - 1\n         return answer\n+\n+\n+# TC : O(n^2)\n+# SC : O(n)\n+\n+class Solution:\n+    def threeSum(self, nums: list[int]) -> list[list[int]]:\n+        \n+        nums.sort()\n+\n+        answer_map = {}\n+        answer = []\n+        \n+        for i in range(len(nums)):\n+            target = -1 * nums[i]\n+\n+            left = i + 1\n+            right = len(nums) - 1\n+\n+            while left < right:\n+                if nums[left] + nums[right] == target:\n+                    candidate = (target * -1, nums[left], nums[right])\n+                    if candidate not in answer_map:\n+                        answer_map[candidate] = True\n+                        answer.append([target * -1, nums[left], nums[right]])",
+    "path": "3sum/sangbeenmoon.py",
+    "commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "original_commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "해시맵을 사용해서 candidate를 담아서 중복을 체크하셨군요! \r\n이미 정렬이 된 상태라서 nums[left] == nums[left+1] 인 케이스를 스킵해주면(right도 동일) candidate를 사용하지 않고 not in 로직을 안타기 때문에 더 최적화가 가능할 거 같아요! \r\n",
+    "created_at": "2026-07-04T14:38:51Z",
+    "updated_at": "2026-07-04T14:56:13Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523356350",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523356350"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523356350"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523356350/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 52,
+    "original_start_line": 52,
+    "start_side": "RIGHT",
+    "line": 57,
+    "original_line": 57,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 28,
+    "position": 28,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523365693",
+    "pull_request_review_id": 4629746963,
+    "id": 3523365693,
+    "node_id": "PRRC_kwDOLwMdns7SAks9",
+    "diff_hunk": "@@ -30,3 +30,35 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:\n                     left = left + 1\n                     right = right - 1\n         return answer\n+\n+\n+# TC : O(n^2)\n+# SC : O(n)\n+\n+class Solution:\n+    def threeSum(self, nums: list[int]) -> list[list[int]]:\n+        \n+        nums.sort()\n+\n+        answer_map = {}\n+        answer = []\n+        \n+        for i in range(len(nums)):\n+            target = -1 * nums[i]\n+\n+            left = i + 1\n+            right = len(nums) - 1\n+\n+            while left < right:\n+                if nums[left] + nums[right] == target:\n+                    candidate = (target * -1, nums[left], nums[right])\n+                    if candidate not in answer_map:\n+                        answer_map[candidate] = True\n+                        answer.append([target * -1, nums[left], nums[right]])\n+                    left += 1",
+    "path": "3sum/sangbeenmoon.py",
+    "commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "original_commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "성공한 경우 right -= 1 도 함께 해주면 좋을 거 같아요!",
+    "created_at": "2026-07-04T14:47:08Z",
+    "updated_at": "2026-07-04T14:53:06Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523365693",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523365693"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523365693"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523365693/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 55,
+    "original_start_line": 55,
+    "start_side": "RIGHT",
+    "line": 58,
+    "original_line": 58,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 29,
+    "position": 29,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523368163",
+    "pull_request_review_id": 4629746963,
+    "id": 3523368163,
+    "node_id": "PRRC_kwDOLwMdns7SAlTj",
+    "diff_hunk": "@@ -30,3 +30,35 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:\n                     left = left + 1\n                     right = right - 1\n         return answer\n+\n+\n+# TC : O(n^2)\n+# SC : O(n)\n+\n+class Solution:\n+    def threeSum(self, nums: list[int]) -> list[list[int]]:\n+        \n+        nums.sort()\n+\n+        answer_map = {}\n+        answer = []\n+        \n+        for i in range(len(nums)):\n+            target = -1 * nums[i]\n+\n+            left = i + 1\n+            right = len(nums) - 1",
+    "path": "3sum/sangbeenmoon.py",
+    "commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "original_commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "정렬이 된 상태라 nums[i] 와 nums[i - 1] 이 같은 경우는 스킵해주고 nums[i] > 0 이 된 상태에서는 break 해주면 최적화가 가능할 거 같습니다 :) \r\n\r\nex. [ -2, -1, -1, -1, 0, 1, 2, 3] , -1이 한번인 경우만 실행하고 이후는 스킵, nums[i]가 0보다 커지면 `양수 + 양수 + 양수` 이기 때문에 종료",
+    "created_at": "2026-07-04T14:49:03Z",
+    "updated_at": "2026-07-04T14:56:43Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523368163",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523368163"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3523368163"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523368163/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 46,
+    "original_start_line": 46,
+    "start_side": "RIGHT",
+    "line": 50,
+    "original_line": 50,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 21,
+    "position": 21,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524590912",
+    "pull_request_review_id": 4631033166,
+    "id": 3524590912,
+    "node_id": "PRRC_kwDOLwMdns7SFP1A",
+    "diff_hunk": "",
+    "path": "3sum/sangbeenmoon.py",
+    "commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "original_commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Two Pointers, Hash Map / Hash Set\n- **설명**: 삼합(3Sum) 문제에서 정렬 후 양 끝 포인터를 이동하는 방식으로 탐색하므로 Two Pointers 패턴이 적용됩니다. 또한 중복 제거를 위해 Hash Map/Hash Set를 활용해 결과 중복을 방지하는 부분이 있습니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n^2) | O(n^2) | ✅ |\n| **Space** | O(n) | O(1) | ❌ |\n\n**피드백**: 정렬 후 외부 루프와 내부 투 포인터로 복잡도를 달성했다. 다만 중복 제거를 visited로 추가했는데, 전체적으로 불필요한 해시맵 사용 가능성이 있다. 두 번째 구현처럼 중복 제거를 더 간결하게 처리하는 편이 좋다.\n\n**개선 제안**: 고려해볼 만한 대안: 중복 제거를 리스트 스킵 방식으로 처리하고 해시맵 없이도 중복 없는 결과를 얻도록 구현을 단순화",
+    "created_at": "2026-07-05T08:57:55Z",
+    "updated_at": "2026-07-05T08:57:55Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524590912",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524590912"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524590912"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524590912/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524590945",
+    "pull_request_review_id": 4631033204,
+    "id": 3524590945,
+    "node_id": "PRRC_kwDOLwMdns7SFP1h",
+    "diff_hunk": "",
+    "path": "validate-binary-search-tree/sangbeenmoon.py",
+    "commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "original_commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Depth-First Search, Binary Search, Hash Map / Hash Set\n- **설명**: 첫 번째 코드는 재귀로 BST의 각 노드를 탐색하며 자식 노드가 특정 범위 안에 있는지 확인한다. 두 가지 구현 모두 트리 구조의 각 노드를 방문하는 DFS 패턴이며, 자식 노드의 값 범위를 제한해 BST 특성을 검사하는 방식이다. 두 번째 구현은 min/max 범위 추적을 통한 Divide and Conquer식 DFS로 BST 여부를 판단한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(h) |\n\n**피드백**: 두 가지 구현이 섞여 있는데, 첫 번째 구현은 전역 상태를 이용해 재귀적으로 범위를 검사한다. 두 번째는 재귀적으로 범위를 넘겨주는 일반적인 패턴으로 안정적이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-05T08:57:58Z",
+    "updated_at": "2026-07-05T08:57:58Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524590945",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524590945"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524590945"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524590945/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524592617",
+    "pull_request_review_id": 4631035568,
+    "id": 3524592617,
+    "node_id": "PRRC_kwDOLwMdns7SFQPp",
+    "diff_hunk": "@@ -38,3 +38,38 @@ def go_right(self, cur:TreeNode, mm:int, MM:int):\n         if cur.right:\n             self.go_right(cur.right, cur.val, MM)\n \n+\n+\n+\n+# ---------\n+\n+\n+# Definition for a binary tree node.\n+\n+# TC: O(n)\n+# SC: O(h)\n+\n+# class TreeNode:\n+#     def __init__(self, val=0, left=None, right=None):\n+#         self.val = val\n+#         self.left = left\n+#         self.right = right\n+class Solution:\n+    def isValidBST(self, root: Optional[TreeNode]) -> bool:\n+        \n+        def isValid(mm, MM, cur: TreeNode) -> bool:\n+            \n+\n+            if cur == None:\n+                return True\n+            \n+            if mm != None and cur.val <= mm:\n+                return False\n+             \n+            if MM != None and cur.val >= MM:\n+                return False\n+            \n+            return isValid(mm, cur.val, cur.left) and isValid(cur.val, MM, cur.right)\n+        \n+        return isValid(None, None ,root)",
+    "path": "validate-binary-search-tree/sangbeenmoon.py",
+    "commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "original_commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "user": {
+      "login": "sangbeenmoon",
+      "id": 225566208,
+      "node_id": "U_kgDODXHeAA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/225566208?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/sangbeenmoon",
+      "html_url": "https://github.com/sangbeenmoon",
+      "followers_url": "https://api.github.com/users/sangbeenmoon/followers",
+      "following_url": "https://api.github.com/users/sangbeenmoon/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sangbeenmoon/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sangbeenmoon/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sangbeenmoon/subscriptions",
+      "organizations_url": "https://api.github.com/users/sangbeenmoon/orgs",
+      "repos_url": "https://api.github.com/users/sangbeenmoon/repos",
+      "events_url": "https://api.github.com/users/sangbeenmoon/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sangbeenmoon/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "오 이런 권장사항이 있는지는 몰랐네요 ㅎㅎ 공식문서까지 찾아서 제안해주셔서 감사합니다 👍 ",
+    "created_at": "2026-07-05T08:59:15Z",
+    "updated_at": "2026-07-05T08:59:15Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524592617",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524592617"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524592617"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524592617/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": 60,
+    "start_side": "RIGHT",
+    "line": null,
+    "original_line": 74,
+    "side": "RIGHT",
+    "in_reply_to_id": 3523346423,
+    "author_association": "MEMBER",
+    "original_position": 37,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524593709",
+    "pull_request_review_id": 4631037025,
+    "id": 3524593709,
+    "node_id": "PRRC_kwDOLwMdns7SFQgt",
+    "diff_hunk": "@@ -30,3 +30,35 @@ def threeSum(self, nums: list[int]) -> list[list[int]]:\n                     left = left + 1\n                     right = right - 1\n         return answer\n+\n+\n+# TC : O(n^2)\n+# SC : O(n)\n+\n+class Solution:\n+    def threeSum(self, nums: list[int]) -> list[list[int]]:\n+        \n+        nums.sort()\n+\n+        answer_map = {}\n+        answer = []\n+        \n+        for i in range(len(nums)):\n+            target = -1 * nums[i]\n+\n+            left = i + 1\n+            right = len(nums) - 1\n+\n+            while left < right:\n+                if nums[left] + nums[right] == target:\n+                    candidate = (target * -1, nums[left], nums[right])\n+                    if candidate not in answer_map:\n+                        answer_map[candidate] = True\n+                        answer.append([target * -1, nums[left], nums[right]])",
+    "path": "3sum/sangbeenmoon.py",
+    "commit_id": "b3a3b273a318592c5899954f5fa6df4834f3b45c",
+    "original_commit_id": "c0c19ab00134c4bbd8666cc023355ffcaaae3ffa",
+    "user": {
+      "login": "sangbeenmoon",
+      "id": 225566208,
+      "node_id": "U_kgDODXHeAA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/225566208?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/sangbeenmoon",
+      "html_url": "https://github.com/sangbeenmoon",
+      "followers_url": "https://api.github.com/users/sangbeenmoon/followers",
+      "following_url": "https://api.github.com/users/sangbeenmoon/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sangbeenmoon/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sangbeenmoon/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sangbeenmoon/subscriptions",
+      "organizations_url": "https://api.github.com/users/sangbeenmoon/orgs",
+      "repos_url": "https://api.github.com/users/sangbeenmoon/repos",
+      "events_url": "https://api.github.com/users/sangbeenmoon/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sangbeenmoon/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "좀 더 깔끔하게 중복 체크할 수 있는 방법이 있었네요. 짚어주셔서 감사합니다",
+    "created_at": "2026-07-05T09:00:08Z",
+    "updated_at": "2026-07-05T09:00:08Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524593709",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524593709"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2704#discussion_r3524593709"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2704"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3524593709/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 52,
+    "original_start_line": 52,
+    "start_side": "RIGHT",
+    "line": 57,
+    "original_line": 57,
+    "side": "RIGHT",
+    "in_reply_to_id": 3523356350,
+    "author_association": "MEMBER",
+    "original_position": 28,
+    "position": 28,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

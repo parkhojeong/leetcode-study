@@ -1,0 +1,215 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486142821",
+    "pull_request_review_id": 4585383955,
+    "id": 3486142821,
+    "node_id": "PRRC_kwDOLwMdns7PylFl",
+    "diff_hunk": "",
+    "path": "contains-duplicate/JinuCheon.java",
+    "commit_id": "45f13c415b19638c5d1921d6585beaf88281ab56",
+    "original_commit_id": "45f13c415b19638c5d1921d6585beaf88281ab56",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Hash Map / Hash Set, Greedy\n- **설명**: 입력에서 이미 본 수를 해시 셋에 저장하며 중복 여부를 확인하는 방식으로 한 번 순회하는 단순 체크 로직으로 해결합니다. 해시 기반 집합을 이용한 중복 탐지 패턴과 더 효율적으로 구현한 간단한 그리디적 판단이 반영됩니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(n) |\n\n**피드백**: 모든 수를 한 번씩 검사하며 각 수를 저장하므로 시간은 선형, 추가 저장소가 필요합니다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-06-27T13:56:13Z",
+    "updated_at": "2026-06-27T13:56:13Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2668#discussion_r3486142821",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2668",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486142821"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2668#discussion_r3486142821"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2668"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486142821/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486142905",
+    "pull_request_review_id": 4585384078,
+    "id": 3486142905,
+    "node_id": "PRRC_kwDOLwMdns7PylG5",
+    "diff_hunk": "",
+    "path": "two-sum/JinuCheon.java",
+    "commit_id": "45f13c415b19638c5d1921d6585beaf88281ab56",
+    "original_commit_id": "45f13c415b19638c5d1921d6585beaf88281ab56",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Hash Map / Hash Set, Greedy\n- **설명**: 두 수의 합 문제를 해시맵으로 처리해 보거나, 이미 본 숫자를 저장하고 필요 값이 등장하면 즉시 구성하는 방식으로 O(n) 시간과 O(n) 공간으로 풀이한다. 핵심은 보조 구조로 원소를 빠르게 조회하는 패턴이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(n) |\n\n**피드백**: 각 수의 쌍을 찾는 데 해시맵으로 조회/저장을 하므로 평균적으로 선형 시간과 추가 공간을 사용합니다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-06-27T13:56:15Z",
+    "updated_at": "2026-06-27T13:56:15Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2668#discussion_r3486142905",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2668",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486142905"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2668#discussion_r3486142905"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2668"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486142905/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486196266",
+    "pull_request_review_id": 4585449638,
+    "id": 3486196266,
+    "node_id": "PRRC_kwDOLwMdns7PyyIq",
+    "diff_hunk": "@@ -0,0 +1,28 @@\n+import java.util.HashSet;\n+import java.util.Set;\n+\n+class Solution {\n+    /**\n+     * 79/79 cases passed (19 ms)\n+     * Your runtime beats 32.04 % of java submissions\n+     * Your memory usage beats 6.16 % of java submissions (108.1 MB)\n+     *\n+     * When I changed HashSet to LinkedHashSet, the runtime and memory usage increased a little bit.",
+    "path": "contains-duplicate/JinuCheon.java",
+    "commit_id": "45f13c415b19638c5d1921d6585beaf88281ab56",
+    "original_commit_id": "45f13c415b19638c5d1921d6585beaf88281ab56",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "LinkedHashSet 사용하면 약간의 성능 저하가 있는 이유를 알 수 있을까요?\n링크드로 관리할 필요가 없는 정보라 그런지 궁금합니다!\n\n감사합니다. 다음주도 파이팅입니다🍀",
+    "created_at": "2026-06-27T14:30:52Z",
+    "updated_at": "2026-06-27T14:30:52Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2668#discussion_r3486196266",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2668",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486196266"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2668#discussion_r3486196266"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2668"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3486196266/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 10,
+    "original_line": 10,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 10,
+    "position": 10,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

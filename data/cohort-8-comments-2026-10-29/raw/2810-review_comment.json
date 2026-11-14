@@ -1,0 +1,998 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808090",
+    "pull_request_review_id": 4892944925,
+    "id": 3745808090,
+    "node_id": "PRRC_kwDOLwMdns7fRH7a",
+    "diff_hunk": "",
+    "path": "clone-graph/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "3f2da1ffa94e612b2cdfb14bd82d726aabd2f0c4",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: b46729e32b8f4ab46c33a1f007c861e6e2704572 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>clone-graph/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도 : O(V + E)\n공간복잡도 : O(V)\n\n1. made 딕셔너리를 초기화한다.\n2. copy_node 함수를 정의한다.\n3. copy_node 함수는 target 노드를 복사한 후 반환한다.\n4. 이미 복사한 노드는 made에서 재사용한다.\n5. 복사한 노드의 이웃들 또한 copy_node를 이용해 재귀적으로 복사한다.\n6. 최종적으로 복제된 그래프의 시작 노드를 반환한다.\n\"\"\"\nclass Solution:\n    def cloneGraph(self, node: Optional[\"Node\"]) -> Optional[\"Node\"]:\n\n        made = dict()\n\n        def copy_node(target: Node) -> Node:\n            if not target:\n                return None\n\n            copied = Node(target.val)\n            made[target.val] = copied\n\n            for nei in target.neighbors:\n                if nei.val in made:\n                    copied.neighbors.append(made[nei.val])\n                else:\n                    copied.neighbors.append(copy_node(nei))\n\n            return copied\n\n        return copy_node(node)\n\n```\n\n</details>\n\n- **패턴**: Depth-First Search, Hash Map / Hash Set\n- **설명**: 그래프의 각 노드를 재귀적으로 방문하며 이웃 노드를 재귀적으로 복제한다. 이미 복제된 노드를 해시 맵으로 재사용하여 순환과 중복 방문을 방지한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(V + E) |\n| **Space** | O(V) |\n\n**피드백**: 각 노드를 한 번씩 방문하고 이웃 노드를 재귀적으로 복제하므로 전체 그래프의 노드 수와 간선 수에 비례하는 시간 복잡도와 노드 수에 비례하는 추가 공간이 필요하다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-10T00:25:04Z",
+    "updated_at": "2026-08-10T00:25:04Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808090",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808090"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808090"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808090/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808173",
+    "pull_request_review_id": 4892944991,
+    "id": 3745808173,
+    "node_id": "PRRC_kwDOLwMdns7fRH8t",
+    "diff_hunk": "",
+    "path": "longest-common-subsequence/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "3f2da1ffa94e612b2cdfb14bd82d726aabd2f0c4",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 3104e1ed80c1ecadb33620a05a415fbf8993ff5a -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-common-subsequence/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도 : O(T1 * T2)\n공간복잡도 : O(T1) # T1에 짧은 문자열을 설정했기에 공간복잡도는 T1이 된다.\n\n1. text1과 text2 중 더 짧은 쪽을 text1으로 설정한다.\n2. T1과 T2를 각각 text1과 text2의 길이로 설정한다.\n3. dp 배열을 T1 + 1 크기로 0으로 초기화한다.\n4. text2의 각 문자(i)를 순회하면서 비교한다.\n5. new_dp 배열을 T1 + 1 크기로 0으로 초기화한다.\n6. text1의 각 문자(j)에 대해 순회하면서 비교한다.\n7. text2[i - 1]과 text1[j - 1]가 같으면, new_dp[j]를 dp[j - 1] + 1로 설정한다.\n8. 다르면, new_dp[j]를 max(new_dp[j - 1], dp[j])로 설정한다.\n9. dp를 new_dp로 갱신하고, 마지막 원소를 반환한다.\n\"\"\"\nclass Solution:\n    def longestCommonSubsequence(self, text1: str, text2: str) -> int:\n        if len(text1) > len(text2):\n            text1, text2 = text1, text2\n\n        T1, T2 = len(text1), len(text2)\n        dp = [0] * (T1 + 1)\n\n        for i in range(1, T2 + 1):\n            new_dp = [0] * (T1 + 1)\n\n            for j in range(1, T1 + 1):\n                if text2[i - 1] == text1[j - 1]:\n                    new_dp[j] = dp[j - 1] + 1\n                else:\n                    new_dp[j] = max(new_dp[j - 1], dp[j])\n\n            dp = new_dp\n\n        return dp[-1]\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming, Two Pointers\n- **설명**: 두 문자열의 부분수열 문제를 DP로 해결하는 전형적인 패턴으로, 각 위치의 부분문자열 조합에 대한 최장 공통 부분수열 길이를 점진적으로 계산한다. 또한 길이가 서로 다른 두 문자열에 대해 간접적으로 두 포인터처럼 인덱스 순회와 DP 배열 갱신으로 구성된다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(T1 * T2) |\n| **Space** | O(T1) |\n\n**피드백**: 공간을 줄이기 위해 두 열 배열을 교체하며 시간 복잡도는 두 문자열 길이의 곱이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-10T00:25:06Z",
+    "updated_at": "2026-08-10T00:25:06Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808173",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808173"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808173"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808173/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808301",
+    "pull_request_review_id": 4892945080,
+    "id": 3745808301,
+    "node_id": "PRRC_kwDOLwMdns7fRH-t",
+    "diff_hunk": "",
+    "path": "longest-repeating-character-replacement/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "3f2da1ffa94e612b2cdfb14bd82d726aabd2f0c4",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: a13102ac19c69fd4d1052ddaa209a1a679221e00 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-repeating-character-replacement/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도 : O(N)\n공간복잡도 : O(1)\n\n1. freq 딕셔너리를 초기화한다.\n2. s의 각 문자(value)에 대해 루프를 돈다.\n3. freq[value]를 1 증가시킨다.\n4. maxima를 현재 윈도우에서 가장 빈도가 높은 문자 빈도로 갱신한다.\n5. 윈도우 크기에서 maxima의 값만큼을 뺀 값이 k보다 크면,\n6. freq[s[left]]를 1 감소시키고 left를 1 증가시킨다.\n7. ans를 윈도우의 최대 길이로 갱신한다.\n8. 마지막으로 ans를 반환한다.\n\"\"\"\nclass Solution:\n    def characterReplacement(self, s: str, k: int) -> int:\n        freq = defaultdict(int)\n        # maxima : 현재 윈도우 내에서 가장 많이 등장한 문자의 빈도수\n        maxima = left = ans = 0\n\n        for right, value in enumerate(s):\n            freq[value] += 1\n            maxima = max(maxima, freq[value])\n\n            while (right - left + 1) - maxima > k:\n                freq[s[left]] -= 1\n                left += 1\n\n            ans = max(ans, right - left + 1)\n\n        return ans\n\n\"\"\"\n시간복잡도 : O(log N)\n공간복잡도 : O(N)\n\n### 세그먼트 트리 구현 ### (윈도우 내 전체만 사용하므로 query 구현 없음)\n\n#### 세그먼트 트리 원리\n- 각 알파벳 빈도 합과 빈도가 가장 높은 문자의 빈도를 저장하는 세그먼트 트리를 사용한다.\n\n#### 코드 설명\n- window.update로 알파벳 개수를 갱신하며,\n- window.tree[1][0]에서 현재 윈도우 내 전체 문자 수,\n- window.tree[1][1]에서 윈도우 내 등장 빈도가 가장 높은 문자의 개수를 구한다.\n- 윈도우 크기 - 최대 빈도가 k를 초과하면 left를 옮기며 윈도우를 줄인다.\n\n> 불필요하게 복잡한 구현이지만, 세그먼트 트리를 공부하기엔 좋은 예제가 될 수 있다.\n\"\"\"\nclass SegTree:\n    def __init__(self):\n        # [문자 개수 합, 최대값]\n        self.tree = [[0, 0] for _ in range(26 * 4 + 1)]\n\n    def _update(\n        self,\n        node_index: int,\n        target_index: int,\n        target_update: int,\n        seg_left: int,\n        seg_right: int,\n    ):\n        if seg_left == seg_right:\n            self.tree[node_index][0] += target_update\n            self.tree[node_index][1] += target_update\n            return\n\n        mid = (seg_left + seg_right) // 2\n\n        if target_index <= mid:\n            self._update(node_index * 2, target_index, target_update, seg_left, mid)\n        else:\n            self._update(\n                node_index * 2 + 1, target_index, target_update, mid + 1, seg_right\n            )\n\n        self.tree[node_index][0] = (\n            self.tree[node_index * 2][0] + self.tree[node_index * 2 + 1][0]\n        )\n        self.tree[node_index][1] = max(\n            self.tree[node_index * 2][1], self.tree[node_index * 2 + 1][1]\n        )\n\n    def update(self, target: str, update: int):\n        self._update(1, ord(target) - ord(\"A\"), update, 0, 25)\n\n\nclass Solution:\n    def characterReplacement(self, s: str, k: int) -> int:\n        left = 0\n        window = SegTree()\n        ans = 0\n\n        for right, value in enumerate(s):\n            window.update(value, 1)\n\n            while window.tree[1][0] > 0 and window.tree[1][0] - window.tree[1][1] > k:\n                window.update(s[left], -1)\n                left += 1\n\n            ans = max(ans, right - left + 1)\n\n        return ans\n\n```\n\n</details>\n\n- **패턴**: Sliding Window, Greedy\n- **설명**: 첫 번째 구현은 슬라이딩 윈도우를 이용해 문자 빈도 차이를 k 이하로 유지하며 윈도우 길이를 확장하는 패턴이고, 두 번째 구현도 윈도우 크기를 조절하며 최대 빈도와의 차이가 k를 넘지 않도록 왼쪽 포인터를 이동하는 그리디 성격의 접근이다. 두 방법 모두 문자열 내 적절한 부분문자열 길이를 최적화한다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.characterReplacement</code> — Time: O(N) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(N) |\n| **Space** | O(1) |\n\n**피드백**: 윈도우 안의 문자 빈도수 추적으로 최대 길이를 결정한다. 최대 빈도수를 유지하는 방식이 핵심이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>SegTree</code> — Time: O(log N) / Space: O(N)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(log N) |\n| **Space** | O(N) |\n\n**피드백**: 복잡도가 불필요하게 커지는 예제지만 세그먼트 트리 학습에 유용하다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-10T00:25:09Z",
+    "updated_at": "2026-08-10T00:25:09Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808301",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808301"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808301"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808301/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808397",
+    "pull_request_review_id": 4892945146,
+    "id": 3745808397,
+    "node_id": "PRRC_kwDOLwMdns7fRIAN",
+    "diff_hunk": "",
+    "path": "palindromic-substrings/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "3f2da1ffa94e612b2cdfb14bd82d726aabd2f0c4",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 1d84b3236b903a28b8fffcd99b80d31a0d6b7a14 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>palindromic-substrings/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도 : O(N^2)\n공간복잡도 : O(1)\n\n1. n을 s의 길이로 설정한다.\n2. count를 0으로 초기화한다.\n3. 각 문자를 중심(center)으로 확장하여 홀수 길이의 팰린드롬을 센다.\n   - radius를 0부터 시작해, center - radius >= 0, center + radius < n 이고 s[center - radius] == s[center + radius]인 동안 count를 1 증가, radius += 1 한다.\n4. 각 문자 쌍(center, center+1)을 중심으로 확장하여 짝수 길이의 팰린드롬을 센다.\n   - radius를 0부터 시작해, center - radius >= 0, center + radius + 1 < n 이고 s[center - radius] == s[center + radius + 1]인 동안 count를 1 증가, radius += 1 한다.\n5. 총 팰린드롬 부분 문자열 개수인 count를 반환한다.\n\"\"\"\nclass Solution:\n    def countSubstrings(self, s: str) -> int:\n        n = len(s)\n        count = 0\n\n        for center in range(n):\n            radius = 0\n            # 홀수 길이 팰린드롬 (center를 기준)\n            while (\n                center - radius >= 0\n                and center + radius < n\n                and s[center - radius] == s[center + radius]\n            ):\n                count += 1\n                radius += 1\n\n            radius = 0\n            # 짝수 길이 팰린드롬 (center, center+1을 기준)\n            while (\n                center - radius >= 0\n                and center + radius + 1 < n\n                and s[center - radius] == s[center + radius + 1]\n            ):\n                count += 1\n                radius += 1\n\n        return count\n\n```\n\n</details>\n\n- **패턴**: Two Pointers, Monotonic Stack, Dynamic Programming\n- **설명**: 문자열의 중심에서 확장하며 팰린드롬을 탐색하는 방식으로, 홀수/짝수 중심을 각각 확장하는 두 포인터(센터-확장) 기법이다. 각 확장에서 일치 여부를 확인하며 카운트를 증가시키므로 한 위치에서의 비교로 전체를 탐색한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(N^2) |\n| **Space** | O(1) |\n\n**피드백**: 가운데를 확장하는 방식으로 모든 홀/짝수 길이 팰린드롬을 탐지한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-10T00:25:10Z",
+    "updated_at": "2026-08-10T00:25:10Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808397",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808397"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808397"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808397/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808498",
+    "pull_request_review_id": 4892945199,
+    "id": 3745808498,
+    "node_id": "PRRC_kwDOLwMdns7fRIBy",
+    "diff_hunk": "",
+    "path": "reverse-bits/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "3f2da1ffa94e612b2cdfb14bd82d726aabd2f0c4",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 392b491da760a968e2373ea354fc5a5eb5aa7005 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>reverse-bits/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(1)  # 32번만 반복하므로 항상 상수 시간 복잡도임\n공간복잡도: O(1)\n\n1. ans를 0으로 초기화한다.\n3. ans를 왼쪽으로 1비트 시프트한 후, n의 마지막 비트를 OR 연산한다.\n4. n을 오른쪽으로 1비트 시프트한다.\n- 3, 4 과정을 32번 반복한다.\n5. ans를 반환한다.\n\"\"\"\nclass Solution:\n    def reverseBits(self, n: int) -> int:\n        ans = 0\n\n        for _ in range(32):\n            ans = (ans << 1) | (n & 1)\n            n >>= 1\n\n        return ans\n\n```\n\n</details>\n\n- **패턴**: Bit Manipulation, Divide and Conquer, Greedy\n- **설명**: 비트 조작으로 각 비트를 좌우로 이동시키며 결과를 구성하는 패턴으로, 반복문 내에서 비트를 shift/OR로 처리하는 비트 연산 기법이다. 입력 비트를 순차적으로 처리해 최종 값을 얻는 방식은 단순하고 명시적이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(1) |\n| **Space** | O(1) |\n\n**피드백**: 고정된 비트 수를 반복하며 비트를 뒤집는다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-10T00:25:12Z",
+    "updated_at": "2026-08-10T00:25:12Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808498",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808498"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745808498"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745808498/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745818167",
+    "pull_request_review_id": 4892953542,
+    "id": 3745818167,
+    "node_id": "PRRC_kwDOLwMdns7fRKY3",
+    "diff_hunk": "",
+    "path": "longest-repeating-character-replacement/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "3cec7aa78adefaf994037745ccbf19990843ad27",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 8fa6483ca1f40f642ef69c3178ff0d3fe7dec201 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-repeating-character-replacement/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도 : O(N)\n공간복잡도 : O(1)\n\n1. freq 딕셔너리를 초기화한다.\n2. s의 각 문자(value)에 대해 루프를 돈다.\n3. freq[value]를 1 증가시킨다.\n4. maxima를 현재 윈도우에서 가장 빈도가 높은 문자 빈도로 갱신한다.\n5. 윈도우 크기에서 maxima의 값만큼을 뺀 값이 k보다 크면,\n6. freq[s[left]]를 1 감소시키고 left를 1 증가시킨다.\n7. ans를 윈도우의 최대 길이로 갱신한다.\n8. 마지막으로 ans를 반환한다.\n\"\"\"\nclass Solution:\n    def characterReplacement(self, s: str, k: int) -> int:\n        freq = defaultdict(int)\n        # maxima : 현재 윈도우 내에서 가장 많이 등장한 문자의 빈도수\n        maxima = left = ans = 0\n\n        for right, value in enumerate(s):\n            freq[value] += 1\n            maxima = max(maxima, freq[value])\n\n            while (right - left + 1) - maxima > k:\n                freq[s[left]] -= 1\n                left += 1\n\n            ans = max(ans, right - left + 1)\n\n        return ans\n\n\"\"\"\n시간복잡도: O(NlogN)\n  - 세그먼트 트리 한 번 업데이트: O(logN)\n  - 슬라이딩 윈도우 오른쪽 포인터 한 번씩 전진: O(N)\n공간복잡도: O(N)\n  - 세그먼트 트리 크기: O(N) (알파벳 26개에 대해 4N+1 노드)\n\n[세그먼트 트리 개요]\n- 각 알파벳(A~Z)의 빈도수를 표현하는 세그먼트 트리를 구현함.\n- 각 트리 노드는 구간 내 현재 알파벳 빈도 총합과 그 구간 내 최빈값(가장 많이 등장한 알파벳의 빈도)을 저장함.\n- 이진 트리 구조로 각 알파벳 인덱스를 리프 노드(0~25)에 매핑.\n\n[핵심 동작 설명]\n- window.update(문자, ±1): 현재 윈도우에 새 문자를 추가/제거할 때 해당 알파벳의 빈도수를 O(logN)에 갱신.\n- window.tree[1][0]: 세그먼트 트리 루트의 첫 번째 값으로, 현재 윈도우 내 전체 문자 개수(윈도우 길이)를 의미.\n- window.tree[1][1]: 루트의 두 번째 값으로, 현재 윈도우 내에서 가장 많이 등장한 문자의 등장 횟수를 의미.\n- (윈도우 전체길이 - 최빈값) > k 를 만족할 때까지 왼쪽 포인터를 옮기며(=왼쪽 문자 제거), 윈도우가 k개 이하의 문자만 바꾸면 모두 동일하게 만들 수 있는 범위로 축소.\n- 매 반복마다 ans를 최대 윈도우 크기로 갱신.\n\n※ 세그먼트 트리 사용은 이 문제에 최적해는 아니나, 자료구조 학습에는 좋은 연습 예제.\n\"\"\"\nclass SegTree:\n    def __init__(self):\n        # [문자 개수 합, 최대값]\n        self.tree = [[0, 0] for _ in range(26 * 4 + 1)]\n\n    def _update(\n        self,\n        node_index: int,\n        target_index: int,\n        target_update: int,\n        seg_left: int,\n        seg_right: int,\n    ):\n        if seg_left == seg_right:\n            self.tree[node_index][0] += target_update\n            self.tree[node_index][1] += target_update\n            return\n\n        mid = (seg_left + seg_right) // 2\n\n        if target_index <= mid:\n            self._update(node_index * 2, target_index, target_update, seg_left, mid)\n        else:\n            self._update(\n                node_index * 2 + 1, target_index, target_update, mid + 1, seg_right\n            )\n\n        self.tree[node_index][0] = (\n            self.tree[node_index * 2][0] + self.tree[node_index * 2 + 1][0]\n        )\n        self.tree[node_index][1] = max(\n            self.tree[node_index * 2][1], self.tree[node_index * 2 + 1][1]\n        )\n\n    def update(self, target: str, update: int):\n        self._update(1, ord(target) - ord(\"A\"), update, 0, 25)\n\n\nclass Solution:\n    def characterReplacement(self, s: str, k: int) -> int:\n        left = 0\n        window = SegTree()\n        ans = 0\n\n        for right, value in enumerate(s):\n            window.update(value, 1)\n\n            while window.tree[1][0] > 0 and window.tree[1][0] - window.tree[1][1] > k:\n                window.update(s[left], -1)\n                left += 1\n\n            ans = max(ans, right - left + 1)\n\n        return ans\n\n```\n\n</details>\n\n- **패턴**: Sliding Window, Hash Map / Hash Set, Divide and Conquer\n- **설명**: 첫 번째 구현은 슬라이딩 윈도우로 연속 부분 문자열에서 필요 문자 갱신 횟수를 관리한다. freq 해시 맵으로 문자 빈도를 추적하고 윈도우를 좌우 포인터로 조정하는 패턴이 핵심이다. 두 번째 구현은 세그먼트 트리로 윈도우 내부 빈도와 최빈값을 관리하지만 여전히 윈도우 확장/축소의 흐름은 Sliding Window에 가깝다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(N) |\n| **Space** | O(1) |\n\n**피드백**: 해당 풀이에서는 슬라이딩 윈도우를 사용해 각 step에서 필요 최소한의 정보를 유지한다. 다만 주석에 제시된 시간/공간 표기가 실제 구현과 다르므로 구현의 동작에 집중하면 된다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-10T00:28:47Z",
+    "updated_at": "2026-08-10T00:28:47Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745818167",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745818167"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745818167"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745818167/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745841482",
+    "pull_request_review_id": 4892972310,
+    "id": 3745841482,
+    "node_id": "PRRC_kwDOLwMdns7fRQFK",
+    "diff_hunk": "",
+    "path": "longest-repeating-character-replacement/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "d0747a2bebcc689eec6ff7f788a107391418e3cd",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: dec52c0c4b9c9a4b36bfb9eea754913ab8bb6adf -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-repeating-character-replacement/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도 : O(N)\n공간복잡도 : O(1)\n\n1. freq 딕셔너리를 초기화한다.\n2. s의 각 문자(value)에 대해 루프를 돈다.\n3. freq[value]를 1 증가시킨다.\n4. maxima를 현재 윈도우에서 가장 빈도가 높은 문자 빈도로 갱신한다.\n5. 윈도우 크기에서 maxima의 값만큼을 뺀 값이 k보다 크면,\n6. freq[s[left]]를 1 감소시키고 left를 1 증가시킨다.\n7. ans를 윈도우의 최대 길이로 갱신한다.\n8. 마지막으로 ans를 반환한다.\n\"\"\"\nclass Solution:\n    def characterReplacement(self, s: str, k: int) -> int:\n        freq = defaultdict(int)\n        # maxima : 현재 윈도우 내에서 가장 많이 등장한 문자의 빈도수\n        maxima = left = ans = 0\n\n        for right, value in enumerate(s):\n            freq[value] += 1\n            maxima = max(maxima, freq[value])\n\n            while (right - left + 1) - maxima > k:\n                freq[s[left]] -= 1\n                left += 1\n\n            ans = max(ans, right - left + 1)\n\n        return ans\n\n\"\"\"\n시간복잡도: O(NlogN)\n  - 세그먼트 트리 한 번 업데이트: O(logN)\n  - 슬라이딩 윈도우 오른쪽 포인터 한 번씩 전진: O(N)\n공간복잡도: O(N)\n  - 세그먼트 트리 크기: O(N) (알파벳 26개에 대해 4N+1 노드)\n\n[세그먼트 트리 개요]\n- 각 알파벳(A~Z)의 빈도수를 표현하는 세그먼트 트리를 구현함.\n- 각 트리 노드는 구간 내 현재 알파벳 빈도 총합과 그 구간 내 최빈값(가장 많이 등장한 알파벳의 빈도)을 저장함.\n- 이진 트리 구조로 각 알파벳 인덱스를 리프 노드(0~25)에 매핑.\n\n[핵심 동작 설명]\n- window.update(문자, ±1): 현재 윈도우에 새 문자를 추가/제거할 때 해당 알파벳의 빈도수를 O(logN)에 갱신.\n- window.tree[1][0]: 세그먼트 트리 루트의 첫 번째 값으로, 현재 윈도우 내 전체 문자 개수(윈도우 길이)를 의미.\n- window.tree[1][1]: 루트의 두 번째 값으로, 현재 윈도우 내에서 가장 많이 등장한 문자의 등장 횟수를 의미.\n- (윈도우 전체길이 - 최빈값) > k 를 만족할 때까지 왼쪽 포인터를 옮기며(=왼쪽 문자 제거), 윈도우가 k개 이하의 문자만 바꾸면 모두 동일하게 만들 수 있는 범위로 축소.\n- 매 반복마다 ans를 최대 윈도우 크기로 갱신.\n\n※ 세그먼트 트리 사용은 이 문제에 최적해는 아니나, 자료구조 학습에는 좋은 연습 예제.\n\"\"\"\nclass SegTree:\n    def __init__(self):\n        # summation, largest\n        self.tree = [[0, 0] for _ in range(26 * 4 + 1)]\n\n    def _update(\n        self,\n        node_index: int,\n        target_index: int,\n        target_update: int,\n        seg_left: int,\n        seg_right: int,\n    ):\n        if seg_left == seg_right:\n            self.tree[node_index][0] += target_update\n            self.tree[node_index][1] += target_update\n            return\n\n        mid = (seg_left + seg_right) // 2\n\n        if target_index <= mid:\n            self._update(node_index * 2, target_index, target_update, seg_left, mid)\n        else:\n            self._update(\n                node_index * 2 + 1, target_index, target_update, mid + 1, seg_right\n            )\n\n        self.tree[node_index][0] = (\n            self.tree[node_index * 2][0] + self.tree[node_index * 2 + 1][0]\n        )\n        self.tree[node_index][1] = max(\n            self.tree[node_index * 2][1], self.tree[node_index * 2 + 1][1]\n        )\n\n    def update(self, target: str, update: int):\n        self._update(1, ord(target) - ord(\"A\"), update, 0, 25)\n\n\nclass Solution:\n    def characterReplacement(self, s: str, k: int) -> int:\n        left = 0\n        window = SegTree()\n        ans = 0\n\n        for right, value in enumerate(s):\n            window.update(value, 1)\n\n            while window.tree[1][0] - window.tree[1][1] > k:\n                window.update(s[left], -1)\n                left += 1\n\n            ans = max(ans, right - left + 1)\n\n        return ans\n\n```\n\n</details>\n\n- **패턴**: Sliding Window, Hash Map / Hash Set, Dynamic Programming\n- **설명**: 첫 번째 코드에서 윈도우 크기를 변동시키며 조건을 만족하는 최대 길이를 찾는 Sliding Window 패턴이다. freq로 문자 빈도를 추적하나 해시 맵/해시셋으로 구현된 핵심 아이디어를 사용한다. 두 번째 코드는 세그먼트 트리로 윈도우 내 총합과 최빈값을 관리하나, 윈도우를 좌우로 확장/축소하는 흐름은 Sliding Window의 확장으로 볼 수 있다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution.characterReplacement</code> — Time: O(n) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 단일 루프와 상수 개의 추가 변수로 구성되어 시간복잡도는 선형이며, 공간은 고정된 상수 크기의 변수로 구성되어 있다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>SegTree.characterReplacement</code> — Time: O(n log N) / Space: O(N)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n log N) |\n| **Space** | O(N) |\n\n**피드백**: 세그먼트 트리로 구현했지만 문제의 최적해는 아닐 수 있으며, 슬라이딩 윈도우의 간단한 구현에 비해 비효율적일 수 있다. 트리 업데이트가 매 문자마다 필요하다.\n\n**개선 제안**: 고려해볼 만한 대안: 간단한 해시맵+윈도우 방식으로 O(n) 시간과 O(1) 공간에 더 가까운 구현을 우선 시도해볼 것.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-10T00:36:36Z",
+    "updated_at": "2026-08-10T00:36:36Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745841482",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745841482"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3745841482"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3745841482/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3755901942",
+    "pull_request_review_id": 4903741227,
+    "id": 3755901942,
+    "node_id": "PRRC_kwDOLwMdns7f3oP2",
+    "diff_hunk": "@@ -0,0 +1,106 @@\n+\"\"\"\n+시간복잡도 : O(N)\n+공간복잡도 : O(1)\n+\n+1. freq 딕셔너리를 초기화한다.\n+2. s의 각 문자(value)에 대해 루프를 돈다.\n+3. freq[value]를 1 증가시킨다.\n+4. maxima를 현재 윈도우에서 가장 빈도가 높은 문자 빈도로 갱신한다.\n+5. 윈도우 크기에서 maxima의 값만큼을 뺀 값이 k보다 크면,\n+6. freq[s[left]]를 1 감소시키고 left를 1 증가시킨다.\n+7. ans를 윈도우의 최대 길이로 갱신한다.\n+8. 마지막으로 ans를 반환한다.\n+\"\"\"\n+class Solution:\n+    def characterReplacement(self, s: str, k: int) -> int:\n+        freq = defaultdict(int)\n+        # maxima : 현재 윈도우 내에서 가장 많이 등장한 문자의 빈도수\n+        maxima = left = ans = 0\n+\n+        for right, value in enumerate(s):\n+            freq[value] += 1\n+            maxima = max(maxima, freq[value])\n+\n+            while (right - left + 1) - maxima > k:\n+                freq[s[left]] -= 1\n+                left += 1\n+\n+            ans = max(ans, right - left + 1)\n+\n+        return ans\n+\n+\"\"\"\n+시간복잡도: O(NlogN)\n+  - 세그먼트 트리 한 번 업데이트: O(logN)",
+    "path": "longest-repeating-character-replacement/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "34105e6eb1040d798f9292ad91b1b9faf2b0ec1b",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "이거 상수라 1이네요, O(N)이 시간복잡도입니다.",
+    "created_at": "2026-08-11T07:05:34Z",
+    "updated_at": "2026-08-11T07:05:34Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3755901942",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3755901942"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3755901942"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3755901942/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 34,
+    "original_line": 34,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 34,
+    "position": 34,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3755922693",
+    "pull_request_review_id": 4903766717,
+    "id": 3755922693,
+    "node_id": "PRRC_kwDOLwMdns7f3tUF",
+    "diff_hunk": "",
+    "path": "longest-common-subsequence/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 5ccd6db53cb0ce36dbeb2014794839d445dc88d7 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-common-subsequence/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도 : O(T1 * T2)\n공간복잡도 : O(T1) # T1에 짧은 문자열을 설정했기에 공간복잡도는 T1이 된다.\n\n1. text1과 text2 중 더 짧은 쪽을 text1으로 설정한다.\n2. T1과 T2를 각각 text1과 text2의 길이로 설정한다.\n3. dp 배열을 T1 + 1 크기로 0으로 초기화한다.\n4. text2의 각 문자(i)를 순회하면서 비교한다.\n5. new_dp 배열을 T1 + 1 크기로 0으로 초기화한다.\n6. text1의 각 문자(j)에 대해 순회하면서 비교한다.\n7. text2[i - 1]과 text1[j - 1]가 같으면, new_dp[j]를 dp[j - 1] + 1로 설정한다.\n8. 다르면, new_dp[j]를 max(new_dp[j - 1], dp[j])로 설정한다.\n9. dp를 new_dp로 갱신하고, 마지막 원소를 반환한다.\n\"\"\"\nclass Solution:\n    def longestCommonSubsequence(self, text1: str, text2: str) -> int:\n        if len(text1) > len(text2):\n            text1, text2 = text2, text1\n\n        T1, T2 = len(text1), len(text2)\n        dp = [0] * (T1 + 1)\n\n        for i in range(1, T2 + 1):\n            new_dp = [0] * (T1 + 1)\n\n            for j in range(1, T1 + 1):\n                if text2[i - 1] == text1[j - 1]:\n                    new_dp[j] = dp[j - 1] + 1\n                else:\n                    new_dp[j] = max(new_dp[j - 1], dp[j])\n\n            dp = new_dp\n\n        return dp[-1]\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming, Two Pointers\n- **설명**: 두 문자열의 LCS를 구하기 위해 부분문제의 해를 이용해 순차적으로 dp를 갱신하는 전형적인 다이나믹 프로그래밍 패턴이며, 공간 절약을 위해 현재와 이전 행만 사용하는 점에서 점진적 갱신이 핵심이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(T1 * T2) |\n| **Space** | O(T1) |\n\n**피드백**: 두 문자열 길이에 비례하는 이중 루프와 한 줄의 보조 배열 사용으로 공간을 최적화했다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-11T07:09:45Z",
+    "updated_at": "2026-08-11T07:09:45Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3755922693",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3755922693"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3755922693"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3755922693/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787609511",
+    "pull_request_review_id": 4941716966,
+    "id": 3787609511,
+    "node_id": "PRRC_kwDOLwMdns7hwlWn",
+    "diff_hunk": "@@ -0,0 +1,106 @@\n+\"\"\"\n+시간복잡도 : O(N)\n+공간복잡도 : O(1)\n+\n+1. freq 딕셔너리를 초기화한다.\n+2. s의 각 문자(value)에 대해 루프를 돈다.\n+3. freq[value]를 1 증가시킨다.\n+4. maxima를 현재 윈도우에서 가장 빈도가 높은 문자 빈도로 갱신한다.\n+5. 윈도우 크기에서 maxima의 값만큼을 뺀 값이 k보다 크면,\n+6. freq[s[left]]를 1 감소시키고 left를 1 증가시킨다.\n+7. ans를 윈도우의 최대 길이로 갱신한다.\n+8. 마지막으로 ans를 반환한다.\n+\"\"\"\n+class Solution:\n+    def characterReplacement(self, s: str, k: int) -> int:\n+        freq = defaultdict(int)\n+        # maxima : 현재 윈도우 내에서 가장 많이 등장한 문자의 빈도수\n+        maxima = left = ans = 0\n+\n+        for right, value in enumerate(s):\n+            freq[value] += 1\n+            maxima = max(maxima, freq[value])\n+\n+            while (right - left + 1) - maxima > k:\n+                freq[s[left]] -= 1\n+                left += 1\n+\n+            ans = max(ans, right - left + 1)\n+\n+        return ans\n+\n+\"\"\"\n+시간복잡도: O(NlogN)\n+  - 세그먼트 트리 한 번 업데이트: O(logN)\n+  - 슬라이딩 윈도우 오른쪽 포인터 한 번씩 전진: O(N)\n+공간복잡도: O(N)\n+  - 세그먼트 트리 크기: O(N) (알파벳 26개에 대해 4N+1 노드)\n+\n+[세그먼트 트리 개요]\n+- 각 알파벳(A~Z)의 빈도수를 표현하는 세그먼트 트리를 구현함.\n+- 각 트리 노드는 구간 내 현재 알파벳 빈도 총합과 그 구간 내 최빈값(가장 많이 등장한 알파벳의 빈도)을 저장함.\n+- 이진 트리 구조로 각 알파벳 인덱스를 리프 노드(0~25)에 매핑.\n+\n+[핵심 동작 설명]\n+- window.update(문자, ±1): 현재 윈도우에 새 문자를 추가/제거할 때 해당 알파벳의 빈도수를 O(logN)에 갱신.\n+- window.tree[1][0]: 세그먼트 트리 루트의 첫 번째 값으로, 현재 윈도우 내 전체 문자 개수(윈도우 길이)를 의미.\n+- window.tree[1][1]: 루트의 두 번째 값으로, 현재 윈도우 내에서 가장 많이 등장한 문자의 등장 횟수를 의미.\n+- (윈도우 전체길이 - 최빈값) > k 를 만족할 때까지 왼쪽 포인터를 옮기며(=왼쪽 문자 제거), 윈도우가 k개 이하의 문자만 바꾸면 모두 동일하게 만들 수 있는 범위로 축소.\n+- 매 반복마다 ans를 최대 윈도우 크기로 갱신.\n+\n+※ 세그먼트 트리 사용은 이 문제에 최적해는 아니나, 자료구조 학습에는 좋은 연습 예제.\n+\"\"\"\n+class SegTree:\n+    def __init__(self):\n+        # summation, largest\n+        self.tree = [[0, 0] for _ in range(26 * 4 + 1)]",
+    "path": "longest-repeating-character-replacement/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "세그먼트 트리는 저한테는 좀 생소한 개념인데 흥미롭네요! 혹시 초기 트리가 4배 정도가 필요하다는 것이 어떤 식으로 도출이 됐는지 알 수 있을까요?",
+    "created_at": "2026-08-14T22:43:07Z",
+    "updated_at": "2026-08-14T23:19:51Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3787609511",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787609511"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3787609511"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787609511/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 56,
+    "original_line": 56,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 56,
+    "position": 56,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787621559",
+    "pull_request_review_id": 4941716966,
+    "id": 3787621559,
+    "node_id": "PRRC_kwDOLwMdns7hwoS3",
+    "diff_hunk": "@@ -0,0 +1,19 @@\n+\"\"\"\n+시간복잡도: O(1)  # 32번만 반복하므로 항상 상수 시간 복잡도임\n+공간복잡도: O(1)\n+\n+1. ans를 0으로 초기화한다.\n+3. ans를 왼쪽으로 1비트 시프트한 후, n의 마지막 비트를 OR 연산한다.",
+    "path": "reverse-bits/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "리턴할 수는 왼쪽으로 비트 연산하고, 원본 수는 오른쪽으로 비트 연산하면서 자연스럽게 거꾸로 비트가 쌓이네요. 비트 연산은 좀 감이 안와서 미루고 있었는데 덕분에 이해가 됐습니다!",
+    "created_at": "2026-08-14T22:46:29Z",
+    "updated_at": "2026-08-14T23:19:51Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3787621559",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787621559"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3787621559"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787621559/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 6,
+    "original_line": 6,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 6,
+    "position": 6,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787632489",
+    "pull_request_review_id": 4941716966,
+    "id": 3787632489,
+    "node_id": "PRRC_kwDOLwMdns7hwq9p",
+    "diff_hunk": "@@ -0,0 +1,32 @@\n+\"\"\"\n+시간복잡도 : O(V + E)\n+공간복잡도 : O(V)\n+\n+1. made 딕셔너리를 초기화한다.\n+2. copy_node 함수를 정의한다.\n+3. copy_node 함수는 target 노드를 복사한 후 반환한다.\n+4. 이미 복사한 노드는 made에서 재사용한다.\n+5. 복사한 노드의 이웃들 또한 copy_node를 이용해 재귀적으로 복사한다.\n+6. 최종적으로 복제된 그래프의 시작 노드를 반환한다.\n+\"\"\"\n+class Solution:\n+    def cloneGraph(self, node: Optional[\"Node\"]) -> Optional[\"Node\"]:\n+\n+        made = dict()\n+\n+        def copy_node(target: Node) -> Node:\n+            if not target:\n+                return None\n+\n+            copied = Node(target.val)\n+            made[target.val] = copied",
+    "path": "clone-graph/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "value가 unique 조건이 있으니, 간단히 인덱스로도 생성 여부를 기록하고 조회할 수 있네요. 좋은 아이디어네요! ",
+    "created_at": "2026-08-14T22:49:32Z",
+    "updated_at": "2026-08-14T23:19:52Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3787632489",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787632489"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3787632489"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3787632489/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 22,
+    "original_line": 22,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 22,
+    "position": 22,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3788306322",
+    "pull_request_review_id": 4942549914,
+    "id": 3788306322,
+    "node_id": "PRRC_kwDOLwMdns7hzPeS",
+    "diff_hunk": "@@ -0,0 +1,106 @@\n+\"\"\"\n+시간복잡도 : O(N)\n+공간복잡도 : O(1)\n+\n+1. freq 딕셔너리를 초기화한다.\n+2. s의 각 문자(value)에 대해 루프를 돈다.\n+3. freq[value]를 1 증가시킨다.\n+4. maxima를 현재 윈도우에서 가장 빈도가 높은 문자 빈도로 갱신한다.\n+5. 윈도우 크기에서 maxima의 값만큼을 뺀 값이 k보다 크면,\n+6. freq[s[left]]를 1 감소시키고 left를 1 증가시킨다.\n+7. ans를 윈도우의 최대 길이로 갱신한다.\n+8. 마지막으로 ans를 반환한다.\n+\"\"\"\n+class Solution:\n+    def characterReplacement(self, s: str, k: int) -> int:\n+        freq = defaultdict(int)\n+        # maxima : 현재 윈도우 내에서 가장 많이 등장한 문자의 빈도수\n+        maxima = left = ans = 0\n+\n+        for right, value in enumerate(s):\n+            freq[value] += 1\n+            maxima = max(maxima, freq[value])\n+\n+            while (right - left + 1) - maxima > k:\n+                freq[s[left]] -= 1\n+                left += 1\n+\n+            ans = max(ans, right - left + 1)\n+\n+        return ans\n+\n+\"\"\"\n+시간복잡도: O(NlogN)\n+  - 세그먼트 트리 한 번 업데이트: O(logN)\n+  - 슬라이딩 윈도우 오른쪽 포인터 한 번씩 전진: O(N)\n+공간복잡도: O(N)\n+  - 세그먼트 트리 크기: O(N) (알파벳 26개에 대해 4N+1 노드)\n+\n+[세그먼트 트리 개요]\n+- 각 알파벳(A~Z)의 빈도수를 표현하는 세그먼트 트리를 구현함.\n+- 각 트리 노드는 구간 내 현재 알파벳 빈도 총합과 그 구간 내 최빈값(가장 많이 등장한 알파벳의 빈도)을 저장함.\n+- 이진 트리 구조로 각 알파벳 인덱스를 리프 노드(0~25)에 매핑.\n+\n+[핵심 동작 설명]\n+- window.update(문자, ±1): 현재 윈도우에 새 문자를 추가/제거할 때 해당 알파벳의 빈도수를 O(logN)에 갱신.\n+- window.tree[1][0]: 세그먼트 트리 루트의 첫 번째 값으로, 현재 윈도우 내 전체 문자 개수(윈도우 길이)를 의미.\n+- window.tree[1][1]: 루트의 두 번째 값으로, 현재 윈도우 내에서 가장 많이 등장한 문자의 등장 횟수를 의미.\n+- (윈도우 전체길이 - 최빈값) > k 를 만족할 때까지 왼쪽 포인터를 옮기며(=왼쪽 문자 제거), 윈도우가 k개 이하의 문자만 바꾸면 모두 동일하게 만들 수 있는 범위로 축소.\n+- 매 반복마다 ans를 최대 윈도우 크기로 갱신.\n+\n+※ 세그먼트 트리 사용은 이 문제에 최적해는 아니나, 자료구조 학습에는 좋은 연습 예제.\n+\"\"\"\n+class SegTree:\n+    def __init__(self):\n+        # summation, largest\n+        self.tree = [[0, 0] for _ in range(26 * 4 + 1)]",
+    "path": "longest-repeating-character-replacement/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "세그먼트 트리의 원소 갯수는 반드시 4*N보다 작은데요, 혹시 모르니까 안전하게 + 1 해서 쓰는거에요!",
+    "created_at": "2026-08-15T02:51:13Z",
+    "updated_at": "2026-08-15T02:51:13Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3788306322",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3788306322"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3788306322"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3788306322/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 56,
+    "original_line": 56,
+    "side": "RIGHT",
+    "in_reply_to_id": 3787609511,
+    "author_association": "MEMBER",
+    "original_position": 56,
+    "position": 56,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3788308343",
+    "pull_request_review_id": 4942555029,
+    "id": 3788308343,
+    "node_id": "PRRC_kwDOLwMdns7hzP93",
+    "diff_hunk": "@@ -0,0 +1,19 @@\n+\"\"\"\n+시간복잡도: O(1)  # 32번만 반복하므로 항상 상수 시간 복잡도임\n+공간복잡도: O(1)\n+\n+1. ans를 0으로 초기화한다.\n+3. ans를 왼쪽으로 1비트 시프트한 후, n의 마지막 비트를 OR 연산한다.",
+    "path": "reverse-bits/alphaorderly.py",
+    "commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "original_commit_id": "375d1fe0b2ae14faed9a5367bd6f2a1bc15458a1",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "맞습니다!",
+    "created_at": "2026-08-15T02:52:25Z",
+    "updated_at": "2026-08-15T02:52:26Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3788308343",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3788308343"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2810#discussion_r3788308343"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2810"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3788308343/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 6,
+    "original_line": 6,
+    "side": "RIGHT",
+    "in_reply_to_id": 3787621559,
+    "author_association": "MEMBER",
+    "original_position": 6,
+    "position": 6,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

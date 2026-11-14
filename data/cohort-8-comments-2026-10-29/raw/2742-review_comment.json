@@ -1,0 +1,928 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919247",
+    "pull_request_review_id": 4728053296,
+    "id": 3607919247,
+    "node_id": "PRRC_kwDOLwMdns7XDHqP",
+    "diff_hunk": "",
+    "path": "coin-change/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Dynamic Programming, Backtracking\n- **설명**: 메모이제이션을 이용한 재귀적 탐색으로 금액(target)을 만드는 최소 동전 수를 계산한다. 중복 하위 문제를 저장하고 재귀적으로 풀이하여 최적해를 도출하는 DP 패턴에 해당한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n * amount) | O(amount * k) | ❌ |\n| **Space** | O(amount) | O(amount) | ✅ |\n\n**피드백**: 재귀 + 메모이제이션으로 중복 계산을 줄였지만, 최악의 경우 모든 target에 대해 모든 코인을 시도하므로 시간복잡도는 O(amount * k)다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-07-18T07:37:07Z",
+    "updated_at": "2026-07-18T07:37:07Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919247",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919247"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919247"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919247/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919303",
+    "pull_request_review_id": 4728053348,
+    "id": 3607919303,
+    "node_id": "PRRC_kwDOLwMdns7XDHrH",
+    "diff_hunk": "",
+    "path": "find-minimum-in-rotated-sorted-array/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Binary Search\n- **설명**: 중간 값을 기준으로 영역을 반으로 나누며 최소 원소 위치를 찾는 이진 탐색 패턴으로, 회전된 정렬 배열에서 부분 정렬 여부를 판단해 탐색 범위를 축소합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(log n) | O(log n) | ✅ |\n| **Space** | O(1) | O(1) | ✅ |\n\n**피드백**: 피벗의 위치를 기준으로 왼쪽/오른쪽 정렬 여부를 판단하며 탐색 공간을 절반으로 축소한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-07-18T07:37:09Z",
+    "updated_at": "2026-07-18T07:37:09Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919303",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919303"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919303"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919303/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919346",
+    "pull_request_review_id": 4728053399,
+    "id": 3607919346,
+    "node_id": "PRRC_kwDOLwMdns7XDHry",
+    "diff_hunk": "",
+    "path": "maximum-depth-of-binary-tree/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Depth-First Search, Binary Search, Divine Pattern?\n- **설명**: 가장 깊이를 재는 재귀 탐색으로 왼쪽/오른쪽 자식을 먼저 탐색하는 DFS 패턴이며, 트리의 각 노드를 방문하며 최대 깊이를 갱신합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | O(h) | O(h) | ✅ |\n\n**피드백**: 트리의 모든 노드를 방문하며 깊이 우선으로 탐색한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-07-18T07:37:11Z",
+    "updated_at": "2026-07-18T07:37:11Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919346",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919346"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919346"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919346/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919425",
+    "pull_request_review_id": 4728053450,
+    "id": 3607919425,
+    "node_id": "PRRC_kwDOLwMdns7XDHtB",
+    "diff_hunk": "",
+    "path": "merge-two-sorted-lists/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Two Pointers, Merge Sort\n- **설명**: 리스트를 순차적으로 비교하며 작은 값을 차례로 연결하는 구간은 Two Pointers 패턴의 전형이며, 두 정렬된 리스트를 합치는 동작은 분할된 부분 배열을 합치는 개념으로 해석할 수 있습니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n+m) | O(n + m) | ✅ |\n| **Space** | O(n+m) | O(1) | ❌ |\n\n**피드백**: 두 리스트를 병합하는 기본 패턴이다. 현재는 새 노드를 만들어 연결하므로 추가 공간이 필요할 수 있다.\n\n**개선 제안**: 고려해볼 만한 대안: 기존 노드를 재배치하여 공간복잡도를 O(1)로 줄일 수 있다.",
+    "created_at": "2026-07-18T07:37:13Z",
+    "updated_at": "2026-07-18T07:37:13Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919425",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919425"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919425"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919425/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919491",
+    "pull_request_review_id": 4728053677,
+    "id": 3607919491,
+    "node_id": "PRRC_kwDOLwMdns7XDHuD",
+    "diff_hunk": "",
+    "path": "word-search/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Depth-First Search, Backtracking\n- **설명**: 이 코드는 보드에서 인접 문자로 단서를 따라 탐색하며 단서를 맞출 때마다 이전 선택을 되돌리는 백트래킹 기법을 사용한다. DFS로 방향을 따라 깊이 탐색하고, 실패 시 되돌아가면서 다른 경로를 시도한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(m * n * 4^L) |\n| **Space** | O(L) |\n\n**피드백**: 각 위치에서 방향마다 DFS를 수행하고 방문 추적 배열로 중복을 방지한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-18T07:37:16Z",
+    "updated_at": "2026-07-18T07:37:16Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919491",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919491"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3607919491"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3607919491/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608277266",
+    "pull_request_review_id": 4728413708,
+    "id": 3608277266,
+    "node_id": "PRRC_kwDOLwMdns7XEfES",
+    "diff_hunk": "",
+    "path": "coin-change/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "저는 바텀업 방식으로 작성했는데 탑다운으로 풀어주셨군요!\ncoins: [1], amout: 10000이 입력으로 주어졌을 때 재귀 스택이 10,000까지 깊어질 수 있을 것 같습니다~\n",
+    "created_at": "2026-07-18T11:42:37Z",
+    "updated_at": "2026-07-18T11:42:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608277266",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608277266"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608277266"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608277266/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608278792",
+    "pull_request_review_id": 4728414920,
+    "id": 3608278792,
+    "node_id": "PRRC_kwDOLwMdns7XEfcI",
+    "diff_hunk": "",
+    "path": "find-minimum-in-rotated-sorted-array/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "저도 동일하게 이진 탐색하도록 풀었습니다. 잘 봤습니다!",
+    "created_at": "2026-07-18T11:43:38Z",
+    "updated_at": "2026-07-18T11:43:38Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608278792",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608278792"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608278792"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608278792/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608281787",
+    "pull_request_review_id": 4728417822,
+    "id": 3608281787,
+    "node_id": "PRRC_kwDOLwMdns7XEgK7",
+    "diff_hunk": "",
+    "path": "maximum-depth-of-binary-tree/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "직관적이고 간결한 풀이 잘 봤습니다 👍 ",
+    "created_at": "2026-07-18T11:45:57Z",
+    "updated_at": "2026-07-18T11:45:57Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608281787",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608281787"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608281787"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608281787/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608284113",
+    "pull_request_review_id": 4728420261,
+    "id": 3608284113,
+    "node_id": "PRRC_kwDOLwMdns7XEgvR",
+    "diff_hunk": "",
+    "path": "merge-two-sorted-lists/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "ListNode 할당하는 로직을 조금 수정해서 공간 복잡도를 O(1)로 개선해보면 좋을 것 같습니다!",
+    "created_at": "2026-07-18T11:47:14Z",
+    "updated_at": "2026-07-18T11:47:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608284113",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608284113"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608284113"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608284113/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608286894",
+    "pull_request_review_id": 4728423121,
+    "id": 3608286894,
+    "node_id": "PRRC_kwDOLwMdns7XEhau",
+    "diff_hunk": "",
+    "path": "word-search/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "okyungjin",
+      "id": 31913666,
+      "node_id": "MDQ6VXNlcjMxOTEzNjY2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31913666?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/okyungjin",
+      "html_url": "https://github.com/okyungjin",
+      "followers_url": "https://api.github.com/users/okyungjin/followers",
+      "following_url": "https://api.github.com/users/okyungjin/following{/other_user}",
+      "gists_url": "https://api.github.com/users/okyungjin/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/okyungjin/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/okyungjin/subscriptions",
+      "organizations_url": "https://api.github.com/users/okyungjin/orgs",
+      "repos_url": "https://api.github.com/users/okyungjin/repos",
+      "events_url": "https://api.github.com/users/okyungjin/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/okyungjin/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "dx, dy로 포지션을 미리 할당해놓고 쓰니까 깔끔하네요. 잘 봤습니다!!\n\nvisited 배열을 선언하지 않도록해서 공간 복잡도를 O(L)로 최적화를 해보는 것도 좋을 것 같습니다 🔥",
+    "created_at": "2026-07-18T11:49:22Z",
+    "updated_at": "2026-07-18T11:49:22Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608286894",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608286894"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608286894"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608286894/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608289461",
+    "pull_request_review_id": 4728426188,
+    "id": 3608289461,
+    "node_id": "PRRC_kwDOLwMdns7XEiC1",
+    "diff_hunk": "",
+    "path": "word-search/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "JeonJe",
+      "id": 43032391,
+      "node_id": "MDQ6VXNlcjQzMDMyMzkx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43032391?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JeonJe",
+      "html_url": "https://github.com/JeonJe",
+      "followers_url": "https://api.github.com/users/JeonJe/followers",
+      "following_url": "https://api.github.com/users/JeonJe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JeonJe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JeonJe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JeonJe/subscriptions",
+      "organizations_url": "https://api.github.com/users/JeonJe/orgs",
+      "repos_url": "https://api.github.com/users/JeonJe/repos",
+      "events_url": "https://api.github.com/users/JeonJe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JeonJe/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "무의식적으로 visited 배열을 사용해서 dfs/bfs 를 풀고 있었는데 사용하지 않는 방식도 고민을 해봐야겠네요 \n감사합니다!!",
+    "created_at": "2026-07-18T11:51:25Z",
+    "updated_at": "2026-07-18T11:58:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608289461",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608289461"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608289461"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608289461/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "in_reply_to_id": 3608286894,
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608296786",
+    "pull_request_review_id": 4728426188,
+    "id": 3608296786,
+    "node_id": "PRRC_kwDOLwMdns7XEj1S",
+    "diff_hunk": "",
+    "path": "merge-two-sorted-lists/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "JeonJe",
+      "id": 43032391,
+      "node_id": "MDQ6VXNlcjQzMDMyMzkx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43032391?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JeonJe",
+      "html_url": "https://github.com/JeonJe",
+      "followers_url": "https://api.github.com/users/JeonJe/followers",
+      "following_url": "https://api.github.com/users/JeonJe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JeonJe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JeonJe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JeonJe/subscriptions",
+      "organizations_url": "https://api.github.com/users/JeonJe/orgs",
+      "repos_url": "https://api.github.com/users/JeonJe/repos",
+      "events_url": "https://api.github.com/users/JeonJe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JeonJe/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "노드를 새로 만드는게 아니라, 이미 있는 list1, list2 노드를 이어 붙여주는 방식으로 최적화가 가능하겠네요!\n생각 못했던 부분인데 좋은 리뷰 감사합니다!!",
+    "created_at": "2026-07-18T11:53:14Z",
+    "updated_at": "2026-07-18T11:58:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608296786",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608296786"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608296786"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608296786/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "in_reply_to_id": 3608284113,
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608308294",
+    "pull_request_review_id": 4728426188,
+    "id": 3608308294,
+    "node_id": "PRRC_kwDOLwMdns7XEmpG",
+    "diff_hunk": "",
+    "path": "coin-change/JeonJe.java",
+    "commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "original_commit_id": "dcce1f6ead11253076f516f6425321d5b573638e",
+    "user": {
+      "login": "JeonJe",
+      "id": 43032391,
+      "node_id": "MDQ6VXNlcjQzMDMyMzkx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43032391?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/JeonJe",
+      "html_url": "https://github.com/JeonJe",
+      "followers_url": "https://api.github.com/users/JeonJe/followers",
+      "following_url": "https://api.github.com/users/JeonJe/following{/other_user}",
+      "gists_url": "https://api.github.com/users/JeonJe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JeonJe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JeonJe/subscriptions",
+      "organizations_url": "https://api.github.com/users/JeonJe/orgs",
+      "repos_url": "https://api.github.com/users/JeonJe/repos",
+      "events_url": "https://api.github.com/users/JeonJe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JeonJe/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "아하 조금만 제약 조건의 범위가 늘어나면 스택 오버플로우가 발생할 수 있겠네요.\n반복문을 써서 가장 작은 금액 단위부터 채워나가는 식의 바텀업 풀이가 좋아보이긴하네요.\n\n꼼꼼한 리뷰 감사합니다!",
+    "created_at": "2026-07-18T11:58:08Z",
+    "updated_at": "2026-07-18T11:58:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608308294",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608308294"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2742#discussion_r3608308294"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2742"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608308294/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "in_reply_to_id": 3608277266,
+    "author_association": "MEMBER",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

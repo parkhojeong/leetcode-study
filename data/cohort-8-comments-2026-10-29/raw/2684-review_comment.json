@@ -1,0 +1,1143 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522663927",
+    "pull_request_review_id": 4628978180,
+    "id": 3522663927,
+    "node_id": "PRRC_kwDOLwMdns7R95X3",
+    "diff_hunk": "@@ -0,0 +1,36 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n)\n+ *   - 공간복잡도 : O(n)\n+ */\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 이해\n+     *   - n 이 계단 수고 그 계단을 오르는 방법의 가짓 수를 \n+     * 1.2 제약\n+     *   - n이 1부터 45까지 임. \n+     * 1.3 아이디어\n+     *   - 전형적인 DP 로 보이긴 함.\n+     *   - 현 단계로 오기 위해서는 전 단계에서 + 1을 하던지 전전단계에서 + 2 하던지 하는 방법이 있음\n+     *   - 즉 전 단계 까지의 가짓 수 + 전전 단계까지의 가짓 수 = 현 단계의 가짓 수 됨\n+     *   - 1번째와 2번째는 전전 단계가 없으므로 직접 계산 해준다.\n+     *   - n까지 순회하면서 계산하며, 각 단계의 가짓 수는 O(1)에 조회되므로 시간복잡도는 O(n) 이다.\n+     *   - 별도 배열이 n+1 만큼 필요하므로 O(n)의 공간복잡도를 가진다.\n+     * 2. 최적화\n+     *   - 각 단계의 숫자는 계속 가지고 있을 필요 없이 별도 변수로 처리하면 공간복잡도를 O(1)로 최적화 할 수 있다.\n+     */\n+    public int climbStairs(int n) {\n+        if(n == 1) return 1;\n+        if(n == 2) return 2;\n+\n+        int[] steps = new int[n+1];\n+        steps[1] = 1;\n+        steps[2] = 2;\n+        \n+        for(int i=3; i<=n; i++) {\n+            steps[i] = steps[i-1] + steps[i-2];\n+        }\n+        return steps[n];\n+    }",
+    "path": "climbing-stairs/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "가독성 좋은 코드인 거 같습니다!",
+    "created_at": "2026-07-04T05:57:02Z",
+    "updated_at": "2026-07-04T06:11:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522663927",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522663927"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522663927"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522663927/reactions",
+      "total_count": 2,
+      "+1": 2,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 24,
+    "original_start_line": 24,
+    "start_side": "RIGHT",
+    "line": 35,
+    "original_line": 35,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 35,
+    "position": 35,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522665306",
+    "pull_request_review_id": 4628978180,
+    "id": 3522665306,
+    "node_id": "PRRC_kwDOLwMdns7R95ta",
+    "diff_hunk": "@@ -0,0 +1,28 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n log n)\n+ *   - 공간복잡도 : O(n)\n+ */\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 애너그램이 가능한 문자열인지 판단하는 문제임. 두 문자열 s와 t가 주어지고, t가 s의 애너그램이라면 true를 반환\n+     * 1.2 제약 사항\n+     *   - s, 와 t의 문자열의 길이가 5 * 10^4 이므로 문자열 길이 만큼 순회해야 한다면 O(n^2)은 불가능해 보임. O(n log n) 이하가 필요.\n+     *   - 문자는 반드시 영소문자로만 구성되어 있으나, 만약 Follow up 질문 처럼 유니코드를 포함해야 된다면 이를 포괄하는 자료형이 필요. \n+     * 1.3 풀이 아이디어\n+     *   - 문자열을 정렬했을 때, 같은 문자열이라면 애너그램이 될 것.\n+     *   - 문자열의 character를 배열로 만들고 정렬하면, bulit-in 메서드에 의해 O(n log n)의 시간복잡도가 가짐,\n+     *   - 문자열의 길이만큼 character 배열이 필요하므로 2n 만큼의 공간이 더 필요하므로 O(n)의 공간복잡도를 가짐.\n+     */\n+    public boolean isAnagram(String s, String t) {\n+        char[] arrayS = s.toCharArray();\n+        char[] arrayT = t.toCharArray();\n+\n+        Arrays.sort(arrayS);\n+        Arrays.sort(arrayT);\n+\n+        return Arrays.equals(arrayS, arrayT);\n+    }",
+    "path": "valid-anagram/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "n log(n) 의 복잡도를 빈도 카운트를 이용해 개선해볼 수도 있을 거 같습니다!",
+    "created_at": "2026-07-04T05:58:22Z",
+    "updated_at": "2026-07-04T09:02:47Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522665306",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522665306"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522665306"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522665306/reactions",
+      "total_count": 2,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 1,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 19,
+    "original_start_line": 19,
+    "start_side": "RIGHT",
+    "line": 27,
+    "original_line": 27,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 27,
+    "position": 27,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522666173",
+    "pull_request_review_id": 4628978180,
+    "id": 3522666173,
+    "node_id": "PRRC_kwDOLwMdns7R9569",
+    "diff_hunk": "@@ -0,0 +1,28 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n log n)\n+ *   - 공간복잡도 : O(n)\n+ */\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 애니어그램이 가능한 문자열인지 판단하는 문제임. 두 문자열 s와 t가 주어지고, t가 s의 애니어그램이라면 true를 반환\n+     * 1.2 제약 사항\n+     *   - s, 와 t의 문자열의 길이가 5 * 10^4 이므로 문자열 길이 만큼 순회해야 한다면 O(n^2)은 불가능해 보임. O(n log n) 이하가 필요.\n+     *   - 문자는 반드시 영소문자로만 구성되어 있으나, 만약 Follow up 질문 처럼 유니코드를 포함해야 된다면 이를 포괄하는 자료형이 필요. \n+     * 1.3 풀이 아이디어\n+     *   - 문자열을 정렬했을 때, 같은 문자열이라면 애니어그램이 될 것.\n+     *   - 문자열의 character를 배열로 만들고 정렬하면, bulit-in 메서드에 의해 O(n log n)의 시간복잡도가 가짐,\n+     *   - 문자열의 길이만큼 character 배열이 필요하므로 2n 만큼의 공간이 더 필요하므로 O(n)의 공간복잡도를 가짐.\n+     */\n+    public boolean isAnagram(String s, String t) {\n+        char[] arrayS = s.toCharArray();\n+        char[] arrayT = t.toCharArray();\n+\n+        Arrays.sort(arrayS);\n+        Arrays.sort(arrayT);\n+\n+        return Arrays.equals(arrayS, arrayT);\n+    }",
+    "path": "validate-binary-search-tree/dahyeong-yun.java",
+    "commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "잘못된 파일이 업로드 된 거 같습니다! 확인 부탁드려요 :)",
+    "created_at": "2026-07-04T05:59:10Z",
+    "updated_at": "2026-07-04T06:11:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522666173",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522666173"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522666173"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522666173/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": 19,
+    "start_side": "RIGHT",
+    "line": null,
+    "original_line": 27,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 27,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522678312",
+    "pull_request_review_id": 4628978180,
+    "id": 3522678312,
+    "node_id": "PRRC_kwDOLwMdns7R984o",
+    "diff_hunk": "@@ -0,0 +1,43 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n)\n+ *   - 공간복잡도 : O(n)\n+ */\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 이해\n+     *   - 각 배열의 원소가 본인을 제외한 모든 것이 곱해진 상태를 출력하면 됨.\n+     * 1.2 제약\n+     *   - n이 2부터 10^5까지 임. 배열을 순회하는 경우 n^2은 어려워 보임(10^8 기준). 따라서 n log n 이하가 필요\n+     * 1.3 아이디어\n+     *   - 사실 문제를 몇번 풀었어서 외워져 버림\n+     *   - 시각적으로 보이자면 2개의 배열을 활용하는 셈\n+     *   - | 배열 원소를 변수로 치환    | a  | b          | c          | d            |\n+     *     | prefix 의 상태         | 1   | 1 * a = a | a * b = ab | ab * c = abc |\n+     *     | suffix 의 상태         | bcd | cd        | d          | 1            |\n+     *     | prefix * suffix      | bcd | acd        | abd       |   abc        |\n+     *   - 시간복잡도는 n 번씩 두번 순회 하므로 2n 번 순회로 O(n)이 됨.\n+     *   - 공간복잡도는 n 크기 만큼의 배열을 추가로 생성하므로 O(n)이 됨.\n+     */\n+    public int[] productExceptSelf(int[] nums) {\n+        int prefix = 1;\n+        int suffix = 1;\n+\n+        int len = nums.length;\n+        int[] answer = new int[len];\n+\n+        answer[0] = 1;\n+        for(int i = 1; i < len; i++) {\n+            answer[i] = prefix * nums[i-1]; \n+            prefix *= nums[i-1];\n+        }\n+\n+        for(int i = len-1; i >= 0; i--) {       \n+            answer[i] = answer[i] * suffix;\n+            suffix *= nums[i];\n+        }",
+    "path": "product-of-array-except-self/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "prefix, suffix의 변수명이 값이 직관적이지는 않아서 값의 의미를 담으면 좋을 거 같습니다!\r\n참고로 answer을 활용하면 prefix 제거하는 것도 가능할 거 같습니다~",
+    "created_at": "2026-07-04T06:04:12Z",
+    "updated_at": "2026-07-04T15:04:57Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522678312",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522678312"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522678312"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522678312/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 24,
+    "original_start_line": 24,
+    "start_side": "RIGHT",
+    "line": 39,
+    "original_line": 39,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 39,
+    "position": 39,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522679423",
+    "pull_request_review_id": 4628978180,
+    "id": 3522679423,
+    "node_id": "PRRC_kwDOLwMdns7R99J_",
+    "diff_hunk": "@@ -0,0 +1,53 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n^2)\n+ *   - 공간복잡도 : O(1)\n+ */\n+\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 세 수의 합이 0이 되는 중복 없는 전체 조합 찾기\n+     * 1.2 제약 사항\n+     *   - 인덱스의 조합이 아닌 값의 조합이므로 배열의 원본을 유지할 필요는 없음\n+     *   - 조합의 중복을 어떻게 제외 시킬지가 관건\n+     * 1.3 풀이 아이디어\n+     *   - 하나의 값이 고정되어 있으면 나머지 두 원소의 합이 고정값 * -1 이 되어야 하는 형태라고도 볼 수 있음\n+     *   - 배열의 인덱스는 몰라도 되므로 배열을 오름차순으로 정렬할 수 있음\n+     *   - 이때 고정값 하나는 반복문 안에서 루프를 돌면서 정하고, 나머지 두 수는 투 포인터로 원하는 조합을 찾을 수 있음\n+     *   - 배열이 오름차순으로 정렬되어 있으므로, 만약 합이 0 보다 크다면 숫자가 작아져야 하고, 0보다 작다면 숫자가 커져야 함. \n+     *   - 따라서 세 수의 합이 작아져야 한다면 우측 포인터를 좌측으로 옮기면서 숫자를 줄일 수 있고,\n+     *   - 합이 커져야 한다면 좌측 포인터를 우측으로 옮기면서 전체 합을 키울 수 있음.\n+     *   - 여기에 더해 중복을 제외하기 위해서 같은 수의 경우는 포인터를 건너뛰는 식으로 처리할 수 있음.\n+     *   - 시간복잡도는 배열의 원소(n)만큼 루프를 돌면서, 그 안에서 최악의 경우 n - 2 번 순회 하게 되므로 N(N-2) 가 되어 n^2 이라 볼 수 있음.\n+     *   - 추가적인 공간을 일부 만들기는 하는데 n에 차수에 대응하는 수가 없으므로 공간복잡도는 O(1)로 판단.\n+     */\n+    public List<List<Integer>> threeSum(int[] nums) {\n+        Arrays.sort(nums);\n+        List<List<Integer>> answer = new ArrayList<>();\n+\n+        for(int i=0; i < nums.length - 2; i++) {\n+            if (i > 0 && nums[i] == nums[i - 1]) {\n+                continue;\n+            }\n+",
+    "path": "3sum/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "nums[i] > 0 인 부분부터는 `양수 + 양수 + 양수` 가 되서 이 조건도 고려해보시면 좋을 거 같습니다!\nex: [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]",
+    "created_at": "2026-07-04T06:05:20Z",
+    "updated_at": "2026-07-04T06:11:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522679423",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522679423"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522679423"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522679423/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 30,
+    "original_start_line": 30,
+    "start_side": "RIGHT",
+    "line": 34,
+    "original_line": 34,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 34,
+    "position": 34,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522683618",
+    "pull_request_review_id": 4628978180,
+    "id": 3522683618,
+    "node_id": "PRRC_kwDOLwMdns7R9-Li",
+    "diff_hunk": "@@ -0,0 +1,53 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n^2)\n+ *   - 공간복잡도 : O(1)\n+ */\n+\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 세 수의 합이 0이 되는 중복 없는 전체 조합 찾기\n+     * 1.2 제약 사항\n+     *   - 인덱스의 조합이 아닌 값의 조합이므로 배열의 원본을 유지할 필요는 없음\n+     *   - 조합의 중복을 어떻게 제외 시킬지가 관건\n+     * 1.3 풀이 아이디어\n+     *   - 하나의 값이 고정되어 있으면 나머지 두 원소의 합이 고정값 * -1 이 되어야 하는 형태라고도 볼 수 있음\n+     *   - 배열의 인덱스는 몰라도 되므로 배열을 오름차순으로 정렬할 수 있음\n+     *   - 이때 고정값 하나는 반복문 안에서 루프를 돌면서 정하고, 나머지 두 수는 투 포인터로 원하는 조합을 찾을 수 있음\n+     *   - 배열이 오름차순으로 정렬되어 있으므로, 만약 합이 0 보다 크다면 숫자가 작아져야 하고, 0보다 작다면 숫자가 커져야 함. \n+     *   - 따라서 세 수의 합이 작아져야 한다면 우측 포인터를 좌측으로 옮기면서 숫자를 줄일 수 있고,\n+     *   - 합이 커져야 한다면 좌측 포인터를 우측으로 옮기면서 전체 합을 키울 수 있음.\n+     *   - 여기에 더해 중복을 제외하기 위해서 같은 수의 경우는 포인터를 건너뛰는 식으로 처리할 수 있음.\n+     *   - 시간복잡도는 배열의 원소(n)만큼 루프를 돌면서, 그 안에서 최악의 경우 n - 2 번 순회 하게 되므로 N(N-2) 가 되어 n^2 이라 볼 수 있음.\n+     *   - 추가적인 공간을 일부 만들기는 하는데 n에 차수에 대응하는 수가 없으므로 공간복잡도는 O(1)로 판단.\n+     */\n+    public List<List<Integer>> threeSum(int[] nums) {\n+        Arrays.sort(nums);\n+        List<List<Integer>> answer = new ArrayList<>();\n+\n+        for(int i=0; i < nums.length - 2; i++) {\n+            if (i > 0 && nums[i] == nums[i - 1]) {\n+                continue;\n+            }\n+\n+            int left = i+1;\n+            int right = nums.length - 1;\n+\n+            while(left < right) {\n+                if(nums[i] + nums[left] + nums[right] == 0) {\n+                    List<Integer> triple = List.of(nums[i], nums[left], nums[right]);\n+                    answer.add(triple);\n+                    while(left+1 < right && nums[left] == nums[left+1]) left++;\n+                    while(right > 0 && nums[right] == nums[right-1]) right--;\n+                    left++;\n+                    right--;\n+                } else if(nums[i] + nums[left] + nums[right] > 0) right--;\n+                else left++;",
+    "path": "3sum/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "while(`left+1 < right` ..), while(`right > 0` ..) 에서 right > 0도 left처럼 평가하는 것이 좋을 거 같습니다!",
+    "created_at": "2026-07-04T06:09:53Z",
+    "updated_at": "2026-07-04T06:11:37Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522683618",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522683618"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522683618"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522683618/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 38,
+    "original_start_line": 38,
+    "start_side": "RIGHT",
+    "line": 47,
+    "original_line": 47,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 47,
+    "position": 47,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769199",
+    "pull_request_review_id": 4629089469,
+    "id": 3522769199,
+    "node_id": "PRRC_kwDOLwMdns7R-TEv",
+    "diff_hunk": "",
+    "path": "3sum/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Two Pointers, Sorting, Hash Map / Hash Set\n- **설명**: 3sum 문제에서 먼저 배열을 정렬한 뒤 고정 수와 두 포인터로 나머지 두 수를 찾는 방식으로 중복 제거와 목표 합 0 달성을 수행합니다. 공간은 상수에 가깝고 시간복잡도는 O(n^2)입니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n^2) |\n| **Space** | O(1) |\n\n**피드백**: 정렬 후 원소 고정-투포인터 패턴으로 중복 제거를 잘 처리하고 있습니다. 모든 가능한 삼중합을 한 번씩 탐색합니다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-04T07:21:41Z",
+    "updated_at": "2026-07-04T07:21:41Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769199",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769199"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769199"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769199/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769244",
+    "pull_request_review_id": 4629089503,
+    "id": 3522769244,
+    "node_id": "PRRC_kwDOLwMdns7R-TFc",
+    "diff_hunk": "",
+    "path": "climbing-stairs/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Dynamic Programming\n- **설명**: 계단 수 문제를 피보나치형 점화식으로 해결하며, 이전 단계의 결과를 이용해 현재 값을 구하는 전형적인 DP 패턴이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | O(n) | O(n) | ✅ |\n\n**피드백**: 초기 경계조건을 명확히 두고 순차적으로 채워 나가는 DP 풀이입니다.\n\n**개선 제안**: 메모리 사용을 줄이려면 두 변수로 롤링 배열로 구현하는 대안을 고려해볼 수 있습니다.",
+    "created_at": "2026-07-04T07:21:43Z",
+    "updated_at": "2026-07-04T07:21:43Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769244",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769244"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769244"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769244/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769276",
+    "pull_request_review_id": 4629089531,
+    "id": 3522769276,
+    "node_id": "PRRC_kwDOLwMdns7R-TF8",
+    "diff_hunk": "",
+    "path": "product-of-array-except-self/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Two Pointers, Dynamic Programming, Hash Map / Hash Set\n- **설명**: 두 패턴의 핵심 아이디어는 왼쪽/오른쪽 누적 곱을 구해 각 원소를 제외한 곱을 구하는 방식이다. 배열을 두 번 순회하며 선행과 후행 값을 축적하는 방식은 최적해를 얻는 다층 누적 계산으로 분류할 수 있다. 또한 문제의 목표는 각 원소를 제외한 곱을 구하는 구조로 DP의 누적 관계를 활용하는 예이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | O(n) | O(1) | ❌ |\n\n**피드백**: 왼쪽 누적곱과 오른쪽 누적곱을 이용해 한 배열에서 모든 원소를 구합니다. 공간을 상수로 줄이는 구현도 가능\n\n**개선 제안**: 추가적인 최적화를 원하면 출력 배열 자체를 공간으로 활용하는 방식이 있습니다.",
+    "created_at": "2026-07-04T07:21:45Z",
+    "updated_at": "2026-07-04T07:21:45Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769276",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769276"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769276"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769276/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769301",
+    "pull_request_review_id": 4629089555,
+    "id": 3522769301,
+    "node_id": "PRRC_kwDOLwMdns7R-TGV",
+    "diff_hunk": "",
+    "path": "valid-anagram/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Time Complexity Analysis Pattern?\n- **설명**: 제시된 코드는 두 문자열을 정렬한 뒤 비교하는 방법으로 애너그램 여부를 판별한다. 이는 두 배열 정렬 후 비교하는 기본적인 아이디어이며, 패턴으로는 정렬(Sort) 자체를 이용한 해결과 그에 따른 비교를 포함한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n log n) | O(n log n) | ✅ |\n| **Space** | O(n) | O(n) | ✅ |\n\n**피드백**: 문자 정렬으로 애너그램 여부를 판단하는 직관적인 접근입니다.\n\n**개선 제안**: 추가로 해시맵을 이용해 선형 시간으로 풀이하는 방법도 있습니다.",
+    "created_at": "2026-07-04T07:21:47Z",
+    "updated_at": "2026-07-04T07:21:47Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769301",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769301"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769301"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769301/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769354",
+    "pull_request_review_id": 4629089591,
+    "id": 3522769354,
+    "node_id": "PRRC_kwDOLwMdns7R-THK",
+    "diff_hunk": "",
+    "path": "validate-binary-search-tree/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Binary Search, Divide and Conquer, Depth-First Search\n- **설명**: BST 유효성 검사에서 각 노드에 대해 범위를 재귀적으로 좁혀 확인하는 방식으로, 두 자식으로 분할하며 문제를 해결한다. 재귀 DFS를 활용하고 범위를 각각 왼쪽/오른쪽에 대해 좁혀 가는 방식은 divide and conquer와 DFS의 조합으로 볼 수 있다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | O(n) | O(h) | ❌ |\n\n**피드백**: 전위순회 방식으로 각 노드의 범위를 자식 노드에 전달하여 BST 조건을 확인합니다.\n\n**개선 제안**: 스택 기반 순회로 재귀 깊이를 제거해 공간을 최적화할 수 있습니다.",
+    "created_at": "2026-07-04T07:21:49Z",
+    "updated_at": "2026-07-04T07:21:49Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769354",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769354"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522769354"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522769354/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522862198",
+    "pull_request_review_id": 4629192487,
+    "id": 3522862198,
+    "node_id": "PRRC_kwDOLwMdns7R-px2",
+    "diff_hunk": "@@ -0,0 +1,28 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n log n)\n+ *   - 공간복잡도 : O(n)\n+ */\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 애너그램이 가능한 문자열인지 판단하는 문제임. 두 문자열 s와 t가 주어지고, t가 s의 애너그램이라면 true를 반환\n+     * 1.2 제약 사항\n+     *   - s, 와 t의 문자열의 길이가 5 * 10^4 이므로 문자열 길이 만큼 순회해야 한다면 O(n^2)은 불가능해 보임. O(n log n) 이하가 필요.\n+     *   - 문자는 반드시 영소문자로만 구성되어 있으나, 만약 Follow up 질문 처럼 유니코드를 포함해야 된다면 이를 포괄하는 자료형이 필요. \n+     * 1.3 풀이 아이디어\n+     *   - 문자열을 정렬했을 때, 같은 문자열이라면 애너그램이 될 것.\n+     *   - 문자열의 character를 배열로 만들고 정렬하면, bulit-in 메서드에 의해 O(n log n)의 시간복잡도가 가짐,\n+     *   - 문자열의 길이만큼 character 배열이 필요하므로 2n 만큼의 공간이 더 필요하므로 O(n)의 공간복잡도를 가짐.\n+     */\n+    public boolean isAnagram(String s, String t) {\n+        char[] arrayS = s.toCharArray();\n+        char[] arrayT = t.toCharArray();\n+\n+        Arrays.sort(arrayS);\n+        Arrays.sort(arrayT);\n+\n+        return Arrays.equals(arrayS, arrayT);\n+    }",
+    "path": "valid-anagram/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "빈도 카운트를 이용해서 개선한다는 의미신거죠? 말씀주신대로 문자열의 Character 단위로 빈도 카운트 하는 방법도 있겠네요.",
+    "created_at": "2026-07-04T08:32:32Z",
+    "updated_at": "2026-07-04T08:32:32Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522862198",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522862198"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3522862198"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522862198/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 19,
+    "original_start_line": 19,
+    "start_side": "RIGHT",
+    "line": 27,
+    "original_line": 27,
+    "side": "RIGHT",
+    "in_reply_to_id": 3522665306,
+    "author_association": "MEMBER",
+    "original_position": 27,
+    "position": 27,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523164292",
+    "pull_request_review_id": 4629559857,
+    "id": 3523164292,
+    "node_id": "PRRC_kwDOLwMdns7R_ziE",
+    "diff_hunk": "@@ -0,0 +1,53 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n^2)\n+ *   - 공간복잡도 : O(1)\n+ */\n+\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 세 수의 합이 0이 되는 중복 없는 전체 조합 찾기\n+     * 1.2 제약 사항\n+     *   - 인덱스의 조합이 아닌 값의 조합이므로 배열의 원본을 유지할 필요는 없음\n+     *   - 조합의 중복을 어떻게 제외 시킬지가 관건\n+     * 1.3 풀이 아이디어\n+     *   - 하나의 값이 고정되어 있으면 나머지 두 원소의 합이 고정값 * -1 이 되어야 하는 형태라고도 볼 수 있음\n+     *   - 배열의 인덱스는 몰라도 되므로 배열을 오름차순으로 정렬할 수 있음\n+     *   - 이때 고정값 하나는 반복문 안에서 루프를 돌면서 정하고, 나머지 두 수는 투 포인터로 원하는 조합을 찾을 수 있음\n+     *   - 배열이 오름차순으로 정렬되어 있으므로, 만약 합이 0 보다 크다면 숫자가 작아져야 하고, 0보다 작다면 숫자가 커져야 함. \n+     *   - 따라서 세 수의 합이 작아져야 한다면 우측 포인터를 좌측으로 옮기면서 숫자를 줄일 수 있고,\n+     *   - 합이 커져야 한다면 좌측 포인터를 우측으로 옮기면서 전체 합을 키울 수 있음.\n+     *   - 여기에 더해 중복을 제외하기 위해서 같은 수의 경우는 포인터를 건너뛰는 식으로 처리할 수 있음.\n+     *   - 시간복잡도는 배열의 원소(n)만큼 루프를 돌면서, 그 안에서 최악의 경우 n - 2 번 순회 하게 되므로 N(N-2) 가 되어 n^2 이라 볼 수 있음.\n+     *   - 추가적인 공간을 일부 만들기는 하는데 n에 차수에 대응하는 수가 없으므로 공간복잡도는 O(1)로 판단.\n+     */\n+    public List<List<Integer>> threeSum(int[] nums) {\n+        Arrays.sort(nums);\n+        List<List<Integer>> answer = new ArrayList<>();\n+\n+        for(int i=0; i < nums.length - 2; i++) {\n+            if (i > 0 && nums[i] == nums[i - 1]) {\n+                continue;\n+            }\n+",
+    "path": "3sum/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "```suggestion\n        for(int i=0; i < nums.length - 2; i++) {\n            if (nums[i] > 0) {\n                break; \n            }\n            if (i > 0 && nums[i] == nums[i - 1]) {\n                continue;\n            }\n\n```\n이런 식으로 조기 종료를 할 수 있겠네요",
+    "created_at": "2026-07-04T11:59:50Z",
+    "updated_at": "2026-07-04T11:59:50Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523164292",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523164292"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523164292"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523164292/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 30,
+    "original_start_line": 30,
+    "start_side": "RIGHT",
+    "line": 34,
+    "original_line": 34,
+    "side": "RIGHT",
+    "in_reply_to_id": 3522679423,
+    "author_association": "MEMBER",
+    "original_position": 34,
+    "position": 34,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523168749",
+    "pull_request_review_id": 4629565548,
+    "id": 3523168749,
+    "node_id": "PRRC_kwDOLwMdns7R_0nt",
+    "diff_hunk": "@@ -0,0 +1,53 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n^2)\n+ *   - 공간복잡도 : O(1)\n+ */\n+\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 세 수의 합이 0이 되는 중복 없는 전체 조합 찾기\n+     * 1.2 제약 사항\n+     *   - 인덱스의 조합이 아닌 값의 조합이므로 배열의 원본을 유지할 필요는 없음\n+     *   - 조합의 중복을 어떻게 제외 시킬지가 관건\n+     * 1.3 풀이 아이디어\n+     *   - 하나의 값이 고정되어 있으면 나머지 두 원소의 합이 고정값 * -1 이 되어야 하는 형태라고도 볼 수 있음\n+     *   - 배열의 인덱스는 몰라도 되므로 배열을 오름차순으로 정렬할 수 있음\n+     *   - 이때 고정값 하나는 반복문 안에서 루프를 돌면서 정하고, 나머지 두 수는 투 포인터로 원하는 조합을 찾을 수 있음\n+     *   - 배열이 오름차순으로 정렬되어 있으므로, 만약 합이 0 보다 크다면 숫자가 작아져야 하고, 0보다 작다면 숫자가 커져야 함. \n+     *   - 따라서 세 수의 합이 작아져야 한다면 우측 포인터를 좌측으로 옮기면서 숫자를 줄일 수 있고,\n+     *   - 합이 커져야 한다면 좌측 포인터를 우측으로 옮기면서 전체 합을 키울 수 있음.\n+     *   - 여기에 더해 중복을 제외하기 위해서 같은 수의 경우는 포인터를 건너뛰는 식으로 처리할 수 있음.\n+     *   - 시간복잡도는 배열의 원소(n)만큼 루프를 돌면서, 그 안에서 최악의 경우 n - 2 번 순회 하게 되므로 N(N-2) 가 되어 n^2 이라 볼 수 있음.\n+     *   - 추가적인 공간을 일부 만들기는 하는데 n에 차수에 대응하는 수가 없으므로 공간복잡도는 O(1)로 판단.\n+     */\n+    public List<List<Integer>> threeSum(int[] nums) {\n+        Arrays.sort(nums);\n+        List<List<Integer>> answer = new ArrayList<>();\n+\n+        for(int i=0; i < nums.length - 2; i++) {\n+            if (i > 0 && nums[i] == nums[i - 1]) {\n+                continue;\n+            }\n+\n+            int left = i+1;\n+            int right = nums.length - 1;\n+\n+            while(left < right) {\n+                if(nums[i] + nums[left] + nums[right] == 0) {\n+                    List<Integer> triple = List.of(nums[i], nums[left], nums[right]);\n+                    answer.add(triple);\n+                    while(left+1 < right && nums[left] == nums[left+1]) left++;\n+                    while(right > 0 && nums[right] == nums[right-1]) right--;\n+                    left++;\n+                    right--;\n+                } else if(nums[i] + nums[left] + nums[right] > 0) right--;\n+                else left++;",
+    "path": "3sum/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "dahyeong-yun",
+      "id": 33543196,
+      "node_id": "MDQ6VXNlcjMzNTQzMTk2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33543196?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dahyeong-yun",
+      "html_url": "https://github.com/dahyeong-yun",
+      "followers_url": "https://api.github.com/users/dahyeong-yun/followers",
+      "following_url": "https://api.github.com/users/dahyeong-yun/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dahyeong-yun/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahyeong-yun/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahyeong-yun/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahyeong-yun/orgs",
+      "repos_url": "https://api.github.com/users/dahyeong-yun/repos",
+      "events_url": "https://api.github.com/users/dahyeong-yun/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahyeong-yun/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "```suggestion\n            while(left < right) {\n                if(nums[i] + nums[left] + nums[right] == 0) {\n                    List<Integer> triple = List.of(nums[i], nums[left], nums[right]);\n                    answer.add(triple);\n                    while(left < right && nums[left] == nums[left + 1]) left++;\n                    while(left < right && nums[right] == nums[right - 1]) right--;\n                    left++;\n                    right--;\n                } else if(nums[i] + nums[left] + nums[right] > 0) right--;\n                else left++;\n```\n좌측 포인터가 우측을 넘어가지 않는 선에서 끝내려는 거니, 해당 조건을 공통으로 넣는 식으로 가독성을 개선할 수 있을 것 같네요.",
+    "created_at": "2026-07-04T12:04:12Z",
+    "updated_at": "2026-07-04T12:04:12Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523168749",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523168749"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523168749"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523168749/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 38,
+    "original_start_line": 38,
+    "start_side": "RIGHT",
+    "line": 47,
+    "original_line": 47,
+    "side": "RIGHT",
+    "in_reply_to_id": 3522683618,
+    "author_association": "MEMBER",
+    "original_position": 47,
+    "position": 47,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523389899",
+    "pull_request_review_id": 4629804079,
+    "id": 3523389899,
+    "node_id": "PRRC_kwDOLwMdns7SAqnL",
+    "diff_hunk": "@@ -0,0 +1,28 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n log n)\n+ *   - 공간복잡도 : O(n)\n+ */\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 애너그램이 가능한 문자열인지 판단하는 문제임. 두 문자열 s와 t가 주어지고, t가 s의 애너그램이라면 true를 반환\n+     * 1.2 제약 사항\n+     *   - s, 와 t의 문자열의 길이가 5 * 10^4 이므로 문자열 길이 만큼 순회해야 한다면 O(n^2)은 불가능해 보임. O(n log n) 이하가 필요.\n+     *   - 문자는 반드시 영소문자로만 구성되어 있으나, 만약 Follow up 질문 처럼 유니코드를 포함해야 된다면 이를 포괄하는 자료형이 필요. \n+     * 1.3 풀이 아이디어\n+     *   - 문자열을 정렬했을 때, 같은 문자열이라면 애너그램이 될 것.\n+     *   - 문자열의 character를 배열로 만들고 정렬하면, bulit-in 메서드에 의해 O(n log n)의 시간복잡도가 가짐,\n+     *   - 문자열의 길이만큼 character 배열이 필요하므로 2n 만큼의 공간이 더 필요하므로 O(n)의 공간복잡도를 가짐.\n+     */\n+    public boolean isAnagram(String s, String t) {\n+        char[] arrayS = s.toCharArray();\n+        char[] arrayT = t.toCharArray();\n+\n+        Arrays.sort(arrayS);\n+        Arrays.sort(arrayT);\n+\n+        return Arrays.equals(arrayS, arrayT);\n+    }",
+    "path": "valid-anagram/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "네 맞습니다! 정렬 안하고 빈도를 카운트하면 O(n) 으로 개선이 가능할 거 같아요 :)",
+    "created_at": "2026-07-04T15:04:22Z",
+    "updated_at": "2026-07-04T15:04:22Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523389899",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523389899"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523389899"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523389899/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 19,
+    "original_start_line": 19,
+    "start_side": "RIGHT",
+    "line": 27,
+    "original_line": 27,
+    "side": "RIGHT",
+    "in_reply_to_id": 3522665306,
+    "author_association": "MEMBER",
+    "original_position": 27,
+    "position": 27,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523390974",
+    "pull_request_review_id": 4629805255,
+    "id": 3523390974,
+    "node_id": "PRRC_kwDOLwMdns7SAq3-",
+    "diff_hunk": "@@ -0,0 +1,53 @@\n+/**\n+ * 0. 풀이 개요\n+ *   - 시간복잡도 : O(n^2)\n+ *   - 공간복잡도 : O(1)\n+ */\n+\n+class Solution {\n+    /**\n+     * 1. 풀이 과정\n+     * 1.1 문제 이해\n+     *   - 세 수의 합이 0이 되는 중복 없는 전체 조합 찾기\n+     * 1.2 제약 사항\n+     *   - 인덱스의 조합이 아닌 값의 조합이므로 배열의 원본을 유지할 필요는 없음\n+     *   - 조합의 중복을 어떻게 제외 시킬지가 관건\n+     * 1.3 풀이 아이디어\n+     *   - 하나의 값이 고정되어 있으면 나머지 두 원소의 합이 고정값 * -1 이 되어야 하는 형태라고도 볼 수 있음\n+     *   - 배열의 인덱스는 몰라도 되므로 배열을 오름차순으로 정렬할 수 있음\n+     *   - 이때 고정값 하나는 반복문 안에서 루프를 돌면서 정하고, 나머지 두 수는 투 포인터로 원하는 조합을 찾을 수 있음\n+     *   - 배열이 오름차순으로 정렬되어 있으므로, 만약 합이 0 보다 크다면 숫자가 작아져야 하고, 0보다 작다면 숫자가 커져야 함. \n+     *   - 따라서 세 수의 합이 작아져야 한다면 우측 포인터를 좌측으로 옮기면서 숫자를 줄일 수 있고,\n+     *   - 합이 커져야 한다면 좌측 포인터를 우측으로 옮기면서 전체 합을 키울 수 있음.\n+     *   - 여기에 더해 중복을 제외하기 위해서 같은 수의 경우는 포인터를 건너뛰는 식으로 처리할 수 있음.\n+     *   - 시간복잡도는 배열의 원소(n)만큼 루프를 돌면서, 그 안에서 최악의 경우 n - 2 번 순회 하게 되므로 N(N-2) 가 되어 n^2 이라 볼 수 있음.\n+     *   - 추가적인 공간을 일부 만들기는 하는데 n에 차수에 대응하는 수가 없으므로 공간복잡도는 O(1)로 판단.\n+     */\n+    public List<List<Integer>> threeSum(int[] nums) {\n+        Arrays.sort(nums);\n+        List<List<Integer>> answer = new ArrayList<>();\n+\n+        for(int i=0; i < nums.length - 2; i++) {\n+            if (i > 0 && nums[i] == nums[i - 1]) {\n+                continue;\n+            }\n+",
+    "path": "3sum/dahyeong-yun.java",
+    "commit_id": "22934f6df523a9d7c95ee148cde362c47af3425a",
+    "original_commit_id": "90395d3e531a120a1172621712e5bcd7affb4177",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "네 맞습니다 :) ",
+    "created_at": "2026-07-04T15:05:14Z",
+    "updated_at": "2026-07-04T15:05:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523390974",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523390974"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2684#discussion_r3523390974"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2684"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3523390974/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 30,
+    "original_start_line": 30,
+    "start_side": "RIGHT",
+    "line": 34,
+    "original_line": 34,
+    "side": "RIGHT",
+    "in_reply_to_id": 3522679423,
+    "author_association": "MEMBER",
+    "original_position": 34,
+    "position": 34,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

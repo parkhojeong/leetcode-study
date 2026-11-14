@@ -1,0 +1,144 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608746593",
+    "pull_request_review_id": 4728873655,
+    "id": 3608746593,
+    "node_id": "PRRC_kwDOLwMdns7XGRph",
+    "diff_hunk": "@@ -0,0 +1,46 @@\n+/**\n+ * Definition for singly-linked list.\n+ * function ListNode(val, next) {\n+ *     this.val = (val===undefined ? 0 : val)\n+ *     this.next = (next===undefined ? null : next)\n+ * }\n+ */\n+/**\n+ * @param {ListNode} list1\n+ * @param {ListNode} list2\n+ * @return {ListNode}\n+ */\n+\n+// TC: O(n + m) / SC: O(1)\n+var mergeTwoLists = function (list1, list2) {\n+  let mergeHead = null;\n+  let mergePointer = null;\n+\n+  let head1 = list1;\n+  let head2 = list2;\n+\n+  const mergeNode = node => {\n+    const temp = node.next;\n+    if (!mergeHead) {\n+      mergeHead = node;\n+      mergePointer = node;\n+    } else {\n+      mergePointer.next = node;\n+      mergePointer = mergePointer.next;\n+    }\n+    return temp;\n+  };\n+\n+  while (head1 && head2) {\n+    if (head1.val <= head2.val) {\n+      head1 = mergeNode(head1);\n+    } else {\n+      head2 = mergeNode(head2);\n+    }\n+  }\n+\n+  if (head1) mergeNode(head1);\n+  if (head2) mergeNode(head2);\n+\n+  return mergeHead;",
+    "path": "merge-two-sorted-lists/togo26.js",
+    "commit_id": "ae30f13d44f8accfb03f073821a717ba5c86dc2b",
+    "original_commit_id": "ad69c8735d6b397d03f4dc71c62b9bb72d14252a",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "dummy 류의 노드를 두면 훨씬 간결하게 풀 수 있어서 이렇게도 풀어보시는걸 추천드립니다.\r\n다른 방법으로는 재귀로 풀면 아주 직관적으로도 풀 수 있어서 이 방법도 풀어보시면 좋을 거 같습니다.",
+    "created_at": "2026-07-18T16:33:25Z",
+    "updated_at": "2026-07-18T16:35:20Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2757#discussion_r3608746593",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2757",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608746593"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2757#discussion_r3608746593"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2757"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3608746593/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 15,
+    "original_start_line": 15,
+    "start_side": "RIGHT",
+    "line": 45,
+    "original_line": 45,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 45,
+    "position": 45,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3613943654",
+    "pull_request_review_id": 4734522031,
+    "id": 3613943654,
+    "node_id": "PRRC_kwDOLwMdns7XaGdm",
+    "diff_hunk": "",
+    "path": "merge-two-sorted-lists/togo26.js",
+    "commit_id": "ae30f13d44f8accfb03f073821a717ba5c86dc2b",
+    "original_commit_id": "ae30f13d44f8accfb03f073821a717ba5c86dc2b",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Two Pointers, Linked List\n- **설명**: 두 개의 정렬된 리스트를 하나의 정렬된 리스트로 합치는 문제로, 두 포인터를 번갈아가며 각 리스트를 순회하며 노드를 이어 붙인다. 공간복잡도 O(1)로 목적으로 두 포인터와 기존 노드를 재사용하는 패턴이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n + m) | O(n + m) | ✅ |\n| **Space** | O(n + m) | O(1) | ❌ |\n\n**피드백**: 두 포인터와 인라인 노드 재사용으로 추가 공간 없이 합치도록 구현했다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-07-20T11:32:52Z",
+    "updated_at": "2026-07-20T11:32:52Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2757#discussion_r3613943654",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2757",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3613943654"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2757#discussion_r3613943654"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2757"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3613943654/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

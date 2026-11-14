@@ -1,0 +1,73 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3560943075",
+    "pull_request_review_id": 4673777886,
+    "id": 3560943075,
+    "node_id": "PRRC_kwDOLwMdns7UP63j",
+    "diff_hunk": "@@ -0,0 +1,13 @@\n+// TC: O(k)\n+// SC: O(1)\n+impl Solution {\n+    pub fn hamming_weight(n: i32) -> i32 {\n+        let mut n = n as u32;\n+        let mut cnt = 0;\n+        while n != 0 {\n+            n &= n - 1;\n+            cnt += 1;\n+        }\n+        cnt\n+    }",
+    "path": "number-of-1-bits/DaleSeo.rs",
+    "commit_id": "aa9d66bc1589ffa106e29682c1068d17ce9466ef",
+    "original_commit_id": "aa9d66bc1589ffa106e29682c1068d17ce9466ef",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "오 Brian Kernighan algorithm이라고도 불리는 방식이군요!\r\n\r\nrust에선 count_ones()를 사용하면 cpu 의 popcount 가 지원되는 경우 명령어 사이클을 더 줄일 수도 있는 거 같네요 :)",
+    "created_at": "2026-07-10T17:51:21Z",
+    "updated_at": "2026-07-10T18:14:06Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2721#discussion_r3560943075",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2721",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3560943075"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2721#discussion_r3560943075"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2721"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3560943075/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 3,
+    "original_start_line": 3,
+    "start_side": "RIGHT",
+    "line": 12,
+    "original_line": 12,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 12,
+    "position": 12,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

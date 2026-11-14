@@ -1,0 +1,144 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3835596761",
+    "pull_request_review_id": 4999644968,
+    "id": 3835596761,
+    "node_id": "PRRC_kwDOLwMdns7kno_Z",
+    "diff_hunk": "",
+    "path": "linked-list-cycle/tigermint.kt",
+    "commit_id": "130e9a414faa7038dd02c42871f8046a328a6459",
+    "original_commit_id": "4e956bb5944f9aebf57062042375daffb592c852",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: ed50fbc14a99d9ce407e48c98e65c9fefd0ee340 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>linked-list-cycle/tigermint.kt</summary>\n\n```kt\n/**\n * Example:\n * var li = ListNode(5)\n * var v = li.`val`\n * Definition for singly-linked list.\n * class ListNode(var `val`: Int) {\n *     var next: ListNode? = null\n * }\n */\n\n/**\n * TC: O(n)\n * SC: O(n)\n */\nclass Solution1 {\n    fun hasCycle(head: ListNode?): Boolean {\n        val visited = mutableSetOf<ListNode>()\n        var current = head\n\n        while (current != null) {\n            if (current in visited) return true\n            visited.add(current)\n            current = current.next\n        }\n        return false\n    }\n}\n\n/**\n * TC: O(n)\n * SC: O(1)\n */\nclass Solution2 {\n    fun hasCycle(head: ListNode?): Boolean {\n        var slow = head\n        var fast = head?.next?.next\n\n        while (fast != null) {\n            if (slow == fast) return true\n            slow = slow?.next\n            fast = fast?.next?.next\n        }\n        return false\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Two Pointers, Floyd’s Tortoise and Hare, Hash Map / Hash Set\n- **설명**: 코드1은 노드를 방문 여부를 해시 셋으로 추적하는 해시 맵/셋 패턴, 코드2는 두 포인터를 이용한 순환 여부 확인(Floyd의 원형 고리 탐지) 패턴으로 분류됩니다. 두 구현 모두 연결 리스트의 사이클 여부 판단에 해당합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **2가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Solution1.hasCycle</code> — Time: ✅ O(n) → O(n) / Space: ✅ O(n) → O(n)</summary>\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | O(n) | O(n) | ✅ |\n\n**피드백**: 각 노드를 한 번씩 방문하며 방문 여부를 세트로 저장하므로 최악의 경우 모든 노드를 저장한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Solution2.hasCycle</code> — Time: ✅ O(n) → O(n) / Space: ✅ O(1) → O(1)</summary>\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | O(1) | O(1) | ✅ |\n\n**피드백**: 추가 페이징 없이 상수 공간으로 사이클 여부를 판별한다. 초기 fast 포인터의 시작 위치에 주의해야 한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n</details>",
+    "created_at": "2026-08-22T08:17:14Z",
+    "updated_at": "2026-08-22T08:17:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2830#discussion_r3835596761",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2830",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3835596761"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2830#discussion_r3835596761"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2830"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3835596761/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3835640878",
+    "pull_request_review_id": 4999778363,
+    "id": 3835640878,
+    "node_id": "PRRC_kwDOLwMdns7knzwu",
+    "diff_hunk": "",
+    "path": "maximum-product-subarray/tigermint.kt",
+    "commit_id": "130e9a414faa7038dd02c42871f8046a328a6459",
+    "original_commit_id": "130e9a414faa7038dd02c42871f8046a328a6459",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: b285a45c6e1143626510656064cc0e3aa76706a8 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>maximum-product-subarray/tigermint.kt</summary>\n\n```kt\n/**\n * TC: O(n)\n * SC: O(1)\n * 음수가 있기 때문에 현 시점에 min/max 모두 추적해야한다\n */\nclass Solution {\n    fun maxProduct(nums: IntArray): Int {\n        var curMax = nums[0]\n        var curMin = nums[0]\n        var answer = nums[0]\n\n        for (i in 1 ..< nums.size) {\n            val n = nums[i]\n\n            val nextMax = maxOf(n, curMax * n, curMin * n)\n            val nextMin = minOf(n, curMax * n, curMin * n)\n\n            curMax = nextMax\n            curMin = nextMin\n            answer = maxOf(answer, curMax)\n        }\n        return answer\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming, Greedy, Binary Search\n- **설명**: 음수 포함 시 최대 곱을 유지하기 위해 현재 최대/최소 연속 구간 곱을 함께 갱신하는 패턴으로, 연속 구간의 최댓값을 동적으로 추적하는 DP 성격과 부호를 고려한 최적화(그리디에 준하는 선택) 특징이 보입니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(n) | O(n) | ✅ |\n| **Space** | O(1) | O(1) | ✅ |\n\n**피드백**: 음수의 부호를 다루기 위해 현재 위치에서의 최대값과 최소값을 함께 유지한다. 각 원소에 대해 상위/하위 곱을 비교하여 갱신한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-08-22T08:42:33Z",
+    "updated_at": "2026-08-22T08:42:33Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2830#discussion_r3835640878",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2830",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3835640878"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2830#discussion_r3835640878"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2830"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3835640878/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

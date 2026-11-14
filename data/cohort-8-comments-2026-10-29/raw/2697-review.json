@@ -1,0 +1,128 @@
+[
+  {
+    "id": 4628863856,
+    "node_id": "PRR_kwDOLwMdns8AAAABE-bbcA",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?u=19844ca937dd175d84008ed28d4b21bbed6649d0&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "코드가 간결해서 읽기 좋았던 거 같습니다. 수고하셨습니다~!",
+    "state": "APPROVED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#pullrequestreview-4628863856",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#pullrequestreview-4628863856"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-04T05:08:32Z",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339"
+  },
+  {
+    "id": 4629293715,
+    "node_id": "PRR_kwDOLwMdns8AAAABE-1qkw",
+    "user": {
+      "login": "hellojoyworldz",
+      "id": 116714457,
+      "node_id": "U_kgDOBvTr2Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116714457?u=a6267726e7bfd648f2c9f8588395c6d795e27534&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hellojoyworldz",
+      "html_url": "https://github.com/hellojoyworldz",
+      "followers_url": "https://api.github.com/users/hellojoyworldz/followers",
+      "following_url": "https://api.github.com/users/hellojoyworldz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hellojoyworldz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hellojoyworldz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hellojoyworldz/subscriptions",
+      "organizations_url": "https://api.github.com/users/hellojoyworldz/orgs",
+      "repos_url": "https://api.github.com/users/hellojoyworldz/repos",
+      "events_url": "https://api.github.com/users/hellojoyworldz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hellojoyworldz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#pullrequestreview-4629293715",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#pullrequestreview-4629293715"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-04T09:50:26Z",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339"
+  },
+  {
+    "id": 4629298708,
+    "node_id": "PRR_kwDOLwMdns8AAAABE-1-FA",
+    "user": {
+      "login": "hellojoyworldz",
+      "id": 116714457,
+      "node_id": "U_kgDOBvTr2Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116714457?u=a6267726e7bfd648f2c9f8588395c6d795e27534&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hellojoyworldz",
+      "html_url": "https://github.com/hellojoyworldz",
+      "followers_url": "https://api.github.com/users/hellojoyworldz/followers",
+      "following_url": "https://api.github.com/users/hellojoyworldz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hellojoyworldz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hellojoyworldz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hellojoyworldz/subscriptions",
+      "organizations_url": "https://api.github.com/users/hellojoyworldz/orgs",
+      "repos_url": "https://api.github.com/users/hellojoyworldz/repos",
+      "events_url": "https://api.github.com/users/hellojoyworldz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hellojoyworldz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#pullrequestreview-4629298708",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#pullrequestreview-4629298708"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-04T09:54:49Z",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339"
+  }
+]

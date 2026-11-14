@@ -1,0 +1,128 @@
+[
+  {
+    "id": 4676643636,
+    "node_id": "PRR_kwDOLwMdns8AAAABFr_rNA",
+    "user": {
+      "login": "sangbeenmoon",
+      "id": 225566208,
+      "node_id": "U_kgDODXHeAA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/225566208?u=af92c8505bbab26ab4b57955e19c5f35d20a45d5&v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/sangbeenmoon",
+      "html_url": "https://github.com/sangbeenmoon",
+      "followers_url": "https://api.github.com/users/sangbeenmoon/followers",
+      "following_url": "https://api.github.com/users/sangbeenmoon/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sangbeenmoon/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/sangbeenmoon/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/sangbeenmoon/subscriptions",
+      "organizations_url": "https://api.github.com/users/sangbeenmoon/orgs",
+      "repos_url": "https://api.github.com/users/sangbeenmoon/repos",
+      "events_url": "https://api.github.com/users/sangbeenmoon/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/sangbeenmoon/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "두가지 이상의 풀이 방법을 올려주신 점이 인상적이네요! 👍 \n고생하셨습니다",
+    "state": "APPROVED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2731#pullrequestreview-4676643636",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2731#pullrequestreview-4676643636"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-11T05:24:49Z",
+    "commit_id": "c8777765279f14b1eadf0eec9b46baada68387d8"
+  },
+  {
+    "id": 4677902327,
+    "node_id": "PRR_kwDOLwMdns8AAAABFtMf9w",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2731#pullrequestreview-4677902327",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731",
+    "author_association": "CONTRIBUTOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2731#pullrequestreview-4677902327"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-11T13:42:30Z",
+    "commit_id": "7847fc594e71c03c245465eaffa67cfcedfa5da1"
+  },
+  {
+    "id": 4677902565,
+    "node_id": "PRR_kwDOLwMdns8AAAABFtMg5Q",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2731#pullrequestreview-4677902565",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731",
+    "author_association": "CONTRIBUTOR",
+    "_links": {
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2731#pullrequestreview-4677902565"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2731"
+      }
+    },
+    "is_copilot_code_review": false,
+    "copilot_code_review_effort": null,
+    "submitted_at": "2026-07-11T13:42:32Z",
+    "commit_id": "7847fc594e71c03c245465eaffa67cfcedfa5da1"
+  }
+]

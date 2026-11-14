@@ -1,0 +1,144 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836124460",
+    "pull_request_review_id": 5000259130,
+    "id": 3836124460,
+    "node_id": "PRRC_kwDOLwMdns7kpp0s",
+    "diff_hunk": "",
+    "path": "linked-list-cycle/ICE0208.java",
+    "commit_id": "99c0379bd85e4c548b197600c46f4eb5237b950e",
+    "original_commit_id": "99c0379bd85e4c548b197600c46f4eb5237b950e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 8609b99c5d22322f1008a2a7a4d2991becf22f26 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>linked-list-cycle/ICE0208.java</summary>\n\n```java\nclass Solution {\n    public boolean hasCycle(ListNode head) {\n        ListNode slow = head;\n        ListNode fast = head;\n\n        // fast가 끝에 도달하면 cycle이 없다.\n        while (fast != null && fast.next != null) {\n            slow = slow.next;           // 한 칸 이동\n            fast = fast.next.next;      // 두 칸 이동\n\n            // cycle이 있다면 두 포인터는 결국 같은 노드에서 만난다.\n            if (slow == fast) {\n                return true;\n            }\n        }\n\n        return false;\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Fast & Slow Pointers, Two Pointers\n- **설명**: 이 코드는 두 포인터(slow, fast)를 서로 다른 속도로 순환하며 사이클 여부를 판별하는 방식으로, Fast & Slow Pointers 패턴의 전형적인 구현입니다. 두 포인터가 서로 만나면 사이클 존재를 확인합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 두 포인터가 한 칸/두 칸으로 움직이며 사이클 여부를 판단합니다. 추가 메모리 없이 구현 가능합니다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-22T13:23:15Z",
+    "updated_at": "2026-08-22T13:23:15Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2833#discussion_r3836124460",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2833",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836124460"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2833#discussion_r3836124460"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2833"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836124460/reactions",
+      "total_count": 2,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 1,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836124503",
+    "pull_request_review_id": 5000259166,
+    "id": 3836124503,
+    "node_id": "PRRC_kwDOLwMdns7kpp1X",
+    "diff_hunk": "",
+    "path": "pacific-atlantic-water-flow/ICE0208.java",
+    "commit_id": "99c0379bd85e4c548b197600c46f4eb5237b950e",
+    "original_commit_id": "99c0379bd85e4c548b197600c46f4eb5237b950e",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: eac7afdad9e1fa669e9e57717d73adbd1190a86c -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>pacific-atlantic-water-flow/ICE0208.java</summary>\n\n```java\nimport java.util.ArrayList;\nimport java.util.List;\n\nclass Solution {\n    static int[][] MOVES = {\n            {1, 0}, {-1, 0}, {0, 1}, {0, -1}\n    };\n\n    static void dfs(int[][] heights, boolean[][] visited, int i, int j) {\n        visited[i][j] = true;\n\n        for (int[] move : MOVES) {\n            int next_i = i + move[0];\n            int next_j = j + move[1];\n\n            if (next_i < 0 || next_i >= heights.length\n                    || next_j < 0 || next_j >= heights[0].length) {\n                continue;\n            }\n\n            if (visited[next_i][next_j]) {\n                continue;\n            }\n\n            // 바다에서 역방향으로 올라가므로\n            // 현재 높이보다 높거나 같은 곳으로만 이동\n            if (heights[next_i][next_j] < heights[i][j]) {\n                continue;\n            }\n\n            dfs(heights, visited, next_i, next_j);\n        }\n    }\n\n    public List<List<Integer>> pacificAtlantic(int[][] heights) {\n        int rows = heights.length;\n        int cols = heights[0].length;\n\n        boolean[][] po = new boolean[rows][cols];\n        boolean[][] ao = new boolean[rows][cols];\n\n        // 위 / 아래\n        for (int j = 0; j < cols; j++) {\n            dfs(heights, po, 0, j);\n            dfs(heights, ao, rows - 1, j);\n        }\n\n        // 왼쪽 / 오른쪽\n        for (int i = 0; i < rows; i++) {\n            dfs(heights, po, i, 0);\n            dfs(heights, ao, i, cols - 1);\n        }\n\n        List<List<Integer>> answer = new ArrayList<>();\n\n        for (int i = 0; i < rows; i++) {\n            for (int j = 0; j < cols; j++) {\n                if (po[i][j] && ao[i][j]) {\n                    answer.add(List.of(i, j));\n                }\n            }\n        }\n\n        return answer;\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Depth-First Search, Backtracking\n- **설명**: 제시 코드에서 물이 흐를 수 있는 경로를 DFS로 탐색해 각 위치가 두 바다에 닿는지 확인합니다. 각 방향으로 재귀적으로 탐색하며 방문 여부를 기록해 중복 방문을 방지하고 가능한 경로를 확인합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(R * C) |\n| **Space** | O(R * C) |\n\n**피드백**: 각 셀에 대해 두 번의 DFS를 수행해야 하므로 전체적으로 행/열의 면적에 비례한 시간과 공간 복잡도를 갖습니다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-22T13:23:16Z",
+    "updated_at": "2026-08-22T13:23:16Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2833#discussion_r3836124503",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2833",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836124503"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2833#discussion_r3836124503"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2833"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3836124503/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

@@ -1,0 +1,501 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522550872",
+    "pull_request_review_id": 4628863856,
+    "id": 3522550872,
+    "node_id": "PRRC_kwDOLwMdns7R9dxY",
+    "diff_hunk": "@@ -0,0 +1,8 @@\n+# 문제: https://leetcode.com/problems/valid-anagram/\n+# 해설: https://www.algodale.com/problems/valid-anagram/\n+# 위치: https://github.com/DaleStudy/leetcode-study/tree/main/valid-anagram\n+\n+class Solution:\n+    def isAnagram(self, s: str, t: str) -> bool:\n+      return sorted(s) == sorted(t)\n+",
+    "path": "valid-anagram/hellojoyworldz.py",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "original_commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "간결하고 좋네요!",
+    "created_at": "2026-07-04T04:18:32Z",
+    "updated_at": "2026-07-04T05:08:32Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522550872",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522550872"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522550872"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522550872/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 5,
+    "original_start_line": 5,
+    "start_side": "RIGHT",
+    "line": 8,
+    "original_line": 8,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 8,
+    "position": 8,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522552258",
+    "pull_request_review_id": 4628863856,
+    "id": 3522552258,
+    "node_id": "PRRC_kwDOLwMdns7R9eHC",
+    "diff_hunk": "@@ -0,0 +1,24 @@\n+# 문제: https://leetcode.com/problems/product-of-array-except-self/\n+# 해설: https://www.algodale.com/problems/product-of-array-except-self/\n+# 위치: https://github.com/DaleStudy/leetcode-study/tree/main/product-of-array-except-self\n+\n+from typing import List\n+\n+\n+class Solution:\n+    def productExceptSelf(self, nums: List[int]) -> List[int]:\n+        n = len(nums)\n+        answer = [1] * n\n+\n+        left = 1\n+        for i in range(n):\n+            answer[i] = left\n+            left *= nums[i]\n+\n+        right = 1\n+        for i in reversed(range(n)):\n+            answer[i] *= right\n+            right *= nums[i]",
+    "path": "product-of-array-except-self/hellojoyworldz.py",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "original_commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "reversed(range(n)) 사용하신거 간결하고 좋네요~",
+    "created_at": "2026-07-04T04:19:59Z",
+    "updated_at": "2026-07-04T05:08:32Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522552258",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522552258"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522552258"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522552258/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 19,
+    "original_start_line": 19,
+    "start_side": "RIGHT",
+    "line": 21,
+    "original_line": 21,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 21,
+    "position": 21,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522593125",
+    "pull_request_review_id": 4628863856,
+    "id": 3522593125,
+    "node_id": "PRRC_kwDOLwMdns7R9oFl",
+    "diff_hunk": "@@ -0,0 +1,11 @@\n+# 문제: https://leetcode.com/problems/climbing-stairs/\n+# 해설: https://www.algodale.com/problems/climbing-stairs/\n+# 위치: https://github.com/DaleStudy/leetcode-study/tree/main/climbing-stairs\n+\n+class Solution:\n+    def climbStairs(self, n: int) -> int:\n+        prev2, prev1 = 1, 1\n+        for _ in range(n - 1):\n+            prev2, prev1 = prev1, prev2 + prev1\n+        return prev1",
+    "path": "climbing-stairs/hellojoyworldz.py",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "original_commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "개인적으로는 이런 부분들이 읽으면서 생각을 한 번 더 하게 되었던 거 같습니다! \r\n- prev2, prev1에 1, 1 이 할당된 것도 문제의 조건과 어떻게 연결되는건지 \r\n- n = 1, n = 2 일때 어떻게 처리되는지 \r\n- prev1이 리턴하는게 n 값 까지 계산한 후 prev1 을 리턴하는 것인지\r\n\r\n가독성을 고려한다면 배열을 사용해봐도 괜찮을 거 같습니다~ \r\n```py\r\nclass Solution:\r\n    def climbStairs(self, n: int) -> int:\r\n        if n == 1:\r\n            return 1\r\n\r\n        arr = [0] * n\r\n        arr[0], arr[1] = 1, 2\r\n\r\n        for i in range(2, n):\r\n            arr[i] = arr[i - 1] + arr[i - 2]\r\n\r\n        return arr[-1]\r\n\r\n```",
+    "created_at": "2026-07-04T04:54:08Z",
+    "updated_at": "2026-07-04T05:11:34Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522593125",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522593125"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522593125"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522593125/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 10,
+    "original_line": 10,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 10,
+    "position": 10,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522598739",
+    "pull_request_review_id": 4628863856,
+    "id": 3522598739,
+    "node_id": "PRRC_kwDOLwMdns7R9pdT",
+    "diff_hunk": "@@ -0,0 +1,36 @@\n+# 문제: https://leetcode.com/problems/3sum/\n+# 해설: https://www.algodale.com/problems/3sum/\n+# 위치: https://github.com/DaleStudy/leetcode-study/tree/main/3sum\n+\n+from typing import List\n+\n+\n+class Solution:\n+    def threeSum(self, nums: List[int]) -> List[List[int]]:\n+        nums.sort()\n+        result = []\n+\n+        for i in range(len(nums)):\n+            if i > 0 and nums[i] == nums[i - 1]:\n+                continue",
+    "path": "3sum/hellojoyworldz.py",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "original_commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "정렬되어 있는 상태라 nums[i] > 0 인 부분은 break해도 좋을 거 같습니다!\r\nex. [-1, 0, 1, 2, 3, 4, 5, 6, 7], i = 2 부터는 `양수 + 양수 + 양수`",
+    "created_at": "2026-07-04T04:59:55Z",
+    "updated_at": "2026-07-04T05:14:42Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522598739",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522598739"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522598739"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522598739/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 13,
+    "original_start_line": 13,
+    "start_side": "RIGHT",
+    "line": 15,
+    "original_line": 15,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 15,
+    "position": 15,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522608149",
+    "pull_request_review_id": 4628863856,
+    "id": 3522608149,
+    "node_id": "PRRC_kwDOLwMdns7R9rwV",
+    "diff_hunk": "@@ -0,0 +1,26 @@\n+# 문제: https://leetcode.com/problems/validate-binary-search-tree/\n+# 해설: https://www.algodale.com/problems/validate-binary-search-tree/\n+# 위치: https://github.com/DaleStudy/leetcode-study/tree/main/validate-binary-search-tree\n+\n+from typing import Optional\n+\n+# Definition for a binary tree node.\n+class TreeNode:\n+    def __init__(self, val=0, left=None, right=None):\n+        self.val = val\n+        self.left = left\n+        self.right = right\n+\n+class Solution:\n+    def isValidBST(self, root: Optional[TreeNode]) -> bool:\n+        def check(node: Optional[TreeNode], low: float, high: float) -> bool:\n+            if not node:\n+                return True\n+\n+            if not (low < node.val < high):\n+                return False",
+    "path": "validate-binary-search-tree/hellojoyworldz.py",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "original_commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "(log < node.val < high) 사용하신거 좋네요!",
+    "created_at": "2026-07-04T05:04:26Z",
+    "updated_at": "2026-07-04T05:08:32Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522608149",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522608149"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522608149"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522608149/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 20,
+    "original_start_line": 20,
+    "start_side": "RIGHT",
+    "line": 21,
+    "original_line": 21,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 21,
+    "position": 21,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522951540",
+    "pull_request_review_id": 4629293715,
+    "id": 3522951540,
+    "node_id": "PRRC_kwDOLwMdns7R-_l0",
+    "diff_hunk": "@@ -0,0 +1,11 @@\n+# 문제: https://leetcode.com/problems/climbing-stairs/\n+# 해설: https://www.algodale.com/problems/climbing-stairs/\n+# 위치: https://github.com/DaleStudy/leetcode-study/tree/main/climbing-stairs\n+\n+class Solution:\n+    def climbStairs(self, n: int) -> int:\n+        prev2, prev1 = 1, 1\n+        for _ in range(n - 1):\n+            prev2, prev1 = prev1, prev2 + prev1\n+        return prev1",
+    "path": "climbing-stairs/hellojoyworldz.py",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "original_commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "user": {
+      "login": "hellojoyworldz",
+      "id": 116714457,
+      "node_id": "U_kgDOBvTr2Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116714457?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hellojoyworldz",
+      "html_url": "https://github.com/hellojoyworldz",
+      "followers_url": "https://api.github.com/users/hellojoyworldz/followers",
+      "following_url": "https://api.github.com/users/hellojoyworldz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hellojoyworldz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hellojoyworldz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hellojoyworldz/subscriptions",
+      "organizations_url": "https://api.github.com/users/hellojoyworldz/orgs",
+      "repos_url": "https://api.github.com/users/hellojoyworldz/repos",
+      "events_url": "https://api.github.com/users/hellojoyworldz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hellojoyworldz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "안 그래도 가독성 부분이 고민이였는데, \r\n제안해 주신 것처럼 배열을 쓰니까 흐름이 훨씬 직관적이고 좋네요!",
+    "created_at": "2026-07-04T09:50:26Z",
+    "updated_at": "2026-07-04T09:50:27Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522951540",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522951540"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522951540"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522951540/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 10,
+    "original_line": 10,
+    "side": "RIGHT",
+    "in_reply_to_id": 3522593125,
+    "author_association": "MEMBER",
+    "original_position": 10,
+    "position": 10,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522957658",
+    "pull_request_review_id": 4629298708,
+    "id": 3522957658,
+    "node_id": "PRRC_kwDOLwMdns7R_BFa",
+    "diff_hunk": "@@ -0,0 +1,36 @@\n+# 문제: https://leetcode.com/problems/3sum/\n+# 해설: https://www.algodale.com/problems/3sum/\n+# 위치: https://github.com/DaleStudy/leetcode-study/tree/main/3sum\n+\n+from typing import List\n+\n+\n+class Solution:\n+    def threeSum(self, nums: List[int]) -> List[List[int]]:\n+        nums.sort()\n+        result = []\n+\n+        for i in range(len(nums)):\n+            if i > 0 and nums[i] == nums[i - 1]:\n+                continue",
+    "path": "3sum/hellojoyworldz.py",
+    "commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "original_commit_id": "e9e209fc87b5451a3d59bdbc281c171d7949d339",
+    "user": {
+      "login": "hellojoyworldz",
+      "id": 116714457,
+      "node_id": "U_kgDOBvTr2Q",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116714457?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hellojoyworldz",
+      "html_url": "https://github.com/hellojoyworldz",
+      "followers_url": "https://api.github.com/users/hellojoyworldz/followers",
+      "following_url": "https://api.github.com/users/hellojoyworldz/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hellojoyworldz/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hellojoyworldz/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hellojoyworldz/subscriptions",
+      "organizations_url": "https://api.github.com/users/hellojoyworldz/orgs",
+      "repos_url": "https://api.github.com/users/hellojoyworldz/repos",
+      "events_url": "https://api.github.com/users/hellojoyworldz/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hellojoyworldz/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "아 그러네요, 제가 놓쳤습니다\r\n세심한 피드백 정말 감사합니다! 🙇‍♂️",
+    "created_at": "2026-07-04T09:54:48Z",
+    "updated_at": "2026-07-04T09:54:49Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522957658",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522957658"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2697#discussion_r3522957658"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2697"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3522957658/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 13,
+    "original_start_line": 13,
+    "start_side": "RIGHT",
+    "line": 15,
+    "original_line": 15,
+    "side": "RIGHT",
+    "in_reply_to_id": 3522598739,
+    "author_association": "MEMBER",
+    "original_position": 15,
+    "position": 15,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

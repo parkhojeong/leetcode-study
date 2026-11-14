@@ -1,0 +1,286 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652105271",
+    "pull_request_review_id": 4781289749,
+    "id": 3652105271,
+    "node_id": "PRRC_kwDOLwMdns7ZrrQ3",
+    "diff_hunk": "",
+    "path": "group-anagrams/freemjstudio.py",
+    "commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "original_commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Hash Map / Hash Set, Sorting\n- **설명**: 문자열을 정렬한 키로 해시 맵에 그룹화하여 애너그램을 묶는 방식으로 해결합니다. 해시맵으로 키-리스트 매핑을 관리하고 정렬은 그룹핑의 기준을 제공합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n * k log k) |\n| **Space** | O(n * k) |\n\n**피드백**: 각 문자열을 길이 k로 정렬하는 비용이 주요 시간 복잡도를 구성한다. 해시맵에 키별로 단어를 모으는 과정도 포함된다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-26T08:34:29Z",
+    "updated_at": "2026-07-26T08:34:29Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652105271",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652105271"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652105271"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652105271/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652105325",
+    "pull_request_review_id": 4781289783,
+    "id": 3652105325,
+    "node_id": "PRRC_kwDOLwMdns7ZrrRt",
+    "diff_hunk": "",
+    "path": "implement-trie-prefix-tree/freemjstudio.py",
+    "commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "original_commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Trie, Hash Map / Hash Set, Dynamic Programming\n- **설명**: Trie 구조를 이용해 문자열 단어를 효율적으로 삽입/검색하며, 각 문자 노드를 해시맵으로 관리한다. startsWith와 search가 공통 트라이 탐색 로직을 공유한다.\n\n### 📊 시간/공간 복잡도 분석\n\n> ℹ️ 이 파일에는 **3가지 풀이**가 포함되어 있어 각각 분석합니다.\n\n<details>\n<summary>풀이 1: <code>Trie.insert</code> — Time: O(m) / Space: O(n * m)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(m) |\n| **Space** | O(n * m) |\n\n**피드백**: 삽입 시 각 문자마다 새로운 노드를 만들 수 있어 공간은 단어의 총 길이에 비례한다.\n\n**개선 제안**: 메모리 사용을 줄이고자 불필요한 중복 제거 또는 공유 구조를 고려해볼 수 있다.\n\n</details>\n\n<details>\n<summary>풀이 2: <code>Trie.search</code> — Time: O(m) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(m) |\n| **Space** | O(1) |\n\n**피드백**: 일치하는 경로가 없으면 즉시 False를 반환하고, 경로 존재 시 마지막 노드의 end 여부를 검사한다.\n\n**개선 제안**: 루프 중간에 조기 종료가 가능하므로 평균 성능은 더 빠를 수 있다.\n\n</details>\n\n<details>\n<summary>풀이 3: <code>Trie.startsWith</code> — Time: O(p) / Space: O(1)</summary>\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(p) |\n| **Space** | O(1) |\n\n**피드백**: 접두사 존재 여부를 빠르게 판단하는데 적합하다.\n\n**개선 제안**: 추가 기능으로 prefix에 해당하는 단어 수를 반환하는 기능을 추가해도 좋다.\n\n</details>\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-07-26T08:34:31Z",
+    "updated_at": "2026-07-26T08:34:31Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652105325",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652105325"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652105325"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652105325/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652180896",
+    "pull_request_review_id": 4781366685,
+    "id": 3652180896,
+    "node_id": "PRRC_kwDOLwMdns7Zr9ug",
+    "diff_hunk": "@@ -0,0 +1,17 @@\n+class Solution:\n+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:\n+        if len(strs) == 1:\n+            return [strs]\n+\n+        answer = []\n+        anagrams = {}\n+        for word in strs:\n+            sorted_word = \"\".join(sorted(word))\n+            if sorted_word in anagrams:\n+                anagrams[sorted_word].append(word)\n+            else:\n+                anagrams[sorted_word] = [word]",
+    "path": "group-anagrams/freemjstudio.py",
+    "commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "original_commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "defaultdict 을 쓰거나 setdefault 같은 방식을 쓰면 if, else를 안쓰고도 가능할 거 같습니다.",
+    "created_at": "2026-07-26T09:25:08Z",
+    "updated_at": "2026-07-26T16:50:01Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652180896",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652180896"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652180896"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652180896/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 7,
+    "original_start_line": 7,
+    "start_side": "RIGHT",
+    "line": 13,
+    "original_line": 13,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 13,
+    "position": 13,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652948533",
+    "pull_request_review_id": 4781366685,
+    "id": 3652948533,
+    "node_id": "PRRC_kwDOLwMdns7Zu5I1",
+    "diff_hunk": "@@ -0,0 +1,48 @@\n+# 트리이 자체의 시간 복잡도는 O(n) 이다. n 은 단어의 길이이다.\n+\n+class Trie:\n+\n+    def __init__(self):\n+        self.children = {} # 다음 문자(key) : 다음 문자에 해당하는 노드(value)\n+        self.is_end = False # 현재 문자가 단어의 마지막인지 여부",
+    "path": "implement-trie-prefix-tree/freemjstudio.py",
+    "commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "original_commit_id": "d17f52f06a3a001916d8280c0c0bdad97f1e6689",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "Trie가 마지막 여부를 가진다는게 어색하게 느껴지네요. 실제 의미는 루트 노드가 마지막인지를 담는 값인데 Trie 전체가 마지막인지(?)를 알려주는 값처럼 읽히네요. Node의 역할을 Trie에서도 해서 생기는 부분인데 Node 클래스를 이용해서 구현해보시면 좋을 거 같습니다.",
+    "created_at": "2026-07-26T16:42:12Z",
+    "updated_at": "2026-07-26T16:51:12Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652948533",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652948533"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2778#discussion_r3652948533"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2778"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3652948533/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 3,
+    "original_start_line": 3,
+    "start_side": "RIGHT",
+    "line": 7,
+    "original_line": 7,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 7,
+    "position": 7,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

@@ -1,0 +1,287 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3603348639",
+    "pull_request_review_id": 4722913404,
+    "id": 3603348639,
+    "node_id": "PRRC_kwDOLwMdns7Wxryf",
+    "diff_hunk": "@@ -0,0 +1,16 @@\n+// TC: O(log n)\n+// SC: O(1)\n+impl Solution {\n+    pub fn find_min(nums: Vec<i32>) -> i32 {\n+        let (mut lo, mut hi) = (0, nums.len() - 1);\n+        while lo < hi {\n+            let mid = (lo + hi) / 2;\n+            if nums[mid] > nums[hi] {\n+                lo = mid + 1;\n+            } else {\n+                hi = mid;\n+            }\n+        }",
+    "path": "find-minimum-in-rotated-sorted-array/DaleSeo.rs",
+    "commit_id": "c2c9b38352940ef4fd74a789cbf5d2598dc9f55d",
+    "original_commit_id": "c4240d907d7f7ae4517f18e9f6fa7cf41f23af2c",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "조금 더 최적화 한다면 lo, mid, hi 중 lo에 해당하는 값이 가장 작을 때에는 바로 리턴해도 될 거 같습니다.\r\n\r\ncase 1\r\n```\r\n1 2 3 4 5 --> 이 케이스 \r\n2 3 4 5 1\r\n3 4 5 1 2\r\n4 5 1 2 3\r\n5 1 2 3 4\r\n```\r\n\r\ncase 2\r\n```\r\n1 2 3  --> 이 케이스\r\n2 3 1\r\n3 1 2\r\n```\r\n\r\n대략 이런 코드가 되겠네요.\r\n\r\n```suggestion\r\n        while lo < hi {\r\n            let mid = (lo + hi) / 2;\r\n            \r\n            if nums[lo] < nums[mid] && nums[mid] < nums[hi]{\r\n                return nums[lo]\r\n            }\r\n            \r\n            if nums[mid] > nums[hi] {\r\n                lo = mid + 1;\r\n            } else {\r\n                hi = mid;\r\n            }\r\n        }\r\n```",
+    "created_at": "2026-07-17T13:04:42Z",
+    "updated_at": "2026-07-17T13:07:05Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3603348639",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3603348639"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3603348639"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3603348639/reactions",
+      "total_count": 2,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 1,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 6,
+    "original_start_line": 6,
+    "start_side": "RIGHT",
+    "line": 16,
+    "original_line": 13,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 13,
+    "position": 16,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3603356111",
+    "pull_request_review_id": 4722922127,
+    "id": 3603356111,
+    "node_id": "PRRC_kwDOLwMdns7WxtnP",
+    "diff_hunk": "@@ -0,0 +1,16 @@\n+// TC: O(log n)\n+// SC: O(1)\n+impl Solution {\n+    pub fn find_min(nums: Vec<i32>) -> i32 {\n+        let (mut lo, mut hi) = (0, nums.len() - 1);\n+        while lo < hi {\n+            let mid = (lo + hi) / 2;\n+            if nums[mid] > nums[hi] {\n+                lo = mid + 1;\n+            } else {\n+                hi = mid;\n+            }\n+        }\n+        nums[lo]\n+    }\n+}",
+    "path": "find-minimum-in-rotated-sorted-array/DaleSeo.rs",
+    "commit_id": "c2c9b38352940ef4fd74a789cbf5d2598dc9f55d",
+    "original_commit_id": "c4240d907d7f7ae4517f18e9f6fa7cf41f23af2c",
+    "user": {
+      "login": "seongmin36",
+      "id": 202721995,
+      "node_id": "U_kgDODBVKyw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202721995?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/seongmin36",
+      "html_url": "https://github.com/seongmin36",
+      "followers_url": "https://api.github.com/users/seongmin36/followers",
+      "following_url": "https://api.github.com/users/seongmin36/following{/other_user}",
+      "gists_url": "https://api.github.com/users/seongmin36/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/seongmin36/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/seongmin36/subscriptions",
+      "organizations_url": "https://api.github.com/users/seongmin36/orgs",
+      "repos_url": "https://api.github.com/users/seongmin36/repos",
+      "events_url": "https://api.github.com/users/seongmin36/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/seongmin36/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "이진탐색으로 해결해주셨군요, 코드 잘 봤습니다. 고생하셨습니다!",
+    "created_at": "2026-07-17T13:05:59Z",
+    "updated_at": "2026-07-17T13:06:04Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3603356111",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3603356111"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3603356111"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3603356111/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 19,
+    "original_line": 16,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 16,
+    "position": 19,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3606985464",
+    "pull_request_review_id": 4726971141,
+    "id": 3606985464,
+    "node_id": "PRRC_kwDOLwMdns7W_jr4",
+    "diff_hunk": "",
+    "path": "find-minimum-in-rotated-sorted-array/DaleSeo.rs",
+    "commit_id": "c2c9b38352940ef4fd74a789cbf5d2598dc9f55d",
+    "original_commit_id": "c2c9b38352940ef4fd74a789cbf5d2598dc9f55d",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n### 🏷️ 알고리즘 패턴 분석\n\n- **패턴**: Binary Search\n- **설명**: 회전된 정렬 배열에서 최소 원소를 이분탐색으로 찾는 문제로, 중간값과 양 끝 값을 비교해 탐색 범위를 절반으로 줄이는 패턴이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 유저 분석 | 실제 분석 | 결과 |\n|---|---|---|---|\n| **Time** | O(log n) | O(log n) | ✅ |\n| **Space** | O(1) | O(1) | ✅ |\n\n**피드백**: 배열의 특성을 이용해 양쪽 끝 비교로 범위를 절반으로 축소한다. 중간 인덱스와 끝 값을 비교해 분기 조건을 결정한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.",
+    "created_at": "2026-07-17T23:40:22Z",
+    "updated_at": "2026-07-17T23:40:22Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3606985464",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3606985464"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3606985464"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3606985464/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3606988688",
+    "pull_request_review_id": 4726974319,
+    "id": 3606988688,
+    "node_id": "PRRC_kwDOLwMdns7W_keQ",
+    "diff_hunk": "@@ -0,0 +1,16 @@\n+// TC: O(log n)\n+// SC: O(1)\n+impl Solution {\n+    pub fn find_min(nums: Vec<i32>) -> i32 {\n+        let (mut lo, mut hi) = (0, nums.len() - 1);\n+        while lo < hi {\n+            let mid = (lo + hi) / 2;\n+            if nums[mid] > nums[hi] {\n+                lo = mid + 1;\n+            } else {\n+                hi = mid;\n+            }\n+        }",
+    "path": "find-minimum-in-rotated-sorted-array/DaleSeo.rs",
+    "commit_id": "c2c9b38352940ef4fd74a789cbf5d2598dc9f55d",
+    "original_commit_id": "c4240d907d7f7ae4517f18e9f6fa7cf41f23af2c",
+    "user": {
+      "login": "DaleSeo",
+      "id": 5466341,
+      "node_id": "MDQ6VXNlcjU0NjYzNDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5466341?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DaleSeo",
+      "html_url": "https://github.com/DaleSeo",
+      "followers_url": "https://api.github.com/users/DaleSeo/followers",
+      "following_url": "https://api.github.com/users/DaleSeo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DaleSeo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DaleSeo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DaleSeo/subscriptions",
+      "organizations_url": "https://api.github.com/users/DaleSeo/orgs",
+      "repos_url": "https://api.github.com/users/DaleSeo/repos",
+      "events_url": "https://api.github.com/users/DaleSeo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DaleSeo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "@parkhojeong 님, 좋은 제안 감사합니다! 🙏 \r\n탐색 구간이 이미 정렬돼 있으면 맨 앞이 최소값이니 바로 반환할 수 있겠네요.\r\n그런데 `mid`까지 볼 필요 없이 `nums[lo] < nums[hi]` 한 번의 비교만으로 동일한 조기 반환을 할 수 있더라고요.\r\n그래서 아래처럼 좀 더 단순화하여 반영하겠습니다.\r\n\r\n```suggestion\r\n        while lo < hi {\r\n            if nums[lo] < nums[hi] {\r\n                return nums[lo];\r\n            }\r\n            let mid = (lo + hi) / 2;\r\n            if nums[mid] > nums[hi] {\r\n                lo = mid + 1;\r\n            } else {\r\n                hi = mid;\r\n            }\r\n        }\r\n```\r\n\r\n",
+    "created_at": "2026-07-17T23:41:13Z",
+    "updated_at": "2026-07-17T23:41:14Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3606988688",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3606988688"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2746#discussion_r3606988688"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2746"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3606988688/reactions",
+      "total_count": 2,
+      "+1": 2,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 6,
+    "original_start_line": 6,
+    "start_side": "RIGHT",
+    "line": 16,
+    "original_line": 13,
+    "side": "RIGHT",
+    "in_reply_to_id": 3603348639,
+    "author_association": "MEMBER",
+    "original_position": 13,
+    "position": 16,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

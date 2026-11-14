@@ -1,0 +1,428 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400865",
+    "pull_request_review_id": 4943883087,
+    "id": 3789400865,
+    "node_id": "PRRC_kwDOLwMdns7h3ash",
+    "diff_hunk": "",
+    "path": "clone-graph/sangbeenmoon.java",
+    "commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "original_commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 625e8221868f05b427efd90f88ffc6e25f79a898 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>clone-graph/sangbeenmoon.java</summary>\n\n```java\n\n// Definition for a Node.\n\nimport java.util.ArrayList;\nimport java.util.Map;\n\n/* \nclass Node {\n    public int val;\n    public List<Node> neighbors;\n    public Node() {\n        val = 0;\n        neighbors = new ArrayList<Node>();\n    }\n    public Node(int _val) {\n        val = _val;\n        neighbors = new ArrayList<Node>();\n    }\n    public Node(int _val, ArrayList<Node> _neighbors) {\n        val = _val;\n        neighbors = _neighbors;\n    }\n}\n*/\n\nclass Solution {\n\n    // <원본, 복제본>\n    public Map<Node,Node> map = new HashMap<>();\n\n    public Node cloneGraph(Node node) {\n    \n      if (node == null) {\n        return null;\n      }\n\n      return dfs(node);\n    }\n\n    public Node dfs(Node origin) {\n        if (map.containsKey(origin)) {\n            return map.get(origin);\n        }\n\n        if (origin == null) {\n            return null;\n        }\n\n        Node copied = new Node(origin.val);\n        map.put(origin, copied);\n        \n        for (Node n : origin.neighbors) {\n            Node neighbor = dfs(n);\n            copied.neighbors.add(neighbor);\n        }\n\n        return copied;\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Depth-First Search, Hash Map / Hash Set\n- **설명**: 그래프를 깊이 우선으로 순회하며 각 노드를 복제하고, 원래 노드와 복제본 간 매핑을 HashMap으로 저장하여 이미 방문한 노드를 재사용합니다. 순회 시 재귀dfs로 이웃 노드를 방문하며 연결 관계를 재현합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(N + E) |\n| **Space** | O(N) |\n\n**피드백**: 맵으로 원본 노드와 복제본 노드를 매핑해 사이클이 있는 그래프에서도 중복 복제를 방지한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T12:56:29Z",
+    "updated_at": "2026-08-15T12:56:29Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789400865",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400865"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789400865"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400865/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400934",
+    "pull_request_review_id": 4943883127,
+    "id": 3789400934,
+    "node_id": "PRRC_kwDOLwMdns7h3atm",
+    "diff_hunk": "",
+    "path": "longest-common-subsequence/sangbeenmoon.java",
+    "commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "original_commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 468052ffe8ce05fa155472d554b3a925781a433c -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-common-subsequence/sangbeenmoon.java</summary>\n\n```java\nclass Solution {\n    public int longestCommonSubsequence(String text1, String text2) {\n\n        int dp[][] = new int[text1.length()][text2.length()];\n\n\n        for(int i = 0; i < text1.length(); i++){\n            if (text1.substring(0,i + 1).contains(String.valueOf(text2.charAt(0)))) {\n                dp[i][0] = 1;\n            }\n        }\n\n        for(int i = 0; i < text2.length(); i++){\n            if (text2.substring(0,i + 1).contains(String.valueOf(text1.charAt(0)))) {\n                dp[0][i] = 1;\n            }\n        }\n\n        for(int i = 1; i < text1.length(); i++){\n            for(int j = 1; j< text2.length(); j++){\n                if(text1.charAt(i) == text2.charAt(j)){\n                    dp[i][j] = dp[i-1][j-1] + 1;\n                } else {\n                    dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);\n                }\n            }\n        }\n        \n        return dp[text1.length() - 1][text2.length() - 1];\n        \n\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming\n- **설명**: 두 문자열의 최장 공통 부분 수열을 구하기 위해 이차원 DP 테이블을 채우는 방식으로 문제를 해결합니다. 이전 상태의 값을 이용해 현재 상태를 구성하는 전형적인 DP 패턴입니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n * m) |\n| **Space** | O(n * m) |\n\n**피드백**: 2차원 DP 배열을 사용해 모든 부분문제 결과를 저장한다.\n\n**개선 제안**: 경계 초기화와 인덱스 접근을 명확히 하고, 공간을 줄이려면 한 행만 사용하는 방법도 있다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T12:56:31Z",
+    "updated_at": "2026-08-15T12:56:31Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789400934",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400934"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789400934"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400934/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400989",
+    "pull_request_review_id": 4943883175,
+    "id": 3789400989,
+    "node_id": "PRRC_kwDOLwMdns7h3aud",
+    "diff_hunk": "",
+    "path": "longest-repeating-character-replacement/sangbeenmoon.java",
+    "commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "original_commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 2c0f3db525a4cd3c6e5dd19981766f42c048c002 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>longest-repeating-character-replacement/sangbeenmoon.java</summary>\n\n```java\nimport java.util.HashMap;\nimport java.util.Map;\nimport java.util.Map.Entry;\n\nclass Solution {\n\n    Map<Character, Integer> counterMap = new HashMap<>();\n\n    public int characterReplacement(String s, int k) {\n        \n        int left = 0;\n        int answer = 0;\n\n        for (int right = 0; right < s.length(); right++){  \n            if(counterMap.containsKey(s.charAt(right))){\n           \n                int cnt = counterMap.get(s.charAt(right));\n                counterMap.put(s.charAt(right), cnt + 1);\n            }\n            else {\n                counterMap.put(s.charAt(right), 1);\n            }\n\n            while (!isCounterOK(k)) {\n                char l = s.charAt(left);\n                int cnt = counterMap.get(l);\n                if (cnt == 1) counterMap.remove(l);\n                else counterMap.put(l, cnt - 1);\n                left++;\n            }\n            answer = Math.max(answer, right - left + 1);\n        }\n\n        return answer;\n    }\n\n    public boolean isCounterOK(int k) {\n        int maxCount = 0;\n        int totalCount = 0;\n        for (Entry<Character, Integer> entry : counterMap.entrySet()) {\n            maxCount = Math.max(maxCount, entry.getValue());\n            totalCount = totalCount + entry.getValue();\n        }\n        return totalCount - maxCount <= k;\n    }\n}\n\n```\n\n</details>\n\n- **패턴**: Two Pointers, Hash Map / Hash Set, Greedy, Sliding Window\n- **설명**: left와 right 두 포인터로 구간을 확장/축소하며 최적의 길이를 찾는다. 해시 맵으로 문자 빈도수를 추적하고, 전체 길이에서 최다 빈도수를 빼서 허용 횟수 k를 만족하는지 판단한다. 이때 윈도우의 최대 길이를 계속 갱신하므로 슬라이딩 윈도우와 그리디의 결합으로 풀이된다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(AlphabetSize) |\n\n**피드백**: 윈도우의 크기를 유지하며 최대 빈도 문자를 활용한다.\n\n**개선 제안**: Counter 갱신 로직을 간결화하고, maxCount를 window 밖에서도 관리하는 방법을 고려해볼 수 있다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T12:56:33Z",
+    "updated_at": "2026-08-15T12:56:33Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789400989",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400989"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789400989"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789400989/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789401034",
+    "pull_request_review_id": 4943883216,
+    "id": 3789401034,
+    "node_id": "PRRC_kwDOLwMdns7h3avK",
+    "diff_hunk": "",
+    "path": "palindromic-substrings/sangbeenmoon.py",
+    "commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "original_commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 2b8109c1eeaaecee7258efef5672e57735187082 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>palindromic-substrings/sangbeenmoon.py</summary>\n\n```py\nclass Solution:\n    def countSubstrings(self, s: str) -> int:\n        dp = [[0] * (len(s) + 1) for _ in range(len(s) + 1)]\n\n        def isPalindrome(start, end) -> bool:\n\n            if end - start == 0:\n                return True\n\n            if end - start == 1 :\n                return s[start] == s[end]\n\n            if dp[start][end] == 1:\n                return True\n\n            if dp[start][end] == -1:\n                return False    \n\n            if s[start] == s[end]:\n                return isPalindrome(start+1, end-1)    \n\n            return False\n\n        answer = 0\n\n        for i in range(len(s) - 1, -1, -1):\n            for j in range(i,len(s)):\n                if isPalindrome(i,j):                    \n                    dp[i][j] = 1\n                    answer += 1\n                else:\n                    dp[i][j] = -1\n\n        return answer\n                \n\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming\n- **설명**: 문자열의 부분 문자열이 회문인지 여부를 DP로 저장해가며(메모이제이션) 중복 계산을 피하고 전체 부분 문자열을 탐색합니다. 주어진 풀이에서 dp 테이블로 회문 여부를 기록하고, 역순으로 시작점과 끝점을 늘려가며 결과를 누적합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n^2) |\n| **Space** | O(n^2) |\n\n**피드백**: isPalindrome 재귀와 DP 표를 섞어 부분 문자열의 회문 여부를 저장한다.\n\n**개선 제안**: 현재 구현은 Python 구문과 DP 표 초기화가 다소 비효율적일 수 있어, 확정된 확장 방법으로 단순화하는 것을 고려해볼 수 있다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T12:56:34Z",
+    "updated_at": "2026-08-15T12:56:34Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789401034",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789401034"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789401034"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789401034/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789880975",
+    "pull_request_review_id": 4944352533,
+    "id": 3789880975,
+    "node_id": "PRRC_kwDOLwMdns7h5P6P",
+    "diff_hunk": "@@ -0,0 +1,46 @@\n+import java.util.HashMap;\n+import java.util.Map;\n+import java.util.Map.Entry;\n+\n+class Solution {\n+\n+    Map<Character, Integer> counterMap = new HashMap<>();\n+\n+    public int characterReplacement(String s, int k) {\n+        \n+        int left = 0;\n+        int answer = 0;\n+\n+        for (int right = 0; right < s.length(); right++){  \n+            if(counterMap.containsKey(s.charAt(right))){\n+           \n+                int cnt = counterMap.get(s.charAt(right));\n+                counterMap.put(s.charAt(right), cnt + 1);\n+            }\n+            else {\n+                counterMap.put(s.charAt(right), 1);\n+            }\n+\n+            while (!isCounterOK(k)) {\n+                char l = s.charAt(left);\n+                int cnt = counterMap.get(l);\n+                if (cnt == 1) counterMap.remove(l);\n+                else counterMap.put(l, cnt - 1);\n+                left++;\n+            }\n+            answer = Math.max(answer, right - left + 1);",
+    "path": "longest-repeating-character-replacement/sangbeenmoon.java",
+    "commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "original_commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "돌려보니 성능이 좋은 편은 아니라서 조금 더 최적화 시도해보셔도 좋을 거 같습니다.",
+    "created_at": "2026-08-15T17:35:07Z",
+    "updated_at": "2026-08-15T17:44:24Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789880975",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789880975"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789880975"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789880975/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 15,
+    "original_start_line": 15,
+    "start_side": "RIGHT",
+    "line": 31,
+    "original_line": 31,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 31,
+    "position": 31,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789891778",
+    "pull_request_review_id": 4944352533,
+    "id": 3789891778,
+    "node_id": "PRRC_kwDOLwMdns7h5SjC",
+    "diff_hunk": "@@ -0,0 +1,46 @@\n+import java.util.HashMap;\n+import java.util.Map;\n+import java.util.Map.Entry;\n+\n+class Solution {\n+\n+    Map<Character, Integer> counterMap = new HashMap<>();\n+\n+    public int characterReplacement(String s, int k) {\n+        \n+        int left = 0;\n+        int answer = 0;\n+\n+        for (int right = 0; right < s.length(); right++){  \n+            if(counterMap.containsKey(s.charAt(right))){\n+           \n+                int cnt = counterMap.get(s.charAt(right));\n+                counterMap.put(s.charAt(right), cnt + 1);\n+            }\n+            else {\n+                counterMap.put(s.charAt(right), 1);\n+            }\n+\n+            while (!isCounterOK(k)) {\n+                char l = s.charAt(left);\n+                int cnt = counterMap.get(l);\n+                if (cnt == 1) counterMap.remove(l);\n+                else counterMap.put(l, cnt - 1);\n+                left++;\n+            }\n+            answer = Math.max(answer, right - left + 1);\n+        }\n+\n+        return answer;\n+    }\n+\n+    public boolean isCounterOK(int k) {\n+        int maxCount = 0;\n+        int totalCount = 0;\n+        for (Entry<Character, Integer> entry : counterMap.entrySet()) {\n+            maxCount = Math.max(maxCount, entry.getValue());\n+            totalCount = totalCount + entry.getValue();\n+        }\n+        return totalCount - maxCount <= k;\n+    }",
+    "path": "longest-repeating-character-replacement/sangbeenmoon.java",
+    "commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "original_commit_id": "1940a588692cb4614a2238f631fa857376cdf31c",
+    "user": {
+      "login": "parkhojeong",
+      "id": 34734102,
+      "node_id": "MDQ6VXNlcjM0NzM0MTAy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34734102?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/parkhojeong",
+      "html_url": "https://github.com/parkhojeong",
+      "followers_url": "https://api.github.com/users/parkhojeong/followers",
+      "following_url": "https://api.github.com/users/parkhojeong/following{/other_user}",
+      "gists_url": "https://api.github.com/users/parkhojeong/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/parkhojeong/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/parkhojeong/subscriptions",
+      "organizations_url": "https://api.github.com/users/parkhojeong/orgs",
+      "repos_url": "https://api.github.com/users/parkhojeong/repos",
+      "events_url": "https://api.github.com/users/parkhojeong/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/parkhojeong/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "이쪽에서 오버헤드가 살짝 있어 보이네요. 단순하게 빈도 배열만 사용해보시는 건 어떨까요?",
+    "created_at": "2026-08-15T17:41:08Z",
+    "updated_at": "2026-08-15T17:44:24Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789891778",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789891778"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2820#discussion_r3789891778"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2820"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789891778/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": 37,
+    "original_start_line": 37,
+    "start_side": "RIGHT",
+    "line": 45,
+    "original_line": 45,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 45,
+    "position": 45,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

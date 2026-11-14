@@ -1,0 +1,927 @@
+[
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619096",
+    "pull_request_review_id": 4944093425,
+    "id": 3789619096,
+    "node_id": "PRRC_kwDOLwMdns7h4P-Y",
+    "diff_hunk": "",
+    "path": "linked-list-cycle/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: cf2508709462fc6bf899524d755a506b52854061 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>linked-list-cycle/alphaorderly.py</summary>\n\n```py\n\n\"\"\"\n시간복잡도: O(n)\n공간복잡도: O(1)\n\n1. 토끼와 거북이를 초기화한다.\n  - 토끼 : 두 칸씩 이동\n  - 거북이 : 한 칸씩 이동\n2. 토끼와 거북이가 만날 때까지 이동한다.\n3. 토끼와 거북이가 만나면 사이클이 있다고 판단한다.\n4. 토끼와 거북이가 만나지 않으면 사이클이 없다고 판단한다.\n\n# 원리 #\n- 사이클이 존재하지 않는다면 토끼와 거북이는 결국 끝에 도달한다.\n- 사이클이 존재한다면 토끼와 거북이는 결국 사이클 내에서 만난다.\n\"\"\"\nclass ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\n\nclass Solution:\n    def hasCycle(self, head: Optional[ListNode]) -> bool:\n        hare = head\n        tortoise = head\n\n        while hare and hare.next:\n            hare = hare.next.next\n            tortoise = tortoise.next\n\n            if hare is tortoise:\n                return True\n\n        return False\n\n```\n\n</details>\n\n- **패턴**: Two Pointers, Fast & Slow Pointers\n- **설명**: 해당 코드는 토끼-거북이 알고리즘으로, 같은 포인터 두 개를 서로 다른 속도로 움직여 순환 여부를 판단한다. 이를 통해 한 번에 하나의 노드를 건너가며 순환 여부를 O(n) 시간, O(1) 공간으로 탐지한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: 토끼와 거북이 알고리즘으로 순차 탐색 중 사이클 여부를 빠르게 판단한다. 추가 공간은 상수로 유지된다.\n\n**개선 제안**: 현재 구현은 의도한 대로 동작하지만, 입력 head가 None인 경우를 명시적으로 처리하는 방어 코드가 있으면 더 robust합니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T15:11:11Z",
+    "updated_at": "2026-08-15T15:11:11Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619096",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619096"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619096"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619096/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619130",
+    "pull_request_review_id": 4944093467,
+    "id": 3789619130,
+    "node_id": "PRRC_kwDOLwMdns7h4P-6",
+    "diff_hunk": "",
+    "path": "maximum-product-subarray/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 18ef35418ce2e624618b221507bd0a1903fcc614 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>maximum-product-subarray/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(n)\n공간복잡도: O(1)\n\n- 만약 현재 숫자가 음수라면, 양수 최대값(pos)과 음수 최소값(neg)을 서로 교환한다.\n  - 이유: 음수 * 음수 = 양수이므로, 음수를 만나면 최대값/최소값 후보가 바뀔 수 있다.\n- pos와 neg를 nums의 첫 번째 값으로 초기화한다.\n  - pos: 현재까지의 양수 곱셈 최대값\n  - neg: 현재까지의 음수 곱셈 최소값\n- ans를 nums의 첫 번째 값으로 초기화한다.\n  - ans: 현재까지의 최대 곱셈 결과\n- nums의 두 번째 원소부터 끝까지 pos와 neg를 갱신한다.\n  - pos는 현재 숫자와 pos*현재 숫자 중 큰 값\n  - neg는 현재 숫자와 neg*현재 숫자 중 작은 값\n- ans를 pos와 비교하여 최대값으로 갱신한다.\n- 반복이 끝나면 ans를 반환한다.\n\"\"\"\nclass Solution:\n    def maxProduct(self, nums: List[int]) -> int:\n        pos = neg = ans = nums[0]\n        N = len(nums)\n\n        for i in range(1, N):\n            if nums[i] < 0:\n                neg, pos = pos, neg\n\n            pos = max(nums[i], nums[i] * pos)\n            neg = min(nums[i], nums[i] * neg)\n\n            ans = max(ans, pos)\n\n        return ans\n\n```\n\n</details>\n\n- **패턴**: Dynamic Programming, Two Pointers, Greedy\n- **설명**: 연속 부분배열의 최대 곱을 찾기 위해 양수/음수의 곱의 특성을 이용하는 단일 패스 해법으로, 현재 위치의 값과 이전까지의 최댓값/최솟값을 갱신하는 DP 성격의 상태 전개와 이를 이용한 그리디적 선택이 결합되어 있습니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: pos와 neg를 각각 현재까지의 양수/음수 구간의 최대/최소 곱으로 관리한다. 음수의 등장 시 교환이 핵심이다.\n\n**개선 제안**: 특정 입력에 대해 nums가 비어있을 수 있는 경우에 대비한 입력 검증을 추가하면 안정성이 올라갑니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T15:11:13Z",
+    "updated_at": "2026-08-15T15:11:13Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619130",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619130"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619130"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619130/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619185",
+    "pull_request_review_id": 4944093522,
+    "id": 3789619185,
+    "node_id": "PRRC_kwDOLwMdns7h4P_x",
+    "diff_hunk": "",
+    "path": "minimum-window-substring/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 264680a8e53906fb5a7a87caba1f50365c2b264a -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>minimum-window-substring/alphaorderly.py</summary>\n\n```py\n\"\"\"\n\n시간복잡도: O(n)\n공간복잡도: O(1)\n\n슬라이딩 윈도우 기법을 사용해 문자열 s에서 t의 모든 문자를 포함하는 최소 윈도우를 찾는다.\n\nWindow 클래스는 타겟 문자열(t)에 구성된 각 문자별 필요한 개수를 카운트하고,\n윈도우 내 해당 문자 개수를 관리하며, 현재 윈도우가 타겟을 만족하는지(check) 확인한다.\n\nadd 메서드는 윈도우에 문자를 추가하여 개수를 갱신하고,\n  - 타겟의 문자 갯수와 같아지면 key_count를 증가시킨다.\nremove 메서드는 윈도우에서 문자를 제거하여 개수를 줄인다.\n  - 타겟의 문자 갯수보다 작아지면 key_count를 감소시킨다.\n\ncheck 메서드는 윈도우에 타겟 문자가 필요한 만큼 모두 포함되어 있는지 검사한다.\n  - key_count와 target_count가 같으면 True를 반환한다.\n\"\"\"\nclass Window:\n    def __init__(self, target: str):\n        self.target = Counter(target)\n        self.window = defaultdict(int)\n\n        self.key_count = 0\n        self.target_count = len(self.target)\n\n    def check(self):\n        return self.key_count == self.target_count\n\n    def add(self, ch: str):\n        self.window[ch] += 1\n\n        if self.window[ch] == self.target[ch]:\n            self.key_count += 1\n\n    def remove(self, ch: str):\n        self.window[ch] -= 1\n        if self.window[ch] < self.target[ch]:\n            self.key_count -= 1\n\n\nclass Solution:\n    def minWindow(self, s: str, t: str) -> str:\n        window = Window(t)\n        left = 0\n        ans = (-float(\"inf\"), float(\"inf\"))\n\n        for right, value in enumerate(s):\n\n            window.add(value)\n            if not window.check():\n                continue\n\n            while window.check():\n                window.remove(s[left])\n                left += 1\n\n            if ans[1] - ans[0] > right - left:\n                ans = (left - 1, right)\n\n        if ans[0] == -float(\"inf\"):\n            return \"\"\n\n        return s[ans[0] : ans[1] + 1]\n\n```\n\n</details>\n\n- **패턴**: Sliding Window\n- **설명**: 주어진 코드는 가변 길이 윈도우를 왼쪽/오른쪽 포인터로 조절하며, 타깃 문자열의 모든 문자를 포함하는 최소 윈도우를 찾는 로직으로 구성되어 있습니다. 윈도우 내부 문자를 관리하고 조건 충족 시 윈도우를 축소하는 흐름이 Sliding Window 패턴에 해당합니다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: Window 클래스를 통해 필요한 문자 수를 추적하고 키 카운트로 윈도우를 축소한다. 추가 정보 관리로 공간을 상수로 유지한다.\n\n**개선 제안**:  Window 구현에서 Counter/ defaultdict 초기화 비용 고려 시, 정규 딕셔너리 기본값 사용 여부를 재점검해 성능 여지를 확인해볼 수 있습니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T15:11:15Z",
+    "updated_at": "2026-08-15T15:11:15Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619185",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619185"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619185"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619185/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619257",
+    "pull_request_review_id": 4944093582,
+    "id": 3789619257,
+    "node_id": "PRRC_kwDOLwMdns7h4QA5",
+    "diff_hunk": "",
+    "path": "pacific-atlantic-water-flow/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: dab1852476fb5140643f3bbddc55fdc4326f5e7b -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>pacific-atlantic-water-flow/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(m * n)\n공간복잡도: O(m * n)\n\n1. 태평양과 대서양 각각에서 물이 도달할 수 있는 위치를 기록할 2차원 배열(check)을 만든다.\n2. 태평양과 맞닿은 칸들(왼쪽 열과 위쪽 행)에는 태평양 도달 가능(값 1), 대서양과 맞닿은 칸들(오른쪽 열과 아래쪽 행)에는 대서양 도달 가능(값 2) 표시를 한다.\n   - 1: 태평양, 2: 대서양 — 2진수로는 각각 01, 10이라는 의미임.\n3. 각 바다에 인접한 칸들에서 시작해, BFS를 이용해 도달 가능한 모든 칸을 확장한다.\n   - 인접한 칸으로 이동할 때, 항상 지금 칸보다 높이가 같거나 더 높은 칸으로만 물이 흐를 수 있다(즉, 물이 거슬러 흐르는 조건).\n   - 이미 같은 바다에서 방문한 적이 있는 칸은 건너뛴다.\n   - 새로운 위치에 도달할 때마다 check 배열을 갱신하고 큐에 추가한다.\n4. 태평양과 대서양에서 모두 도달 가능한 칸(값이 3이 된 칸)을 답으로 모아 반환한다.\n\n# 비트마스킹 기법 사용 원리 #\n- 태평양과 대서양 두 바다에서 도달 가능한 칸을 표시하기 위해 비트마스킹 기법을 사용한다.\n- 각 칸에 대해, 1비트(01)는 태평양(Pacific), 2비트(10)는 대서양(Atlantic) 도달 가능을 의미한다.\n- 예를 들어 각 칸의 값이 1이면 태평양, 2이면 대서양, 3이면 두 바다 모두에 도달 가능한 칸임을 나타낸다.\n- bfs/dfs로 인접 칸(상하좌우)로 확장할 때, 이미 해당 바다의 비트가 켜져 있으면 방문하지 않는다.\n\"\"\"\nclass Solution:\n    def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:\n        ROW = len(heights)\n        COL = len(heights[0])\n        DIR = [\n            [1, 0],\n            [0, 1],\n            [-1, 0],\n            [0, -1]\n        ]\n\n        check = [[0] * COL for _ in range(ROW)]\n\n        for r in range(ROW):\n            check[r][0] |= 1\n            check[r][COL - 1] |= 2\n\n        for c in range(COL):\n            check[0][c] |= 1\n            check[ROW - 1][c] |= 2\n\n        queue = deque([])\n\n        for r in range(ROW):\n            for c in range(COL):\n                if check[r][c] != 0:\n                    queue.append((r, c))\n\n        def bound(row: int, col: int) -> bool:\n            return 0 <= row < ROW and 0 <= col < COL\n\n        while queue:\n            r, c = queue.popleft()\n\n            for dr, dc in DIR:\n                tr, tc = r + dr, c + dc\n\n                if not bound(tr, tc):\n                    continue\n\n                if heights[tr][tc] < heights[r][c]:\n                    continue\n\n                if check[tr][tc] | check[r][c] == check[tr][tc]:\n                    continue\n\n                check[tr][tc] |= check[r][c]\n                queue.append((tr, tc))\n\n        ans = []\n\n        for r in range(ROW):\n            for c in range(COL):\n                if check[r][c] == 3:\n                    ans.append([r, c])\n\n        return ans\n\n```\n\n</details>\n\n- **패턴**: Breadth-First Search, Dynamic Programming, Hash Map / Hash Set\n- **설명**: 주요 로직이 BFS를 사용해 두 바다로 차례대로 도달 여부를 확장하는 방식이며, 각 칸의 상태를 비트마스킹으로 관리해 두 바다의 도달 여부를 합쳐 결과를 얻는 패턴이 보인다. 또한 상태 갱신과 방문 여부 관리가 DP적 아이디어와 비트마스킹의 활용으로 연결된다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(m * n) |\n| **Space** | O(m * n) |\n\n**피드백**: 각 칸에 두 바다 도달 여부를 비트로 표시하고, 양 방향으로 BFS를 확장한다. 중복 방문 최소화가 핵심이다.\n\n**개선 제안**: 메모리 사용을 줄이고자 비트마스킹 대신 두 개의 독립 체크 배열을 사용하는 방식도 고려 가능하다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T15:11:17Z",
+    "updated_at": "2026-08-15T15:11:17Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619257",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619257"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619257"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619257/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619306",
+    "pull_request_review_id": 4944093637,
+    "id": 3789619306,
+    "node_id": "PRRC_kwDOLwMdns7h4QBq",
+    "diff_hunk": "",
+    "path": "sum-of-two-integers/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 13e68ba20ff34283f458ac9f601022111c165c74 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>sum-of-two-integers/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(1)\n공간복잡도: O(1)\n\n16비트 정수 범위에서 각 비트를 하나씩 확인하며 덧셈을 수행한다.\n\n각 비트의 합은 XOR 연산으로 구하고,\n올림수(carry)는 두 비트 이상이 1인 경우를 OR 연산으로 계산한다.\n  - 전가산기 원리 적용\n\n계산된 각 비트는 ans의 해당 위치에 저장한다.\n\nPython의 int는 고정된 비트 폭을 가지지 않으므로,\n최종 결과의 최상위 비트가 1인 경우에는 16비트 음수로 직접 변환한다.\n\nMASK와 XOR하여 16비트 범위 안에서 비트를 반전한 뒤,\n~ 연산을 적용하여 Python의 음수 정수 형태로 변환한다.\n\"\"\"\nclass Solution:\n    def getSum(self, a: int, b: int) -> int:\n        MASK = 0xFFFF\n        CHECK = 0x8000\n\n        ans = carry = left = 0\n        for i in range(16):\n            a_bit = a & 1\n            b_bit = b & 1\n\n            left = a_bit ^ b_bit ^ carry\n            carry = (a_bit & b_bit) | (b_bit & carry) | (a_bit & carry)\n\n            ans |= left * 2**i\n            a >>= 1\n            b >>= 1\n\n        if ans & CHECK == 0:\n            return ans\n        else:\n            return ~(MASK ^ ans)\n\n```\n\n</details>\n\n- **패턴**: Bit Manipulation\n- **설명**: 두 정수의 각 비트를 순회하며, 비트 연산으로 덧셈을 구현하고, 캐리와 합을 비트 단위로 계산하는 방식이다. 16비트 고정 폭 가정과 최종 부호 처리로 비트 조작 패턴이 핵심이다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(1) |\n| **Space** | O(1) |\n\n**피드백**: 비트 연산으로 덧셈의 각 비트를 차례대로 계산하고 최종 음수 표시를 처리한다. 파이썬의 가변 정수 특성을 활용해 경계 처리를 한다.\n\n**개선 제안**: 입력 수의 범위를 명시적으로 확인하고, 더 큰 비트 수에서도 동작하도록 일반화하는 전략도 고려해볼 만하다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-15T15:11:19Z",
+    "updated_at": "2026-08-15T15:11:19Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619306",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619306"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3789619306"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3789619306/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818523098",
+    "pull_request_review_id": 4978953056,
+    "id": 3818523098,
+    "node_id": "PRRC_kwDOLwMdns7jmgna",
+    "diff_hunk": "@@ -0,0 +1,64 @@\n+\"\"\"\n+\n+시간복잡도: O(n)\n+공간복잡도: O(1)",
+    "path": "minimum-window-substring/alphaorderly.py",
+    "commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "DaleSeo",
+      "id": 5466341,
+      "node_id": "MDQ6VXNlcjU0NjYzNDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5466341?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DaleSeo",
+      "html_url": "https://github.com/DaleSeo",
+      "followers_url": "https://api.github.com/users/DaleSeo/followers",
+      "following_url": "https://api.github.com/users/DaleSeo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DaleSeo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DaleSeo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DaleSeo/subscriptions",
+      "organizations_url": "https://api.github.com/users/DaleSeo/orgs",
+      "repos_url": "https://api.github.com/users/DaleSeo/repos",
+      "events_url": "https://api.github.com/users/DaleSeo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DaleSeo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "어떤 기준으로 `O(1)`이라고 판단하셨는지 궁금합니다.",
+    "created_at": "2026-08-20T04:03:57Z",
+    "updated_at": "2026-08-20T04:08:31Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818523098",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818523098"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818523098"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818523098/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": null,
+    "original_line": 4,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 4,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818529777",
+    "pull_request_review_id": 4978953056,
+    "id": 3818529777,
+    "node_id": "PRRC_kwDOLwMdns7jmiPx",
+    "diff_hunk": "@@ -0,0 +1,32 @@\n+\"\"\"\n+시간복잡도: O(n)\n+공간복잡도: O(1)\n+\n+- 만약 현재 숫자가 음수라면, 양수 최대값(pos)과 음수 최소값(neg)을 서로 교환한다.\n+  - 이유: 음수 * 음수 = 양수이므로, 음수를 만나면 최대값/최소값 후보가 바뀔 수 있다.\n+- pos와 neg를 nums의 첫 번째 값으로 초기화한다.\n+  - pos: 현재까지의 양수 곱셈 최대값\n+  - neg: 현재까지의 음수 곱셈 최소값",
+    "path": "maximum-product-subarray/alphaorderly.py",
+    "commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "DaleSeo",
+      "id": 5466341,
+      "node_id": "MDQ6VXNlcjU0NjYzNDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5466341?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DaleSeo",
+      "html_url": "https://github.com/DaleSeo",
+      "followers_url": "https://api.github.com/users/DaleSeo/followers",
+      "following_url": "https://api.github.com/users/DaleSeo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DaleSeo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DaleSeo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DaleSeo/subscriptions",
+      "organizations_url": "https://api.github.com/users/DaleSeo/orgs",
+      "repos_url": "https://api.github.com/users/DaleSeo/repos",
+      "events_url": "https://api.github.com/users/DaleSeo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DaleSeo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "여기 양수, 음수라는 표현이 맞나요? 코드 상으로는 그냥 단순 최대, 최소값을 저장하는 것 같아서요.",
+    "created_at": "2026-08-20T04:05:44Z",
+    "updated_at": "2026-08-20T04:08:31Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818529777",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818529777"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818529777"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818529777/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": 8,
+    "start_side": "RIGHT",
+    "line": null,
+    "original_line": 9,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 9,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818535629",
+    "pull_request_review_id": 4978953056,
+    "id": 3818535629,
+    "node_id": "PRRC_kwDOLwMdns7jmjrN",
+    "diff_hunk": "@@ -0,0 +1,39 @@\n+\"\"\"\n+시간복잡도: O(1)\n+공간복잡도: O(1)\n+\n+16비트 정수 범위에서 각 비트를 하나씩 확인하며 덧셈을 수행한다.\n+\n+각 비트의 합은 XOR 연산으로 구하고,\n+올림수(carry)는 두 비트 이상이 1인 경우를 OR 연산으로 계산한다.\n+  - 전가산기 원리 적용\n+\n+계산된 각 비트는 ans의 해당 위치에 저장한다.\n+\n+Python의 int는 고정된 비트 폭을 가지지 않으므로,\n+최종 결과의 최상위 비트가 1인 경우에는 16비트 음수로 직접 변환한다.\n+\n+MASK와 XOR하여 16비트 범위 안에서 비트를 반전한 뒤,\n+~ 연산을 적용하여 Python의 음수 정수 형태로 변환한다.\n+\"\"\"\n+class Solution:\n+    def getSum(self, a: int, b: int) -> int:\n+        MASK = 0xFFFF\n+        CHECK = 0x8000\n+\n+        ans = carry = left = 0",
+    "path": "sum-of-two-integers/alphaorderly.py",
+    "commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "DaleSeo",
+      "id": 5466341,
+      "node_id": "MDQ6VXNlcjU0NjYzNDE=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5466341?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/DaleSeo",
+      "html_url": "https://github.com/DaleSeo",
+      "followers_url": "https://api.github.com/users/DaleSeo/followers",
+      "following_url": "https://api.github.com/users/DaleSeo/following{/other_user}",
+      "gists_url": "https://api.github.com/users/DaleSeo/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/DaleSeo/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/DaleSeo/subscriptions",
+      "organizations_url": "https://api.github.com/users/DaleSeo/orgs",
+      "repos_url": "https://api.github.com/users/DaleSeo/repos",
+      "events_url": "https://api.github.com/users/DaleSeo/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/DaleSeo/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "nit: `left`는 루프 안에서 매번 새로 할당되므로 여기서 굳이 초기화할 필요가 없을 것 같습니다.",
+    "created_at": "2026-08-20T04:07:16Z",
+    "updated_at": "2026-08-20T04:08:31Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818535629",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818535629"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818535629"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818535629/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": null,
+    "original_line": 24,
+    "side": "RIGHT",
+    "author_association": "MEMBER",
+    "original_position": 24,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818548824",
+    "pull_request_review_id": 4978981496,
+    "id": 3818548824,
+    "node_id": "PRRC_kwDOLwMdns7jmm5Y",
+    "diff_hunk": "@@ -0,0 +1,32 @@\n+\"\"\"\n+시간복잡도: O(n)\n+공간복잡도: O(1)\n+\n+- 만약 현재 숫자가 음수라면, 양수 최대값(pos)과 음수 최소값(neg)을 서로 교환한다.\n+  - 이유: 음수 * 음수 = 양수이므로, 음수를 만나면 최대값/최소값 후보가 바뀔 수 있다.\n+- pos와 neg를 nums의 첫 번째 값으로 초기화한다.\n+  - pos: 현재까지의 양수 곱셈 최대값\n+  - neg: 현재까지의 음수 곱셈 최소값",
+    "path": "maximum-product-subarray/alphaorderly.py",
+    "commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "거시적으로 보면 맞다고 생각해서 적었어요!\n만약 nums의 모든 수가 양수로만 이루어져 있다면 음수가 아니지만\n음수가 하나라도 있다면 음수의 곱으로 인해 해당 내용과 비슷하게 되니까요!",
+    "created_at": "2026-08-20T04:10:55Z",
+    "updated_at": "2026-08-20T04:10:55Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818548824",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818548824"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818548824"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818548824/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": 8,
+    "start_side": "RIGHT",
+    "line": null,
+    "original_line": 9,
+    "side": "RIGHT",
+    "in_reply_to_id": 3818529777,
+    "author_association": "MEMBER",
+    "original_position": 9,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818550399",
+    "pull_request_review_id": 4978983148,
+    "id": 3818550399,
+    "node_id": "PRRC_kwDOLwMdns7jmnR_",
+    "diff_hunk": "@@ -0,0 +1,64 @@\n+\"\"\"\n+\n+시간복잡도: O(n)\n+공간복잡도: O(1)",
+    "path": "minimum-window-substring/alphaorderly.py",
+    "commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "original_commit_id": "cdb9b504194d8ba338a1354f055182961de44b85",
+    "user": {
+      "login": "alphaorderly",
+      "id": 55572245,
+      "node_id": "MDQ6VXNlcjU1NTcyMjQ1",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55572245?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alphaorderly",
+      "html_url": "https://github.com/alphaorderly",
+      "followers_url": "https://api.github.com/users/alphaorderly/followers",
+      "following_url": "https://api.github.com/users/alphaorderly/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alphaorderly/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alphaorderly/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alphaorderly/subscriptions",
+      "organizations_url": "https://api.github.com/users/alphaorderly/orgs",
+      "repos_url": "https://api.github.com/users/alphaorderly/repos",
+      "events_url": "https://api.github.com/users/alphaorderly/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alphaorderly/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "으아 이건 실수네요 O(N) 입니다.",
+    "created_at": "2026-08-20T04:11:21Z",
+    "updated_at": "2026-08-20T04:11:21Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818550399",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818550399"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818550399"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818550399/reactions",
+      "total_count": 1,
+      "+1": 1,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": null,
+    "original_line": 4,
+    "side": "RIGHT",
+    "in_reply_to_id": 3818523098,
+    "author_association": "MEMBER",
+    "original_position": 4,
+    "position": 1,
+    "subject_type": "line",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566575",
+    "pull_request_review_id": 4979002491,
+    "id": 3818566575,
+    "node_id": "PRRC_kwDOLwMdns7jmrOv",
+    "diff_hunk": "",
+    "path": "maximum-product-subarray/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: d2f62c8bc1e92f2e188ba300a46bfda9d16ce220 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>maximum-product-subarray/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(n)\n공간복잡도: O(1)\n\n- 만약 현재 숫자가 음수라면, 양수 최대값(pos)과 음수 최소값(neg)을 서로 교환한다.\n  - 이유: 음수 * 음수 = 양수이므로, 음수를 만나면 최대값/최소값 후보가 바뀔 수 있다.\n- pos와 neg를 nums의 첫 번째 값으로 초기화한다.\n    - pos: 현재까지의 곱셈 최대값\n    - neg: 현재까지의 곱셈 최소값\n    - pos, neg로 이름 붙힌 이유는 nums에 음수가 있을 때 각각 양수와 음수가 될 수 있기 때문이다.\n- ans를 nums의 첫 번째 값으로 초기화한다.\n  - ans: 현재까지의 최대 곱셈 결과\n- nums의 두 번째 원소부터 끝까지 pos와 neg를 갱신한다.\n  - pos는 현재 숫자와 pos*현재 숫자 중 큰 값\n  - neg는 현재 숫자와 neg*현재 숫자 중 작은 값\n- ans를 pos와 비교하여 최대값으로 갱신한다.\n- 반복이 끝나면 ans를 반환한다.\n\"\"\"\nclass Solution:\n    def maxProduct(self, nums: List[int]) -> int:\n        pos = neg = ans = nums[0]\n        N = len(nums)\n\n        for i in range(1, N):\n            if nums[i] < 0:\n                neg, pos = pos, neg\n\n            pos = max(nums[i], nums[i] * pos)\n            neg = min(nums[i], nums[i] * neg)\n\n            ans = max(ans, pos)\n\n        return ans\n\n```\n\n</details>\n\n- **패턴**: Two Pointers, Dynamic Programming, Greedy\n- **설명**: 연속 부분 배열의 곱의 최대를 구하는 문제로, 현재 위치에서 양수/음수 상태를 유지하며 최댓값과 최솟값을 함께 추적하는 방식은 DP적 성격과 최적해를 한 번에 갱신하는 Greedy 요소를 포함한다. 포인터가 한 방향으로만 움직이며 상태를 업데이트하는 구조로 해석 가능하다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(1) |\n\n**피드백**: pos와 neg를 각각 현재까지의 곱의 최고/최저로 유지하며 음수 처리 시 위치를 교환하는 방식으로 전체를 한 번의 순회로 해결한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-20T04:15:54Z",
+    "updated_at": "2026-08-20T04:15:54Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818566575",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566575"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818566575"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566575/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566738",
+    "pull_request_review_id": 4979002730,
+    "id": 3818566738,
+    "node_id": "PRRC_kwDOLwMdns7jmrRS",
+    "diff_hunk": "",
+    "path": "minimum-window-substring/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: d61e001f03cf099ff834b3c958874036f6f5f9b3 -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>minimum-window-substring/alphaorderly.py</summary>\n\n```py\n\"\"\"\n\n시간복잡도: O(n)\n공간복잡도: O(n)\n\n슬라이딩 윈도우 기법을 사용해 문자열 s에서 t의 모든 문자를 포함하는 최소 윈도우를 찾는다.\n\nWindow 클래스는 타겟 문자열(t)에 구성된 각 문자별 필요한 개수를 카운트하고,\n윈도우 내 해당 문자 개수를 관리하며, 현재 윈도우가 타겟을 만족하는지(check) 확인한다.\n\nadd 메서드는 윈도우에 문자를 추가하여 개수를 갱신하고,\n  - 타겟의 문자 갯수와 같아지면 key_count를 증가시킨다.\nremove 메서드는 윈도우에서 문자를 제거하여 개수를 줄인다.\n  - 타겟의 문자 갯수보다 작아지면 key_count를 감소시킨다.\n\ncheck 메서드는 윈도우에 타겟 문자가 필요한 만큼 모두 포함되어 있는지 검사한다.\n  - key_count와 target_count가 같으면 True를 반환한다.\n\"\"\"\nclass Window:\n    def __init__(self, target: str):\n        self.target = Counter(target)\n        self.window = defaultdict(int)\n\n        self.key_count = 0\n        self.target_count = len(self.target)\n\n    def check(self):\n        return self.key_count == self.target_count\n\n    def add(self, ch: str):\n        self.window[ch] += 1\n\n        if self.window[ch] == self.target[ch]:\n            self.key_count += 1\n\n    def remove(self, ch: str):\n        self.window[ch] -= 1\n        if self.window[ch] < self.target[ch]:\n            self.key_count -= 1\n\n\nclass Solution:\n    def minWindow(self, s: str, t: str) -> str:\n        window = Window(t)\n        left = 0\n        ans = (-float(\"inf\"), float(\"inf\"))\n\n        for right, value in enumerate(s):\n\n            window.add(value)\n            if not window.check():\n                continue\n\n            while window.check():\n                window.remove(s[left])\n                left += 1\n\n            if ans[1] - ans[0] > right - left:\n                ans = (left - 1, right)\n\n        if ans[0] == -float(\"inf\"):\n            return \"\"\n\n        return s[ans[0] : ans[1] + 1]\n\n```\n\n</details>\n\n- **패턴**: Sliding Window\n- **설명**: 주어진 코드는 타깃 문자열의 모든 문자를 포함하는 최소 윈도우를 찾기 위해 좌우 포인터를 늘리며 윈도우를 관리하는 sliding window 패턴을 사용한다. window 내부 카운팅으로 조건을 확인하고 필요 시 왼쪽 포인터를 이동해 윈도우를 축소한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(n) |\n| **Space** | O(n) |\n\n**피드백**: Window 클래스가 타겟 문자 개수와 윈도우 내 개수를 관리하며, check를 통해 필요 조건 만족 여부를 확인한다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-20T04:15:56Z",
+    "updated_at": "2026-08-20T04:15:56Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818566738",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566738"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818566738"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566738/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  },
+  {
+    "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566900",
+    "pull_request_review_id": 4979002932,
+    "id": 3818566900,
+    "node_id": "PRRC_kwDOLwMdns7jmrT0",
+    "diff_hunk": "",
+    "path": "sum-of-two-integers/alphaorderly.py",
+    "commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "original_commit_id": "dbc662d57dd26e0bcee38d1b41f8f01d8cc67ed8",
+    "user": {
+      "login": "dalestudy[bot]",
+      "id": 189409060,
+      "node_id": "BOT_kgDOC0onJA",
+      "avatar_url": "https://avatars.githubusercontent.com/in/1067270?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/dalestudy%5Bbot%5D",
+      "html_url": "https://github.com/apps/dalestudy",
+      "followers_url": "https://api.github.com/users/dalestudy%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/dalestudy%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/dalestudy%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dalestudy%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dalestudy%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/dalestudy%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/dalestudy%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dalestudy%5Bbot%5D/received_events",
+      "type": "Bot",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "<!-- dalestudy-pattern-tag -->\n<!-- file-sha: 7ac211490ab23e5a9b46b4d85758d59fd04956ed -->\n### 🏷️ 알고리즘 패턴 분석\n\n<details>\n<summary>sum-of-two-integers/alphaorderly.py</summary>\n\n```py\n\"\"\"\n시간복잡도: O(1)\n공간복잡도: O(1)\n\n16비트 정수 범위에서 각 비트를 하나씩 확인하며 덧셈을 수행한다.\n\n각 비트의 합은 XOR 연산으로 구하고,\n올림수(carry)는 두 비트 이상이 1인 경우를 OR 연산으로 계산한다.\n  - 전가산기 원리 적용\n\n계산된 각 비트는 ans의 해당 위치에 저장한다.\n\nPython의 int는 고정된 비트 폭을 가지지 않으므로,\n최종 결과의 최상위 비트가 1인 경우에는 16비트 음수로 직접 변환한다.\n\nMASK와 XOR하여 16비트 범위 안에서 비트를 반전한 뒤,\n~ 연산을 적용하여 Python의 음수 정수 형태로 변환한다.\n\"\"\"\nclass Solution:\n    def getSum(self, a: int, b: int) -> int:\n        MASK = 0xFFFF\n        CHECK = 0x8000\n\n        ans = carry = 0\n        for i in range(16):\n            a_bit = a & 1\n            b_bit = b & 1\n\n            left = a_bit ^ b_bit ^ carry\n            carry = (a_bit & b_bit) | (b_bit & carry) | (a_bit & carry)\n\n            ans |= left * 2**i\n            a >>= 1\n            b >>= 1\n\n        if ans & CHECK == 0:\n            return ans\n        else:\n            return ~(MASK ^ ans)\n\n```\n\n</details>\n\n- **패턴**: Bit Manipulation, Greedy\n- **설명**: 두 정수의 각 비트를 다루며 덧셈을 비트 연산으로 구현하고, 올림수를 이용해 결과를 구성한다. 비트 단위 연산과 마스크를 활용하는 점에서 비트 조작 패턴에 속하며, 최종 음수 처리 방식도 비트 연산의 활용에 해당한다.\n\n### 📊 시간/공간 복잡도 분석\n\n| | 복잡도 |\n|---|---|\n| **Time** | O(1) |\n| **Space** | O(1) |\n\n**피드백**: 비트 연산으로 각 비트를 더하고 캐리를 업데이트하는 전가산기 스타일의 구현이다.\n\n**개선 제안**: 현재 구현이 적절해 보입니다.\n\n> 💡 풀이에 시간/공간 복잡도를 주석으로 남겨보세요!",
+    "created_at": "2026-08-20T04:15:58Z",
+    "updated_at": "2026-08-20T04:15:58Z",
+    "html_url": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818566900",
+    "pull_request_url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822",
+    "_links": {
+      "self": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566900"
+      },
+      "html": {
+        "href": "https://github.com/DaleStudy/leetcode-study/pull/2822#discussion_r3818566900"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/2822"
+      }
+    },
+    "reactions": {
+      "url": "https://api.github.com/repos/DaleStudy/leetcode-study/pulls/comments/3818566900/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "start_line": null,
+    "original_start_line": null,
+    "start_side": null,
+    "line": 1,
+    "original_line": 1,
+    "side": "RIGHT",
+    "author_association": "CONTRIBUTOR",
+    "original_position": 1,
+    "position": 1,
+    "subject_type": "file",
+    "is_copilot_code_review": false,
+    "copilot_code_review_sources": []
+  }
+]

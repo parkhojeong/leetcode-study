@@ -1,0 +1,19 @@
+{
+  "data": {
+    "repository": {
+      "pullRequest": {
+        "comments": {
+          "totalCount": 1,
+          "nodes": [
+            {
+              "databaseId": 5553555081
+            }
+          ],
+          "pageInfo": {
+            "hasNextPage": false
+          }
+        }
+      }
+    }
+  }
+}
